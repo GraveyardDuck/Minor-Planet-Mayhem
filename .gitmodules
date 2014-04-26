@@ -1,0 +1,3 @@
+[submodule "Locus-Game-Engine"]
+	path = Locus-Game-Engine
+	url = https://github.com/GraveyardDuck/Locus-Game-Engine.git
