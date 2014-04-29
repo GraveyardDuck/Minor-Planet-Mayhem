@@ -1,0 +1,6245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SAP>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>-0.254775911569595</x>
+				<y>0.28600001335144</y>
+				<z>0.178549706935883</z>
+			</Position>
+			<Position Index="1">
+				<x>-0.433325618505478</x>
+				<y>0.107450306415558</y>
+				<z>0.178549706935883</z>
+			</Position>
+			<Position Index="2">
+				<x>-0.611875474452972</x>
+				<y>0.28600001335144</y>
+				<z>0.178549706935883</z>
+			</Position>
+			<Position Index="3">
+				<x>-0.433325618505478</x>
+				<y>0.464549750089645</y>
+				<z>0.178549706935883</z>
+			</Position>
+			<Position Index="4">
+				<x>-0.18081821501255</x>
+				<y>0.28600001335144</y>
+				<z>0</z>
+			</Position>
+			<Position Index="5">
+				<x>-0.433325618505478</x>
+				<y>0.0334925688803196</y>
+				<z>-6.844228097583E-21</z>
+			</Position>
+			<Position Index="6">
+				<x>-0.685833156108856</x>
+				<y>0.28600001335144</y>
+				<z>3.71025998294675E-40</z>
+			</Position>
+			<Position Index="7">
+				<x>-0.433325618505478</x>
+				<y>0.538507401943207</y>
+				<z>6.844228097583E-21</z>
+			</Position>
+			<Position Index="8">
+				<x>-0.254775911569595</x>
+				<y>0.28600001335144</y>
+				<z>-0.178549706935883</z>
+			</Position>
+			<Position Index="9">
+				<x>-0.433325618505478</x>
+				<y>0.107450306415558</y>
+				<z>-0.178549706935883</z>
+			</Position>
+			<Position Index="10">
+				<x>-0.611875474452972</x>
+				<y>0.28600001335144</y>
+				<z>-0.178549706935883</z>
+			</Position>
+			<Position Index="11">
+				<x>-0.433325618505478</x>
+				<y>0.464549750089645</y>
+				<z>-0.178549706935883</z>
+			</Position>
+			<Position Index="12">
+				<x>-0.433325618505478</x>
+				<y>0.28600001335144</y>
+				<z>0.252507418394089</z>
+			</Position>
+			<Position Index="13">
+				<x>-0.433325618505478</x>
+				<y>0.28600001335144</y>
+				<z>-0.252507418394089</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>-3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>-3.38535594940186</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>-4.78027582168579</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>-3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>-1.99043703079224</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>-3.38535594940186</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>-3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>-3.38535594940186</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>-1.99043703079224</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>-3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>-4.78027582168579</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>-3.38535594940186</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>3.38535594940186</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>4.78027582168579</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>1.99043703079224</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>3.38535594940186</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>3.38535594940186</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>1.99043703079224</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>4.78027582168579</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>3.38535594940186</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>3.38535594940186</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>1.39491999149323</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>5.34705316084704E-20</tx>
+				<ty>5.20708894729614</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>2.89864332669292E-39</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>-1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>0</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="30">
+				<tx>-5.34705316084704E-20</tx>
+				<ty>5.20708894729614</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="31">
+				<tx>-1.39491999149323</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="32">
+				<tx>-1.39491999149323</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="33">
+				<tx>5.34705316084704E-20</tx>
+				<ty>1.26166069507599</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="34">
+				<tx>0</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="35">
+				<tx>-1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="36">
+				<tx>1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="37">
+				<tx>2.89864332669292E-39</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="38">
+				<tx>-5.34705316084704E-20</tx>
+				<ty>1.26166069507599</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="39">
+				<tx>1.39491999149323</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="40">
+				<tx>5.34705316084704E-20</tx>
+				<ty>5.20708894729614</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="41">
+				<tx>-1.39491999149323</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="42">
+				<tx>-1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="43">
+				<tx>2.89864332669292E-39</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="44">
+				<tx>0</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="45">
+				<tx>1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="46">
+				<tx>1.39491999149323</tx>
+				<ty>4.62929511070251</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="47">
+				<tx>-5.34705316084704E-20</tx>
+				<ty>5.20708894729614</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="48">
+				<tx>5.34705316084704E-20</tx>
+				<ty>1.26166069507599</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="49">
+				<tx>1.39491999149323</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="50">
+				<tx>1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="51">
+				<tx>0</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="52">
+				<tx>2.89864332669292E-39</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="53">
+				<tx>-1.39491999149323</tx>
+				<ty>3.234375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="54">
+				<tx>-1.39491999149323</tx>
+				<ty>1.83945542573929</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="55">
+				<tx>-5.34705316084704E-20</tx>
+				<ty>1.26166069507599</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="9">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>30</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>31</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="10">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>32</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>33</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>34</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>35</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="11">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>36</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>37</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>38</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>39</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="12">
+				<Vertex Index="0">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>40</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>41</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>42</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>43</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="13">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>44</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>45</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>46</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>47</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="14">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>48</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>49</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>50</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>51</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="15">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>52</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>53</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>54</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>55</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>-0.796177625656128</x>
+				<y>0.315383940935135</y>
+				<z>0.142117708921432</z>
+			</Position>
+			<Position Index="1">
+				<x>-0.867524743080139</x>
+				<y>0.217183008790016</y>
+				<z>0.142117708921432</z>
+			</Position>
+			<Position Index="2">
+				<x>-0.982966840267181</x>
+				<y>0.254692405462265</y>
+				<z>0.142117708921432</z>
+			</Position>
+			<Position Index="3">
+				<x>-0.982966840267181</x>
+				<y>0.37607541680336</y>
+				<z>0.142117708921432</z>
+			</Position>
+			<Position Index="4">
+				<x>-0.867524743080139</x>
+				<y>0.41358482837677</y>
+				<z>0.142117708921432</z>
+			</Position>
+			<Position Index="5">
+				<x>-0.732362687587738</x>
+				<y>0.315383940935135</y>
+				<z>0.0542841330170631</z>
+			</Position>
+			<Position Index="6">
+				<x>-0.847804844379425</x>
+				<y>0.156491503119469</y>
+				<z>0.0542841330170631</z>
+			</Position>
+			<Position Index="7">
+				<x>-1.03459405899048</x>
+				<y>0.217183008790016</y>
+				<z>0.0542841330170631</z>
+			</Position>
+			<Position Index="8">
+				<x>-1.03459405899048</x>
+				<y>0.41358482837677</y>
+				<z>0.0542841330170631</z>
+			</Position>
+			<Position Index="9">
+				<x>-0.847804844379425</x>
+				<y>0.474276334047318</y>
+				<z>0.0542841330170631</z>
+			</Position>
+			<Position Index="10">
+				<x>-0.732362687587738</x>
+				<y>0.315383940935135</y>
+				<z>-0.0542841330170631</z>
+			</Position>
+			<Position Index="11">
+				<x>-0.847804844379425</x>
+				<y>0.156491503119469</y>
+				<z>-0.0542841330170631</z>
+			</Position>
+			<Position Index="12">
+				<x>-1.03459405899048</x>
+				<y>0.217183008790016</y>
+				<z>-0.0542841330170631</z>
+			</Position>
+			<Position Index="13">
+				<x>-1.03459405899048</x>
+				<y>0.41358482837677</y>
+				<z>-0.0542841330170631</z>
+			</Position>
+			<Position Index="14">
+				<x>-0.847804844379425</x>
+				<y>0.474276334047318</y>
+				<z>-0.0542841330170631</z>
+			</Position>
+			<Position Index="15">
+				<x>-0.796177625656128</x>
+				<y>0.315383940935135</y>
+				<z>-0.142117708921432</z>
+			</Position>
+			<Position Index="16">
+				<x>-0.867524743080139</x>
+				<y>0.217183008790016</y>
+				<z>-0.142117708921432</z>
+			</Position>
+			<Position Index="17">
+				<x>-0.982966840267181</x>
+				<y>0.254692405462265</y>
+				<z>-0.142117708921432</z>
+			</Position>
+			<Position Index="18">
+				<x>-0.982966840267181</x>
+				<y>0.37607541680336</y>
+				<z>-0.142117708921432</z>
+			</Position>
+			<Position Index="19">
+				<x>-0.867524743080139</x>
+				<y>0.41358482837677</y>
+				<z>-0.142117708921432</z>
+			</Position>
+			<Position Index="20">
+				<x>-0.899432182312012</x>
+				<y>0.315383940935135</y>
+				<z>0.175667107105255</z>
+			</Position>
+			<Position Index="21">
+				<x>-0.899432182312012</x>
+				<y>0.315383940935135</y>
+				<z>-0.175667107105255</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>-7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>-7.67942810058594</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>-6.77753591537476</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>-7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>-7.67942810058594</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>-7.67942810058594</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>-7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>-6.77753591537476</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>-7.67942810058594</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>-6.62347507476807</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>-6.77753591537476</tx>
+				<ty>2.11029398441315</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>-7.67942810058594</tx>
+				<ty>2.11029398441315</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>-8.08276557922363</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>1.11029398441315</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>1.11029398441315</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>0.424094706773758</tx>
+				<ty>4.70528411865234</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>-7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>-6.77753591537476</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>-6.22013711929321</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>7.67942810058594</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>7.67942810058594</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>6.77753591537476</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>7.67942810058594</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>6.22013711929321</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>6.77753591537476</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>-7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="30">
+				<tx>-6.22013711929321</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="31">
+				<tx>-6.77753591537476</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="32">
+				<tx>6.77753591537476</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="33">
+				<tx>7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="34">
+				<tx>6.22013711929321</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="35">
+				<tx>7.67942810058594</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="36">
+				<tx>7.02681303024292</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="37">
+				<tx>6.77753591537476</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="38">
+				<tx>-0.424094706773758</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="39">
+				<tx>-1.11029398441315</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="40">
+				<tx>-1.11029398441315</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="41">
+				<tx>-0.424094706773758</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="42">
+				<tx>-6.77753591537476</tx>
+				<ty>-0.110293984413147</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="43">
+				<tx>-6.62347507476807</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="44">
+				<tx>-8.08276557922363</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="45">
+				<tx>-7.67942810058594</tx>
+				<ty>-0.110293984413147</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="46">
+				<tx>-1.11029398441315</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="47">
+				<tx>-0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="48">
+				<tx>-0.424094706773758</tx>
+				<ty>4.70528411865234</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="49">
+				<tx>-1.11029398441315</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="50">
+				<tx>-0.424094706773758</tx>
+				<ty>2.22258996963501</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="51">
+				<tx>0.424094706773758</tx>
+				<ty>2.22258996963501</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="52">
+				<tx>0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="53">
+				<tx>-0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="54">
+				<tx>-1.11029398441315</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="55">
+				<tx>-0.424094706773758</tx>
+				<ty>2.22258996963501</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="56">
+				<tx>-0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="57">
+				<tx>-1.11029398441315</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="58">
+				<tx>-7.67942810058594</tx>
+				<ty>2.11029398441315</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="59">
+				<tx>-8.08276557922363</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="60">
+				<tx>-6.62347507476807</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="61">
+				<tx>-6.77753591537476</tx>
+				<ty>2.11029398441315</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="62">
+				<tx>1.11029398441315</tx>
+				<ty>3.93808889389038</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="63">
+				<tx>0.424094706773758</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="64">
+				<tx>0.424094706773758</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="65">
+				<tx>1.11029398441315</tx>
+				<ty>2.98978400230408</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="66">
+				<tx>-0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="67">
+				<tx>0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="68">
+				<tx>0.424094706773758</tx>
+				<ty>4.70528411865234</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="69">
+				<tx>-0.424094706773758</tx>
+				<ty>4.70528411865234</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="70">
+				<tx>0.424094706773758</tx>
+				<ty>2.22258996963501</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="71">
+				<tx>1.11029398441315</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="72">
+				<tx>1.11029398441315</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="73">
+				<tx>0.424094706773758</tx>
+				<ty>3.46393704414368</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="74">
+				<tx>-8.08276557922363</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="75">
+				<tx>-7.67942810058594</tx>
+				<ty>-0.110293984413147</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="76">
+				<tx>-6.77753591537476</tx>
+				<ty>-0.110293984413147</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="77">
+				<tx>-6.62347507476807</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="78">
+				<tx>-8.08276557922363</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="79">
+				<tx>-8.08276557922363</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="80">
+				<tx>-6.62347507476807</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="81">
+				<tx>-6.62347507476807</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="82">
+				<tx>0.424094706773758</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="83">
+				<tx>-0.424094706773758</tx>
+				<ty>4.23113107681274</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="84">
+				<tx>-0.424094706773758</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="85">
+				<tx>0.424094706773758</tx>
+				<ty>2.69674205780029</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="86">
+				<tx>-6.62347507476807</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="87">
+				<tx>-6.62347507476807</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="88">
+				<tx>-8.08276557922363</tx>
+				<ty>1.42409470677376</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="89">
+				<tx>-8.08276557922363</tx>
+				<ty>0.575905293226242</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="9">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>30</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>31</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="10">
+				<Vertex Index="0">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>32</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>33</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>34</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="11">
+				<Vertex Index="0">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>35</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>36</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>37</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="12">
+				<Vertex Index="0">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>38</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>39</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>40</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>41</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="13">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>42</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>43</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>44</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>45</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="14">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>46</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>47</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>48</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>49</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="15">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>50</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>51</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>52</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>53</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="16">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>54</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>55</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>56</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>57</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="17">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>58</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>59</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>60</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>61</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="18">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>62</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>63</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>64</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>65</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="19">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>66</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>67</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>68</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>69</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="20">
+				<Vertex Index="0">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>70</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>71</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>72</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>73</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="21">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>74</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>75</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>76</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>77</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="22">
+				<Vertex Index="0">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>78</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>79</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>80</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>81</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="23">
+				<Vertex Index="0">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>82</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>83</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>84</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>85</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="24">
+				<Vertex Index="0">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>86</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>87</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>88</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>89</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>0.753647148609161</x>
+				<y>0.27707239985466</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="1">
+				<x>0.702246725559235</x>
+				<y>0.188044413924217</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="2">
+				<x>0.599445939064026</x>
+				<y>0.188044413924217</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="3">
+				<x>0.548045516014099</x>
+				<y>0.27707239985466</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="4">
+				<x>0.599445939064026</x>
+				<y>0.366100519895554</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="5">
+				<x>0.702246725559235</x>
+				<y>0.366100519895554</y>
+				<z>0.178056210279465</z>
+			</Position>
+			<Position Index="6">
+				<x>0.828902542591095</x>
+				<y>0.27707239985466</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="7">
+				<x>0.739874422550201</x>
+				<y>0.122871302068233</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="8">
+				<x>0.561818182468414</x>
+				<y>0.122871302068233</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="9">
+				<x>0.472790122032166</x>
+				<y>0.27707239985466</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="10">
+				<x>0.561818182468414</x>
+				<y>0.431273609399796</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="11">
+				<x>0.739874422550201</x>
+				<y>0.431273609399796</y>
+				<z>0.10280080139637</z>
+			</Position>
+			<Position Index="12">
+				<x>0.85644793510437</x>
+				<y>0.27707239985466</y>
+				<z>0</z>
+			</Position>
+			<Position Index="13">
+				<x>0.753647148609161</x>
+				<y>0.0990162864327431</y>
+				<z>-4.82622244244472E-21</z>
+			</Position>
+			<Position Index="14">
+				<x>0.548045516014099</x>
+				<y>0.0990162864327431</y>
+				<z>-4.82622244244472E-21</z>
+			</Position>
+			<Position Index="15">
+				<x>0.445244818925858</x>
+				<y>0.27707239985466</y>
+				<z>3.02104534625323E-40</z>
+			</Position>
+			<Position Index="16">
+				<x>0.548045516014099</x>
+				<y>0.455128610134125</y>
+				<z>4.82622244244472E-21</z>
+			</Position>
+			<Position Index="17">
+				<x>0.753647148609161</x>
+				<y>0.455128610134125</y>
+				<z>4.82622244244472E-21</z>
+			</Position>
+			<Position Index="18">
+				<x>0.828902542591095</x>
+				<y>0.27707239985466</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="19">
+				<x>0.739874422550201</x>
+				<y>0.122871302068233</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="20">
+				<x>0.561818182468414</x>
+				<y>0.122871302068233</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="21">
+				<x>0.472790122032166</x>
+				<y>0.27707239985466</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="22">
+				<x>0.561818182468414</x>
+				<y>0.431273609399796</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="23">
+				<x>0.739874422550201</x>
+				<y>0.431273609399796</y>
+				<z>-0.10280080139637</z>
+			</Position>
+			<Position Index="24">
+				<x>0.753647148609161</x>
+				<y>0.27707239985466</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="25">
+				<x>0.702246725559235</x>
+				<y>0.188044413924217</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="26">
+				<x>0.599445939064026</x>
+				<y>0.188044413924217</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="27">
+				<x>0.548045516014099</x>
+				<y>0.27707239985466</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="28">
+				<x>0.599445939064026</x>
+				<y>0.366100519895554</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="29">
+				<x>0.702246725559235</x>
+				<y>0.366100519895554</y>
+				<z>-0.178056210279465</z>
+			</Position>
+			<Position Index="30">
+				<x>0.650846362113953</x>
+				<y>0.27707239985466</y>
+				<z>0.20560160279274</z>
+			</Position>
+			<Position Index="31">
+				<x>0.650846362113953</x>
+				<y>0.27707239985466</y>
+				<z>-0.20560160279274</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>5.4863018989563</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>5.88786792755127</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>1.39106404781342</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>4.28160619735718</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>4.68317079544067</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>4.68317079544067</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>5.4863018989563</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>5.78026914596558</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>5.4863018989563</tx>
+				<ty>2.39106404781342</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>4.68317079544067</tx>
+				<ty>2.39106404781342</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>4.38920497894287</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>4.38920497894287</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>4.68317079544067</tx>
+				<ty>-0.391064047813416</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>5.4863018989563</tx>
+				<ty>-0.391064047813416</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>5.78026914596558</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>1.39106404781342</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>-0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>-1.39106404781342</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>-1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="30">
+				<tx>-1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="31">
+				<tx>-1.39106404781342</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="32">
+				<tx>-0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="33">
+				<tx>-4.68317079544067</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="34">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="35">
+				<tx>-4.28160619735718</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="36">
+				<tx>-4.28160619735718</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="37">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="38">
+				<tx>-4.68317079544067</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="39">
+				<tx>-5.88786792755127</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="40">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="41">
+				<tx>-5.4863018989563</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="42">
+				<tx>-5.4863018989563</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="43">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="44">
+				<tx>-4.68317079544067</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="45">
+				<tx>-4.68317079544067</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="46">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="47">
+				<tx>-5.4863018989563</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="48">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="49">
+				<tx>5.4863018989563</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="50">
+				<tx>4.68317079544067</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="51">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="52">
+				<tx>4.68317079544067</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="53">
+				<tx>4.28160619735718</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="54">
+				<tx>-5.4863018989563</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="55">
+				<tx>-5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="56">
+				<tx>-5.88786792755127</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="57">
+				<tx>5.08473682403564</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="58">
+				<tx>5.88786792755127</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="59">
+				<tx>5.4863018989563</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="60">
+				<tx>-0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="61">
+				<tx>3.77048601052961E-20</tx>
+				<ty>1.77356469631195</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="62">
+				<tx>0</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="63">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="64">
+				<tx>-1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="65">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="66">
+				<tx>-0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="67">
+				<tx>-1.39106404781342</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="68">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="69">
+				<tx>2.36019018788072E-39</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="70">
+				<tx>-3.77048601052961E-20</tx>
+				<ty>1.77356469631195</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="71">
+				<tx>0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="72">
+				<tx>4.38920497894287</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="73">
+				<tx>4.28160619735718</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="74">
+				<tx>5.88786792755127</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="75">
+				<tx>5.78026914596558</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="76">
+				<tx>5.4863018989563</tx>
+				<ty>-0.391064047813416</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="77">
+				<tx>5.78026914596558</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="78">
+				<tx>4.38920497894287</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="79">
+				<tx>4.68317079544067</tx>
+				<ty>-0.391064047813416</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="80">
+				<tx>4.68317079544067</tx>
+				<ty>2.39106404781342</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="81">
+				<tx>4.38920497894287</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="82">
+				<tx>5.78026914596558</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="83">
+				<tx>5.4863018989563</tx>
+				<ty>2.39106404781342</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="84">
+				<tx>-1.39106404781342</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="85">
+				<tx>-0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="86">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="87">
+				<tx>-1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="88">
+				<tx>1.39106404781342</tx>
+				<ty>3.86016011238098</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="89">
+				<tx>0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="90">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="91">
+				<tx>1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="92">
+				<tx>1.39106404781342</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="93">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="94">
+				<tx>0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="95">
+				<tx>1.39106404781342</tx>
+				<ty>2.46909701824188</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="96">
+				<tx>3.77048601052961E-20</tx>
+				<ty>4.55569195747375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="97">
+				<tx>-0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="98">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="99">
+				<tx>2.36019018788072E-39</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="100">
+				<tx>2.36019018788072E-39</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="101">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="102">
+				<tx>-0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="103">
+				<tx>-3.77048601052961E-20</tx>
+				<ty>1.77356469631195</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="104">
+				<tx>0</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="105">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="106">
+				<tx>0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="107">
+				<tx>-3.77048601052961E-20</tx>
+				<ty>4.55569195747375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="108">
+				<tx>5.88786792755127</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="109">
+				<tx>5.78026914596558</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="110">
+				<tx>4.38920497894287</tx>
+				<ty>1.80313110351563</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="111">
+				<tx>4.28160619735718</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="112">
+				<tx>4.28160619735718</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="113">
+				<tx>4.38920497894287</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="114">
+				<tx>5.78026914596558</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="115">
+				<tx>5.88786792755127</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="116">
+				<tx>5.78026914596558</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="117">
+				<tx>5.88786792755127</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="118">
+				<tx>4.28160619735718</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="119">
+				<tx>4.38920497894287</tx>
+				<ty>0.196868896484375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="120">
+				<tx>0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="121">
+				<tx>3.77048601052961E-20</tx>
+				<ty>4.55569195747375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="122">
+				<tx>2.36019018788072E-39</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="123">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="124">
+				<tx>3.77048601052961E-20</tx>
+				<ty>1.77356469631195</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="125">
+				<tx>0.803131103515625</tx>
+				<ty>1.95993191003799</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="126">
+				<tx>0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="127">
+				<tx>0</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="128">
+				<tx>-0.803131103515625</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="129">
+				<tx>0</tx>
+				<ty>3.16462898254395</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="130">
+				<tx>-3.77048601052961E-20</tx>
+				<ty>4.55569195747375</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="131">
+				<tx>-0.803131103515625</tx>
+				<ty>4.36932492256165</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>30</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>31</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>32</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="9">
+				<Vertex Index="0">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>33</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>34</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>35</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="10">
+				<Vertex Index="0">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>36</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>37</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>38</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="11">
+				<Vertex Index="0">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>39</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>40</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>41</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="12">
+				<Vertex Index="0">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>42</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>43</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>44</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="13">
+				<Vertex Index="0">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>45</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>46</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>47</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="14">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>48</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>49</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>50</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="15">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>51</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>52</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>53</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="16">
+				<Vertex Index="0">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>54</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>55</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>56</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="17">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>57</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>58</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>59</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="18">
+				<Vertex Index="0">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>60</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>61</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>62</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>63</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="19">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>64</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>65</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>66</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>67</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="20">
+				<Vertex Index="0">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>68</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>69</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>70</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>71</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="21">
+				<Vertex Index="0">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>72</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>73</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>74</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>75</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="22">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>76</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>77</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>78</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>79</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="23">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>80</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>81</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>82</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>83</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="24">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>84</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>85</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>86</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>87</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="25">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>88</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>89</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>90</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>91</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="26">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>92</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>93</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>94</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>95</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="27">
+				<Vertex Index="0">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>96</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>97</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>98</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>99</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="28">
+				<Vertex Index="0">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>100</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>101</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>102</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>103</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="29">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>104</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>105</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>106</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>107</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="30">
+				<Vertex Index="0">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>108</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>109</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>110</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>111</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="31">
+				<Vertex Index="0">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>112</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>113</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>114</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>115</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="32">
+				<Vertex Index="0">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>116</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>117</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>118</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>119</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="33">
+				<Vertex Index="0">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>120</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>121</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>122</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>123</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="34">
+				<Vertex Index="0">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>124</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>125</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>126</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>127</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="35">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>128</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>129</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>130</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>131</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>1.48029804229736</x>
+				<y>0.327096521854401</y>
+				<z>0.154591307044029</z>
+			</Position>
+			<Position Index="1">
+				<x>1.07865798473358</x>
+				<y>0.0952095836400986</y>
+				<z>0.154591307044029</z>
+			</Position>
+			<Position Index="2">
+				<x>1.07865798473358</x>
+				<y>0.558983445167542</y>
+				<z>0.154591307044029</z>
+			</Position>
+			<Position Index="3">
+				<x>1.48029804229736</x>
+				<y>0.327096521854401</y>
+				<z>-0.154591307044029</z>
+			</Position>
+			<Position Index="4">
+				<x>1.07865798473358</x>
+				<y>0.0952095836400986</y>
+				<z>-0.154591307044029</z>
+			</Position>
+			<Position Index="5">
+				<x>1.07865798473358</x>
+				<y>0.558983445167542</y>
+				<z>-0.154591307044029</z>
+			</Position>
+			<Position Index="6">
+				<x>1.21253800392151</x>
+				<y>0.327096521854401</y>
+				<z>0.309182614088058</z>
+			</Position>
+			<Position Index="7">
+				<x>1.21253800392151</x>
+				<y>0.327096521854401</y>
+				<z>-0.309182614088058</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>8.4270133972168</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>9.47295093536377</tx>
+				<ty>-1.41548895835876</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>11.564829826355</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>9.47295093536377</tx>
+				<ty>-1.41548895835876</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>11.564829826355</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>8.4270133972168</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>11.564829826355</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>9.47295093536377</tx>
+				<ty>3.41548895835876</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>8.4270133972168</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>-1.20774400234222</tx>
+				<ty>5.36705780029297</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>-2.41548895835876</tx>
+				<ty>3.55544090270996</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>-1.20774400234222</tx>
+				<ty>1.74382477998734</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>2.41548895835876</tx>
+				<ty>3.55544090270996</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>1.20774400234222</tx>
+				<ty>5.36705780029297</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>1.20774400234222</tx>
+				<ty>1.74382477998734</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>1.20774400234222</tx>
+				<ty>5.36705780029297</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>-1.20774400234222</tx>
+				<ty>5.36705780029297</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>-1.20774400234222</tx>
+				<ty>1.74382477998734</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>1.20774400234222</tx>
+				<ty>1.74382477998734</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>8.4270133972168</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>8.4270133972168</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>11.564829826355</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>11.564829826355</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>9.47295093536377</tx>
+				<ty>3.41548895835876</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>8.4270133972168</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>11.564829826355</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>11.564829826355</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>11.564829826355</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>8.4270133972168</tx>
+				<ty>2.20774400234222</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>8.4270133972168</tx>
+				<ty>-0.207744002342224</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>0.182121098041534</x>
+				<y>0.336000025272369</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="1">
+				<x>0.146545201539993</x>
+				<y>0.26212602853775</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="2">
+				<x>0.0666070356965065</x>
+				<y>0.243880614638329</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="3">
+				<x>0.00250156316906214</x>
+				<y>0.295002996921539</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="4">
+				<x>0.00250156316906214</x>
+				<y>0.376997023820877</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="5">
+				<x>0.0666070356965065</x>
+				<y>0.428119391202927</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="6">
+				<x>0.146545201539993</x>
+				<y>0.409874022006989</y>
+				<z>0.196207210421562</z>
+			</Position>
+			<Position Index="7">
+				<x>0.257894903421402</x>
+				<y>0.336000025272369</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="8">
+				<x>0.193789407610893</x>
+				<y>0.202883616089821</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="9">
+				<x>0.0497457720339298</x>
+				<y>0.170006617903709</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="10">
+				<x>-0.0657683089375496</x>
+				<y>0.26212602853775</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="11">
+				<x>-0.0657683089375496</x>
+				<y>0.409874022006989</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="12">
+				<x>0.0497457720339298</x>
+				<y>0.501993417739868</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="13">
+				<x>0.193789407610893</x>
+				<y>0.469116419553757</y>
+				<z>0.135779604315758</z>
+			</Position>
+			<Position Index="14">
+				<x>0.299946218729019</x>
+				<y>0.336000025272369</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="15">
+				<x>0.220008000731468</x>
+				<y>0.170006617903709</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="16">
+				<x>0.0403884723782539</x>
+				<y>0.129009604454041</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="17">
+				<x>-0.103655204176903</x>
+				<y>0.243880614638329</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="18">
+				<x>-0.103655204176903</x>
+				<y>0.428119391202927</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="19">
+				<x>0.0403884723782539</x>
+				<y>0.542990446090698</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="20">
+				<x>0.220008000731468</x>
+				<y>0.501993417739868</y>
+				<z>0.0484591796994209</z>
+			</Position>
+			<Position Index="21">
+				<x>0.299946218729019</x>
+				<y>0.336000025272369</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="22">
+				<x>0.220008000731468</x>
+				<y>0.170006617903709</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="23">
+				<x>0.0403884723782539</x>
+				<y>0.129009604454041</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="24">
+				<x>-0.103655204176903</x>
+				<y>0.243880614638329</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="25">
+				<x>-0.103655204176903</x>
+				<y>0.428119391202927</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="26">
+				<x>0.0403884723782539</x>
+				<y>0.542990446090698</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="27">
+				<x>0.220008000731468</x>
+				<y>0.501993417739868</y>
+				<z>-0.0484591796994209</z>
+			</Position>
+			<Position Index="28">
+				<x>0.257894903421402</x>
+				<y>0.336000025272369</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="29">
+				<x>0.193789407610893</x>
+				<y>0.202883616089821</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="30">
+				<x>0.0497457720339298</x>
+				<y>0.170006617903709</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="31">
+				<x>-0.0657683089375496</x>
+				<y>0.26212602853775</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="32">
+				<x>-0.0657683089375496</x>
+				<y>0.409874022006989</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="33">
+				<x>0.0497457720339298</x>
+				<y>0.501993417739868</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="34">
+				<x>0.193789407610893</x>
+				<y>0.469116419553757</y>
+				<z>-0.135779604315758</z>
+			</Position>
+			<Position Index="35">
+				<x>0.182121098041534</x>
+				<y>0.336000025272369</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="36">
+				<x>0.146545201539993</x>
+				<y>0.26212602853775</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="37">
+				<x>0.0666070356965065</x>
+				<y>0.243880614638329</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="38">
+				<x>0.00250156316906214</x>
+				<y>0.295002996921539</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="39">
+				<x>0.00250156316906214</x>
+				<y>0.376997023820877</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="40">
+				<x>0.0666070356965065</x>
+				<y>0.428119391202927</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="41">
+				<x>0.146545201539993</x>
+				<y>0.409874022006989</y>
+				<z>-0.196207210421562</z>
+			</Position>
+			<Position Index="42">
+				<x>0.0876326858997345</x>
+				<y>0.336000025272369</y>
+				<z>0.217773616313934</z>
+			</Position>
+			<Position Index="43">
+				<x>0.0876326858997345</x>
+				<y>0.336000025272369</y>
+				<z>-0.217773616313934</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>-1.51398003101349</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>-1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>-0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>-0.38863879442215</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>-0.38863879442215</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>-0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>0.513814806938171</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>0.513814806938171</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>0.513814806938171</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>-2.01480388641357</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>-1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>-1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>-1.51398003101349</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>1.06077802181244</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>1.06077802181244</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>0.378587305545807</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>1.71881198883057</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>1.51398003101349</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>0.38863879442215</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="30">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="31">
+				<tx>0.38863879442215</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="32">
+				<tx>-0.513814806938171</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="33">
+				<tx>-0.809806287288666</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="34">
+				<tx>0.513814806938171</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="35">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="36">
+				<tx>-0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="37">
+				<tx>-0.38863879442215</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="38">
+				<tx>-0.38863879442215</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="39">
+				<tx>-0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="40">
+				<tx>-1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="41">
+				<tx>-1.51398003101349</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="42">
+				<tx>-1.51398003101349</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="43">
+				<tx>-1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="44">
+				<tx>-1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="45">
+				<tx>-2.01480388641357</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="46">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="47">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="48">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="49">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="50">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="51">
+				<tx>-0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="52">
+				<tx>-0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="53">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="54">
+				<tx>-1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="55">
+				<tx>-1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="56">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="57">
+				<tx>-1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="58">
+				<tx>-1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="59">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="60">
+				<tx>-0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="61">
+				<tx>-0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="62">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="63">
+				<tx>-0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="64">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="65">
+				<tx>0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="66">
+				<tx>0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="67">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="68">
+				<tx>0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="69">
+				<tx>0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="70">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="71">
+				<tx>0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="72">
+				<tx>0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="73">
+				<tx>-1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="74">
+				<tx>-0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="75">
+				<tx>-1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="76">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="77">
+				<tx>1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="78">
+				<tx>1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="79">
+				<tx>0.684630274772644</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="80">
+				<tx>1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="81">
+				<tx>0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="82">
+				<tx>-0.378587305545807</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="83">
+				<tx>-1.06077802181244</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="84">
+				<tx>-1.06077802181244</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="85">
+				<tx>-0.378587305545807</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="86">
+				<tx>0.38863879442215</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="87">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="88">
+				<tx>1.71881198883057</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="89">
+				<tx>1.51398003101349</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="90">
+				<tx>-1.06077802181244</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="91">
+				<tx>-0.378587305545807</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="92">
+				<tx>-0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="93">
+				<tx>-1.06077802181244</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="94">
+				<tx>1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="95">
+				<tx>2.01480388641357</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="96">
+				<tx>1.51398003101349</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="97">
+				<tx>1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="98">
+				<tx>0.38863879442215</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="99">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="100">
+				<tx>-0.809806287288666</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="101">
+				<tx>-0.513814806938171</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="102">
+				<tx>1.06077802181244</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="103">
+				<tx>0.378587305545807</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="104">
+				<tx>0.378587305545807</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="105">
+				<tx>1.06077802181244</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="106">
+				<tx>-0.513814806938171</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="107">
+				<tx>-0.809806287288666</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="108">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="109">
+				<tx>0.38863879442215</tx>
+				<ty>2.06077802181244</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="110">
+				<tx>0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="111">
+				<tx>-0.513814806938171</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="112">
+				<tx>0.38863879442215</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="113">
+				<tx>0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="114">
+				<tx>0.520367383956909</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="115">
+				<tx>0.38863879442215</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="116">
+				<tx>1.51398003101349</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="117">
+				<tx>1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="118">
+				<tx>1.1448849439621</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="119">
+				<tx>1.51398003101349</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="120">
+				<tx>2.01480388641357</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="121">
+				<tx>1.42282104492188</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="122">
+				<tx>1.1448849439621</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="123">
+				<tx>1.51398003101349</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="124">
+				<tx>0.38863879442215</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="125">
+				<tx>0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="126">
+				<tx>0.520367383956909</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="127">
+				<tx>0.38863879442215</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="128">
+				<tx>-0.513814806938171</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="129">
+				<tx>0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="130">
+				<tx>0.0195434596389532</tx>
+				<ty>3.94528889656067</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="131">
+				<tx>-0.513814806938171</tx>
+				<ty>4.20214104652405</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="132">
+				<tx>-0.513814806938171</tx>
+				<ty>3.04785895347595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="133">
+				<tx>0.0195434596389532</tx>
+				<ty>3.30471110343933</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="134">
+				<tx>-0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="135">
+				<tx>0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="136">
+				<tx>0.378587305545807</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="137">
+				<tx>-0.378587305545807</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="138">
+				<tx>1.71881198883057</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="139">
+				<tx>1.71881198883057</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="140">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="141">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="142">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="143">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="144">
+				<tx>-0.809806287288666</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="145">
+				<tx>-0.809806287288666</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="146">
+				<tx>-0.809806287288666</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="147">
+				<tx>-0.513814806938171</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="148">
+				<tx>0.38863879442215</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="149">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="150">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="151">
+				<tx>0.38863879442215</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="152">
+				<tx>1.51398003101349</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="153">
+				<tx>1.71881198883057</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="154">
+				<tx>0.378587305545807</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="155">
+				<tx>1.06077802181244</tx>
+				<ty>2.58502805233002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="156">
+				<tx>1.06077802181244</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="157">
+				<tx>0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="158">
+				<tx>-0.378587305545807</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="159">
+				<tx>0.378587305545807</tx>
+				<ty>2.32817602157593</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="160">
+				<tx>0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="161">
+				<tx>-0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="162">
+				<tx>-1.06077802181244</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="163">
+				<tx>-0.378587305545807</tx>
+				<ty>3.625</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="164">
+				<tx>-0.378587305545807</tx>
+				<ty>4.92182397842407</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="165">
+				<tx>-1.06077802181244</tx>
+				<ty>4.66497206687927</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="166">
+				<tx>1.51398003101349</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="167">
+				<tx>1.71881198883057</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="168">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="169">
+				<tx>0.38863879442215</tx>
+				<ty>-0.060778021812439</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="170">
+				<tx>0.378587305545807</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="171">
+				<tx>-0.378587305545807</tx>
+				<ty>4.34468293190002</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="172">
+				<tx>-0.378587305545807</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="173">
+				<tx>0.378587305545807</tx>
+				<ty>2.90531694889069</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="174">
+				<tx>-0.809806287288666</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="175">
+				<tx>-0.809806287288666</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="176">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="177">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="178">
+				<tx>0.315534889698029</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="179">
+				<tx>0.315534889698029</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="180">
+				<tx>1.71881198883057</tx>
+				<ty>0.621412694454193</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="181">
+				<tx>1.71881198883057</tx>
+				<ty>1.37858730554581</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>41</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>40</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>40</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>39</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>39</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>38</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>41</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>30</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>31</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>32</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>33</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="9">
+				<Vertex Index="0">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>34</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>38</PositionIndex>
+					<TextureCoordinateIndex>35</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>37</PositionIndex>
+					<TextureCoordinateIndex>36</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>37</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="10">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>38</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>37</PositionIndex>
+					<TextureCoordinateIndex>39</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>36</PositionIndex>
+					<TextureCoordinateIndex>40</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>41</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="11">
+				<Vertex Index="0">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>42</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>36</PositionIndex>
+					<TextureCoordinateIndex>43</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>44</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>45</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="12">
+				<Vertex Index="0">
+					<PositionIndex>39</PositionIndex>
+					<TextureCoordinateIndex>46</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>47</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>38</PositionIndex>
+					<TextureCoordinateIndex>48</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="13">
+				<Vertex Index="0">
+					<PositionIndex>38</PositionIndex>
+					<TextureCoordinateIndex>49</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>50</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>37</PositionIndex>
+					<TextureCoordinateIndex>51</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="14">
+				<Vertex Index="0">
+					<PositionIndex>37</PositionIndex>
+					<TextureCoordinateIndex>52</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>53</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>36</PositionIndex>
+					<TextureCoordinateIndex>54</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="15">
+				<Vertex Index="0">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>55</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>56</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>41</PositionIndex>
+					<TextureCoordinateIndex>57</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="16">
+				<Vertex Index="0">
+					<PositionIndex>41</PositionIndex>
+					<TextureCoordinateIndex>58</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>59</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>40</PositionIndex>
+					<TextureCoordinateIndex>60</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="17">
+				<Vertex Index="0">
+					<PositionIndex>40</PositionIndex>
+					<TextureCoordinateIndex>61</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>62</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>39</PositionIndex>
+					<TextureCoordinateIndex>63</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="18">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>64</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>65</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>66</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="19">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>67</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>68</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>69</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="20">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>70</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>71</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>72</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="21">
+				<Vertex Index="0">
+					<PositionIndex>36</PositionIndex>
+					<TextureCoordinateIndex>73</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>43</PositionIndex>
+					<TextureCoordinateIndex>74</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>75</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="22">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>76</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>77</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>78</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="23">
+				<Vertex Index="0">
+					<PositionIndex>42</PositionIndex>
+					<TextureCoordinateIndex>79</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>80</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>81</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="24">
+				<Vertex Index="0">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>82</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>83</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>84</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>85</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="25">
+				<Vertex Index="0">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>86</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>87</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>88</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>89</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="26">
+				<Vertex Index="0">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>90</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>91</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>92</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>93</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="27">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>94</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>95</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>96</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>97</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="28">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>98</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>99</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>100</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>101</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="29">
+				<Vertex Index="0">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>102</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>103</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>104</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>105</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="30">
+				<Vertex Index="0">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>106</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>107</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>108</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>109</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="31">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>110</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>111</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>112</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>113</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="32">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>114</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>115</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>116</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>117</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="33">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>118</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>119</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>120</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>121</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="34">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>122</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>123</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>124</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>125</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="35">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>126</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>127</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>128</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>129</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="36">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>130</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>131</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>132</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>133</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="37">
+				<Vertex Index="0">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>134</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>135</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>136</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>137</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="38">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>138</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>139</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>140</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>141</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="39">
+				<Vertex Index="0">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>142</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>143</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>144</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>145</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="40">
+				<Vertex Index="0">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>146</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>147</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>148</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>149</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="41">
+				<Vertex Index="0">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>150</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>151</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>152</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>153</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="42">
+				<Vertex Index="0">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>154</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>155</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>156</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>157</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="43">
+				<Vertex Index="0">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>158</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>159</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>160</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>161</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="44">
+				<Vertex Index="0">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>162</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>163</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>164</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>165</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="45">
+				<Vertex Index="0">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>166</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>167</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>168</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>169</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="46">
+				<Vertex Index="0">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>170</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>171</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>172</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>173</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="47">
+				<Vertex Index="0">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>174</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>175</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>176</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>177</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="48">
+				<Vertex Index="0">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>178</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>179</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>180</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>181</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+	<Model>
+		<Positions>
+			<Position Index="0">
+				<x>0.608529031276703</x>
+				<y>0.00186923111323267</y>
+				<z>0</z>
+			</Position>
+			<Position Index="1">
+				<x>0.518911957740784</x>
+				<y>0.00186923111323267</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="2">
+				<x>0.429295122623444</x>
+				<y>0.00186923111323267</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="3">
+				<x>0.518911957740784</x>
+				<y>0.00186923111323267</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="4">
+				<x>0.461764305830002</x>
+				<y>0.405101597309113</y>
+				<z>0</z>
+			</Position>
+			<Position Index="5">
+				<x>0.393113762140274</x>
+				<y>0.34749698638916</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="6">
+				<x>0.324463278055191</x>
+				<y>0.289892345666885</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="7">
+				<x>0.393113762140274</x>
+				<y>0.34749698638916</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="8">
+				<x>0.0901433452963829</x>
+				<y>0.619657218456268</y>
+				<z>0</z>
+			</Position>
+			<Position Index="9">
+				<x>0.0745815634727478</x>
+				<y>0.531401634216309</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="10">
+				<x>0.0590197294950485</x>
+				<y>0.443146228790283</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="11">
+				<x>0.0745815634727478</x>
+				<y>0.531401634216309</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="12">
+				<x>-0.332448393106461</x>
+				<y>0.545142769813538</y>
+				<z>0</z>
+			</Position>
+			<Position Index="13">
+				<x>-0.287639945745468</x>
+				<y>0.467532187700272</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="14">
+				<x>-0.242831543087959</x>
+				<y>0.389921724796295</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="15">
+				<x>-0.287639945745468</x>
+				<y>0.467532187700272</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="16">
+				<x>-0.608275830745697</x>
+				<y>0.216424688696861</y>
+				<z>0</z>
+			</Position>
+			<Position Index="17">
+				<x>-0.524063229560852</x>
+				<y>0.185773923993111</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="18">
+				<x>-0.439850896596909</x>
+				<y>0.155123114585876</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="19">
+				<x>-0.524063229560852</x>
+				<y>0.185773923993111</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="20">
+				<x>-0.608275830745697</x>
+				<y>-0.212686210870743</y>
+				<z>0</z>
+			</Position>
+			<Position Index="21">
+				<x>-0.524063229560852</x>
+				<y>-0.182035446166992</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="22">
+				<x>-0.439850896596909</x>
+				<y>-0.151384681463242</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="23">
+				<x>-0.524063229560852</x>
+				<y>-0.182035446166992</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="24">
+				<x>-0.332448393106461</x>
+				<y>-0.541404247283936</y>
+				<z>0</z>
+			</Position>
+			<Position Index="25">
+				<x>-0.287639945745468</x>
+				<y>-0.463793784379959</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="26">
+				<x>-0.242831543087959</x>
+				<y>-0.386183232069016</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="27">
+				<x>-0.287639945745468</x>
+				<y>-0.463793784379959</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="28">
+				<x>0.0901433452963829</x>
+				<y>-0.615918636322021</y>
+				<z>0</z>
+			</Position>
+			<Position Index="29">
+				<x>0.0745815634727478</x>
+				<y>-0.527663171291351</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="30">
+				<x>0.0590197294950485</x>
+				<y>-0.439407795667648</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="31">
+				<x>0.0745815634727478</x>
+				<y>-0.527663171291351</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+			<Position Index="32">
+				<x>0.461764305830002</x>
+				<y>-0.401363104581833</y>
+				<z>0</z>
+			</Position>
+			<Position Index="33">
+				<x>0.393113762140274</x>
+				<y>-0.34375849366188</y>
+				<z>0.0896169021725655</z>
+			</Position>
+			<Position Index="34">
+				<x>0.324463278055191</x>
+				<y>-0.286153882741928</y>
+				<z>-4.85814078965547E-21</z>
+			</Position>
+			<Position Index="35">
+				<x>0.393113762140274</x>
+				<y>-0.34375849366188</y>
+				<z>-0.0896169021725655</z>
+			</Position>
+		</Positions>
+		<TextureCoordinates>
+			<TextureCoordinate Index="0">
+				<tx>1.17374098300934</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="1">
+				<tx>0.971113681793213</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="2">
+				<tx>-3.74531197547913</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="3">
+				<tx>-4.32875490188599</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="4">
+				<tx>3.74531197547913</tx>
+				<ty>-5.03898096084595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="5">
+				<tx>4.32875490188599</tx>
+				<ty>-6.04953384399414</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="6">
+				<tx>7.92025518417358</tx>
+				<ty>-1.76935195922852</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="7">
+				<tx>6.82374000549316</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="8">
+				<tx>0.768486022949219</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="9">
+				<tx>0.971113681793213</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="10">
+				<tx>-3.74531197547913</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="11">
+				<tx>-3.16186904907227</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="12">
+				<tx>0.971113681793213</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="13">
+				<tx>0.768486022949219</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="14">
+				<tx>-3.16186904907227</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="15">
+				<tx>-3.74531197547913</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="16">
+				<tx>3.16186904907227</tx>
+				<ty>-4.02842807769775</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="17">
+				<tx>3.74531197547913</tx>
+				<ty>-5.03898096084595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="18">
+				<tx>6.82374000549316</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="19">
+				<tx>5.72722482681274</tx>
+				<ty>-0.971153974533081</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="20">
+				<tx>-1.16688597202301</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="21">
+				<tx>0</tx>
+				<ty>-1.76935195922852</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="22">
+				<tx>0</tx>
+				<ty>3.81803011894226</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="23">
+				<tx>-1.16688597202301</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="24">
+				<tx>6.32570411449045E-20</tx>
+				<ty>-0.971153974533081</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="25">
+				<tx>1.16688597202301</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="26">
+				<tx>1.16688597202301</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="27">
+				<tx>6.32570411449045E-20</tx>
+				<ty>3.01983189582825</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="28">
+				<tx>-3.74531197547913</tx>
+				<ty>-5.03898096084595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="29">
+				<tx>-3.16186904907227</tx>
+				<ty>-4.02842807769775</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="30">
+				<tx>-5.72722482681274</tx>
+				<ty>-0.971153974533081</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="31">
+				<tx>-6.82374000549316</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="32">
+				<tx>-4.32875490188599</tx>
+				<ty>-6.04953384399414</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="33">
+				<tx>-3.74531197547913</tx>
+				<ty>-5.03898096084595</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="34">
+				<tx>-6.82374000549316</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="35">
+				<tx>-7.92025518417358</tx>
+				<ty>-1.76935195922852</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="36">
+				<tx>6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="37">
+				<tx>5.5897798538208</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="38">
+				<tx>4.22478199005127</tx>
+				<ty>-2.72596192359924</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="39">
+				<tx>5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="40">
+				<tx>7.92355298995972</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="41">
+				<tx>6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="42">
+				<tx>5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="43">
+				<tx>6.0125560760498</tx>
+				<ty>-4.22608184814453</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="44">
+				<tx>-6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="45">
+				<tx>-7.92355298995972</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="46">
+				<tx>-6.0125560760498</tx>
+				<ty>-4.22608184814453</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="47">
+				<tx>-5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="48">
+				<tx>-5.5897798538208</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="49">
+				<tx>-6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="50">
+				<tx>-5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="51">
+				<tx>-4.22478199005127</tx>
+				<ty>-2.72596192359924</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="52">
+				<tx>-5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="53">
+				<tx>-6.0125560760498</tx>
+				<ty>-4.22608184814453</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="54">
+				<tx>-1.17374098300934</tx>
+				<ty>-7.01977252960205</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="55">
+				<tx>-0.971113681793213</tx>
+				<ty>-5.87061405181885</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="56">
+				<tx>6.0125560760498</tx>
+				<ty>-4.22608184814453</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="57">
+				<tx>5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="58">
+				<tx>0.971113681793213</tx>
+				<ty>-5.87061405181885</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="59">
+				<tx>1.17374098300934</tx>
+				<ty>-7.01977252960205</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="60">
+				<tx>0.971113681793213</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="61">
+				<tx>1.17374098300934</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="62">
+				<tx>-4.32875490188599</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="63">
+				<tx>-3.74531197547913</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="64">
+				<tx>-4.22478199005127</tx>
+				<ty>-2.72596192359924</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="65">
+				<tx>-5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="66">
+				<tx>-0.971113681793213</tx>
+				<ty>-5.87061405181885</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="67">
+				<tx>-0.768486022949219</tx>
+				<ty>-4.72145509719849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="68">
+				<tx>5.11866903305054</tx>
+				<ty>-3.4760217666626</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="69">
+				<tx>4.22478199005127</tx>
+				<ty>-2.72596192359924</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="70">
+				<tx>0.768486022949219</tx>
+				<ty>-4.72145509719849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="71">
+				<tx>0.971113681793213</tx>
+				<ty>-5.87061405181885</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="72">
+				<tx>-0.768486022949219</tx>
+				<ty>6.77013301849365</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="73">
+				<tx>-0.971113681793213</tx>
+				<ty>7.91929197311401</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="74">
+				<tx>-5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="75">
+				<tx>-4.22478199005127</tx>
+				<ty>4.77464008331299</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="76">
+				<tx>0.971113681793213</tx>
+				<ty>7.91929197311401</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="77">
+				<tx>0.768486022949219</tx>
+				<ty>6.77013301849365</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="78">
+				<tx>4.22478199005127</tx>
+				<ty>4.77464008331299</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="79">
+				<tx>5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="80">
+				<tx>-4.32875490188599</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="81">
+				<tx>-3.74531197547913</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="82">
+				<tx>0.971113681793213</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="83">
+				<tx>1.17374098300934</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="84">
+				<tx>-0.971113681793213</tx>
+				<ty>7.91929197311401</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="85">
+				<tx>-1.17374098300934</tx>
+				<ty>9.06845092773438</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="86">
+				<tx>-6.0125560760498</tx>
+				<ty>6.2747597694397</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="87">
+				<tx>-5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="88">
+				<tx>1.17374098300934</tx>
+				<ty>9.06845092773438</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="89">
+				<tx>0.971113681793213</tx>
+				<ty>7.91929197311401</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="90">
+				<tx>5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="91">
+				<tx>6.0125560760498</tx>
+				<ty>6.2747597694397</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="92">
+				<tx>5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="93">
+				<tx>4.22478199005127</tx>
+				<ty>4.77464008331299</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="94">
+				<tx>5.5897798538208</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="95">
+				<tx>6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="96">
+				<tx>6.0125560760498</tx>
+				<ty>6.2747597694397</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="97">
+				<tx>5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="98">
+				<tx>6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="99">
+				<tx>7.92355298995972</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="100">
+				<tx>-5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="101">
+				<tx>-6.0125560760498</tx>
+				<ty>6.2747597694397</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="102">
+				<tx>-7.92355298995972</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="103">
+				<tx>-6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="104">
+				<tx>-4.22478199005127</tx>
+				<ty>4.77464008331299</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="105">
+				<tx>-5.11866903305054</tx>
+				<ty>5.52470016479492</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="106">
+				<tx>-6.75666618347168</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="107">
+				<tx>-5.5897798538208</tx>
+				<ty>1.02433894015849</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="108">
+				<tx>6.82374000549316</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="109">
+				<tx>7.92025518417358</tx>
+				<ty>3.81803011894226</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="110">
+				<tx>4.32875490188599</tx>
+				<ty>8.09821176528931</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="111">
+				<tx>3.74531197547913</tx>
+				<ty>7.08765888214111</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="112">
+				<tx>5.72722482681274</tx>
+				<ty>3.01983189582825</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="113">
+				<tx>6.82374000549316</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="114">
+				<tx>3.74531197547913</tx>
+				<ty>7.08765888214111</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="115">
+				<tx>3.16186904907227</tx>
+				<ty>6.07710599899292</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="116">
+				<tx>-1.16688597202301</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="117">
+				<tx>6.32570411449045E-20</tx>
+				<ty>-0.971153974533081</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="118">
+				<tx>6.32570411449045E-20</tx>
+				<ty>3.01983189582825</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="119">
+				<tx>-1.16688597202301</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="120">
+				<tx>0</tx>
+				<ty>-1.76935195922852</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="121">
+				<tx>1.16688597202301</tx>
+				<ty>-1.37025308609009</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="122">
+				<tx>1.16688597202301</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="123">
+				<tx>0</tx>
+				<ty>3.81803011894226</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="124">
+				<tx>-6.82374000549316</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="125">
+				<tx>-5.72722482681274</tx>
+				<ty>3.01983189582825</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="126">
+				<tx>-3.16186904907227</tx>
+				<ty>6.07710599899292</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="127">
+				<tx>-3.74531197547913</tx>
+				<ty>7.08765888214111</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="128">
+				<tx>-3.16186904907227</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="129">
+				<tx>-3.74531197547913</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="130">
+				<tx>0.971113681793213</tx>
+				<ty>-0.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="131">
+				<tx>0.768486022949219</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="132">
+				<tx>-3.74531197547913</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="133">
+				<tx>-3.16186904907227</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="134">
+				<tx>0.768486022949219</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="135">
+				<tx>0.971113681793213</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="136">
+				<tx>-7.92025518417358</tx>
+				<ty>3.81803011894226</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="137">
+				<tx>-6.82374000549316</tx>
+				<ty>3.41893100738525</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="138">
+				<tx>-3.74531197547913</tx>
+				<ty>7.08765888214111</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="139">
+				<tx>-4.32875490188599</tx>
+				<ty>8.09821176528931</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="140">
+				<tx>-3.74531197547913</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="141">
+				<tx>-4.32875490188599</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="142">
+				<tx>1.17374098300934</tx>
+				<ty>1</ty>
+			</TextureCoordinate>
+			<TextureCoordinate Index="143">
+				<tx>0.971113681793213</tx>
+				<ty>2.16688597202301</ty>
+			</TextureCoordinate>
+		</TextureCoordinates>
+		<Faces>
+			<Face Index="0">
+				<Vertex Index="0">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>0</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>1</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>2</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>3</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="1">
+				<Vertex Index="0">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>4</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>5</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>6</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>7</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="2">
+				<Vertex Index="0">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>8</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>9</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>10</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>11</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="3">
+				<Vertex Index="0">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>12</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>13</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>14</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>15</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="4">
+				<Vertex Index="0">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>16</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>17</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>18</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>19</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="5">
+				<Vertex Index="0">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>20</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>21</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>22</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>23</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="6">
+				<Vertex Index="0">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>24</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>23</PositionIndex>
+					<TextureCoordinateIndex>25</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>26</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>27</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="7">
+				<Vertex Index="0">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>28</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>26</PositionIndex>
+					<TextureCoordinateIndex>29</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>30</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>31</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="8">
+				<Vertex Index="0">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>32</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>25</PositionIndex>
+					<TextureCoordinateIndex>33</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>34</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>35</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="9">
+				<Vertex Index="0">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>36</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>37</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>38</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>39</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="10">
+				<Vertex Index="0">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>40</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>41</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>42</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>43</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="11">
+				<Vertex Index="0">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>44</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>45</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>46</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>47</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="12">
+				<Vertex Index="0">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>48</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>49</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>50</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>51</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="13">
+				<Vertex Index="0">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>52</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>53</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>54</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>55</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="14">
+				<Vertex Index="0">
+					<PositionIndex>32</PositionIndex>
+					<TextureCoordinateIndex>56</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>57</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>58</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>59</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="15">
+				<Vertex Index="0">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>60</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>28</PositionIndex>
+					<TextureCoordinateIndex>61</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>24</PositionIndex>
+					<TextureCoordinateIndex>62</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>27</PositionIndex>
+					<TextureCoordinateIndex>63</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="16">
+				<Vertex Index="0">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>64</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>35</PositionIndex>
+					<TextureCoordinateIndex>65</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>31</PositionIndex>
+					<TextureCoordinateIndex>66</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>67</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="17">
+				<Vertex Index="0">
+					<PositionIndex>33</PositionIndex>
+					<TextureCoordinateIndex>68</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>34</PositionIndex>
+					<TextureCoordinateIndex>69</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>30</PositionIndex>
+					<TextureCoordinateIndex>70</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>29</PositionIndex>
+					<TextureCoordinateIndex>71</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="18">
+				<Vertex Index="0">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>72</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>73</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>74</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>75</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="19">
+				<Vertex Index="0">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>76</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>77</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>78</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>79</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="20">
+				<Vertex Index="0">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>80</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>81</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>82</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>83</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="21">
+				<Vertex Index="0">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>84</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>85</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>86</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>87</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="22">
+				<Vertex Index="0">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>88</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>89</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>90</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>91</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="23">
+				<Vertex Index="0">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>92</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>93</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>94</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>95</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="24">
+				<Vertex Index="0">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>96</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>5</PositionIndex>
+					<TextureCoordinateIndex>97</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>1</PositionIndex>
+					<TextureCoordinateIndex>98</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>99</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="25">
+				<Vertex Index="0">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>100</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>4</PositionIndex>
+					<TextureCoordinateIndex>101</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>0</PositionIndex>
+					<TextureCoordinateIndex>102</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>103</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="26">
+				<Vertex Index="0">
+					<PositionIndex>6</PositionIndex>
+					<TextureCoordinateIndex>104</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>7</PositionIndex>
+					<TextureCoordinateIndex>105</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>3</PositionIndex>
+					<TextureCoordinateIndex>106</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>2</PositionIndex>
+					<TextureCoordinateIndex>107</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="27">
+				<Vertex Index="0">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>108</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>109</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>110</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>111</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="28">
+				<Vertex Index="0">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>112</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>19</PositionIndex>
+					<TextureCoordinateIndex>113</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>114</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>115</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="29">
+				<Vertex Index="0">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>116</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>22</PositionIndex>
+					<TextureCoordinateIndex>117</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>118</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>119</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="30">
+				<Vertex Index="0">
+					<PositionIndex>20</PositionIndex>
+					<TextureCoordinateIndex>120</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>21</PositionIndex>
+					<TextureCoordinateIndex>121</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>122</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>123</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="31">
+				<Vertex Index="0">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>124</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>18</PositionIndex>
+					<TextureCoordinateIndex>125</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>126</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>127</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="32">
+				<Vertex Index="0">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>128</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>129</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>130</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>131</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="33">
+				<Vertex Index="0">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>132</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>14</PositionIndex>
+					<TextureCoordinateIndex>133</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>10</PositionIndex>
+					<TextureCoordinateIndex>134</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>9</PositionIndex>
+					<TextureCoordinateIndex>135</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="34">
+				<Vertex Index="0">
+					<PositionIndex>16</PositionIndex>
+					<TextureCoordinateIndex>136</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>17</PositionIndex>
+					<TextureCoordinateIndex>137</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>13</PositionIndex>
+					<TextureCoordinateIndex>138</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>139</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+			<Face Index="35">
+				<Vertex Index="0">
+					<PositionIndex>15</PositionIndex>
+					<TextureCoordinateIndex>140</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="1">
+					<PositionIndex>12</PositionIndex>
+					<TextureCoordinateIndex>141</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="2">
+					<PositionIndex>8</PositionIndex>
+					<TextureCoordinateIndex>142</TextureCoordinateIndex>
+				</Vertex>
+				<Vertex Index="3">
+					<PositionIndex>11</PositionIndex>
+					<TextureCoordinateIndex>143</TextureCoordinateIndex>
+				</Vertex>
+			</Face>
+		</Faces>
+	</Model>
+</SAP>

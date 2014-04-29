@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Textures>
+<Asteroids>
+<Texture index="1">asteroid.png</Texture>
+</Asteroids>
+<Planets>
+<Texture index="1">planet_1.png</Texture>
+<Texture index="2">planet_2.png</Texture>
+<Texture index="3">planet_3.png</Texture>
+</Planets>
+<Moons>
+<Texture index="1">moon.png</Texture>
+</Moons>
+<Skybox_Front>space1.png</Skybox_Front>
+<Skybox_Back>space1.png</Skybox_Back>
+<Skybox_Left>space1.png</Skybox_Left>
+<Skybox_Right>space1.png</Skybox_Right>
+<Skybox_Up>space1.png</Skybox_Up>
+<Skybox_Down>space1.png</Skybox_Down>
+<Shot>fire_grayscale.png</Shot>
+<LivesIcon>lives_icon.png</LivesIcon>
+<LivesTimes>lives_times.png</LivesTimes>
+<ScoreLabel>score_label.png</ScoreLabel>
+<LevelLabel>level_label.png</LevelLabel>
+<Ammo>ammo_texture.png</Ammo>
+<Digit_0>digits_0.png</Digit_0>
+<Digit_1>digits_1.png</Digit_1>
+<Digit_2>digits_2.png</Digit_2>
+<Digit_3>digits_3.png</Digit_3>
+<Digit_4>digits_4.png</Digit_4>
+<Digit_5>digits_5.png</Digit_5>
+<Digit_6>digits_6.png</Digit_6>
+<Digit_7>digits_7.png</Digit_7>
+<Digit_8>digits_8.png</Digit_8>
+<Digit_9>digits_9.png</Digit_9>
+</Textures>

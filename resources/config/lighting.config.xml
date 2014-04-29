@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Lighting>
+<ShotLights>
+<Light index="1">
+<R>255</R>
+<G>0</G>
+<B>0</B>
+<A>255</A>
+</Light>
+<Light index="2">
+<R>255</R>
+<G>132</G>
+<B>0</B>
+<A>255</A>
+</Light>
+<Light index="3">
+<R>255</R>
+<G>255</G>
+<B>0</B>
+<A>255</A>
+</Light>
+<Light index="4">
+<R>0</R>
+<G>255</G>
+<B>0</B>
+<A>255</A>
+</Light>
+<Light index="5">
+<R>0</R>
+<G>0</G>
+<B>255</B>
+<A>255</A>
+</Light>
+<Light index="6">
+<R>128</R>
+<G>0</G>
+<B>255</B>
+<A>255</A>
+</Light>
+<Light index="7">
+<R>255</R>
+<G>0</G>
+<B>255</B>
+<A>255</A>
+</Light>
+</ShotLights>
+<Attenuation>
+<Constant>0.01</Constant>
+<Linear>0.03</Linear>
+<Quadratic>0.01</Quadratic>
+</Attenuation>
+</Lighting>

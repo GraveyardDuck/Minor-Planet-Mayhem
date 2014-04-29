@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Options>
+
+<!-- The file that contains the asteroid models -->
+<Model_File>demo.sap</Model_File>
+
+<!-- The number of asteroids in play -->
+<Num_Asteroids>200</Num_Asteroids>
+
+<!-- The number of stars in the background -->
+<Num_Stars>10000</Num_Stars>
+
+<!-- The maximum number of shots allowed in play at once -->
+<Num_Shots>100</Num_Shots>
+
+<!-- The player's speed ( units / second ) -->
+<Player_Speed>80</Player_Speed>
+
+<!-- The speed of the player's shots ( units / second ) -->
+<Shot_Speed>200</Shot_Speed>
+
+<!-- Half the length of the game boundary ( units ) (call this L). The game is played
+	     within a cube with dimensions 2L x 2L x 2L. Asteroids bounce off the side of
+		 the boundary. The player starts at the center. -->
+<Game_Boundary_Length>130</Game_Boundary_Length>
+
+<!-- The distance of the collision zone around the player ( units ) -->
+<Player_Collision_Radius>15</Player_Collision_Radius>
+
+<!-- The translation speed of an asteroid ( units / second ) -->
+<Asteroid_Speed>
+<Min>5</Min>
+<Max>10</Max>
+</Asteroid_Speed>
+
+<!-- The rotation speed of an asteroid ( radians / second ) -->
+<Rotation_Speed>
+<Min>1</Min>
+<Max>3</Max>
+</Rotation_Speed>
+
+<!-- The number of planets shown in the background -->
+<Num_Planets>
+<Min>10</Min>
+<Max>15</Max>
+</Num_Planets>
+
+<!-- The radius of a planet shown in the background ( units ) -->
+<Planet_Radius>
+<Min>30</Min>
+<Max>50</Max>
+</Planet_Radius>
+
+<!-- The number of moons orbiting around a planet -->
+<Num_Moons>
+<Min>1</Min>
+<Max>3</Max>
+</Num_Moons>
+
+<!-- The orbital speed of a moon ( radians / second ) -->
+<Moon_Orbital_Speed>
+<Min>1</Min>
+<Max>3</Max>
+</Moon_Orbital_Speed>
+
+</Options>
