@@ -18,9 +18,11 @@ if (MSVC)
 	option(USE_MSVC_RUNTIME_LIBRARY_DLL "Use MSVC runtime library DLL" OFF)
 endif()
 
-include(Locus-Game-Engine/cmake/Config.cmake)
+set(LocusDir "${CMAKE_CURRENT_SOURCE_DIR}/Locus-Game-Engine")
 
-add_subdirectory(Locus-Game-Engine "${CMAKE_CURRENT_BINARY_DIR}/Locus")
+include(${LocusDir}/cmake/Config.cmake)
+
+add_subdirectory(${LocusDir} "${CMAKE_CURRENT_BINARY_DIR}/Locus")
 add_subdirectory(src)
 
 add_custom_target(MPM_Copy_Target_Files)
@@ -32,9 +34,9 @@ set(Make_Copy_PDB_Files_Target OFF)
 
 if(WINDOWS)
 	if(ARCH_32BITS)
-		set(OPENAL_DLL ${PROJECT_SOURCE_DIR}/Locus-Game-Engine/third-party/OpenAL/bin/x86/openal32.dll)
+		set(OPENAL_DLL ${LocusDir}/third-party/OpenAL/bin/x86/openal32.dll)
 	else()
-		set(OPENAL_DLL ${PROJECT_SOURCE_DIR}/Locus-Game-Engine/third-party/OpenAL/bin/x64/openal32.dll)
+		set(OPENAL_DLL ${LocusDir}/third-party/OpenAL/bin/x64/openal32.dll)
 	endif()
 
 	add_custom_command(TARGET MPM_Copy_Target_Files POST_BUILD
