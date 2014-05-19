@@ -140,59 +140,9 @@ void DemoScene::LoadShaderPrograms()
 {
    Locus::GLInfo::GLSLVersion activeGLSLVersion = renderingState->shaderController.GetActiveGLSLVersion();
 
-   std::vector<std::string> basicAttributes(2);
-   basicAttributes[0] = Locus::ShaderSource::Color;
-   basicAttributes[1] = Locus::ShaderSource::Vert_Pos;
+   renderingState->shaderController.LoadShaderProgram(ShaderNames::NotTexturedNotLit, activeGLSLVersion, false, 0);
 
-   std::vector<std::string> basicUniforms(1);
-   basicUniforms[0] = Locus::ShaderSource::Mat_MVP;
-
-   renderingState->shaderController.LoadShaderProgram
-   (
-     ShaderNames::NotTexturedNotLit,
-     Locus::Shader(Locus::Shader::ShaderType::Vertex, Locus::ShaderSource::Vert(activeGLSLVersion, false, 0)),
-     Locus::Shader(Locus::Shader::ShaderType::Fragment, Locus::ShaderSource::Frag(activeGLSLVersion, false, 0)),
-     false,
-     false,
-     basicAttributes,
-     basicUniforms
-   );
-
-   std::vector<std::string> texturedAttributes(3);
-   texturedAttributes[0] = Locus::ShaderSource::Color;
-   texturedAttributes[1] = Locus::ShaderSource::Vert_Pos;
-   texturedAttributes[2] = Locus::ShaderSource::Vert_Tex;
-
-   std::vector<std::string> texturedUniforms(2);
-   texturedUniforms[0] = Locus::ShaderSource::Mat_MVP;
-   texturedUniforms[1] = Locus::ShaderSource::Map_Diffuse;
-
-   renderingState->shaderController.LoadShaderProgram
-   (
-     ShaderNames::TexturedNotLit,
-     Locus::Shader(Locus::Shader::ShaderType::Vertex, Locus::ShaderSource::Vert(activeGLSLVersion, true, 0)),
-     Locus::Shader(Locus::Shader::ShaderType::Fragment, Locus::ShaderSource::Frag(activeGLSLVersion, true, 0)),
-     true,
-     false,
-     texturedAttributes,
-     texturedUniforms
-   );
-
-   std::vector<std::string> litAndTexturedAttributes(4);
-   litAndTexturedAttributes[0] = Locus::ShaderSource::Color;
-   litAndTexturedAttributes[1] = Locus::ShaderSource::Vert_Pos;
-   litAndTexturedAttributes[2] = Locus::ShaderSource::Vert_Tex;
-   litAndTexturedAttributes[3] = Locus::ShaderSource::Vert_Normal;
-
-   static const int Max_Lights_Guess = 8;
-
-   std::vector<std::string> litAndTexturedUniforms;
-   litAndTexturedUniforms.reserve(4 + Max_Lights_Guess * 5);
-
-   litAndTexturedUniforms.push_back(Locus::ShaderSource::Mat_MVP);
-   litAndTexturedUniforms.push_back(Locus::ShaderSource::Map_Diffuse);
-   litAndTexturedUniforms.push_back(Locus::ShaderSource::Mat_MV);
-   litAndTexturedUniforms.push_back(Locus::ShaderSource::Mat_Normal);
+   renderingState->shaderController.LoadShaderProgram(ShaderNames::TexturedNotLit, activeGLSLVersion, true, 0);
 
    unsigned int lightIndex = 0;
 
@@ -200,22 +150,7 @@ void DemoScene::LoadShaderPrograms()
    {
       try
       {
-         litAndTexturedUniforms.push_back( Locus::ShaderSource::GetMultiVariableName(Locus::ShaderSource::Light_EyePos, lightIndex) );
-         litAndTexturedUniforms.push_back( Locus::ShaderSource::GetMultiVariableName(Locus::ShaderSource::Light_Attenuation, lightIndex) );
-         litAndTexturedUniforms.push_back( Locus::ShaderSource::GetMultiVariableName(Locus::ShaderSource::Light_LinearAttenuation, lightIndex) );
-         litAndTexturedUniforms.push_back( Locus::ShaderSource::GetMultiVariableName(Locus::ShaderSource::Light_QuadraticAttenuation, lightIndex) );
-         litAndTexturedUniforms.push_back( Locus::ShaderSource::GetMultiVariableName(Locus::ShaderSource::Light_Diffuse, lightIndex) );
-
-         renderingState->shaderController.LoadShaderProgram
-         (
-           ShaderNames::TexturedAndLit_1 + lightIndex,
-           Locus::Shader(Locus::Shader::ShaderType::Vertex, Locus::ShaderSource::Vert(activeGLSLVersion, true, lightIndex + 1)),
-           Locus::Shader(Locus::Shader::ShaderType::Fragment, Locus::ShaderSource::Frag(activeGLSLVersion, true, lightIndex + 1)),
-           true,
-           true,
-           litAndTexturedAttributes,
-           litAndTexturedUniforms
-         );
+         renderingState->shaderController.LoadShaderProgram(ShaderNames::TexturedAndLit_1 + lightIndex, activeGLSLVersion, true, lightIndex + 1);
       }
       catch(Locus::ShaderLinkException& shaderLinkException)
       {
