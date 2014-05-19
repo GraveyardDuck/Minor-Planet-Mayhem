@@ -31,6 +31,10 @@
 
 #include <string>
 
+#ifndef LOCUS_WINDOWS
+   #include <iostream>
+#endif
+
 #include <stdlib.h>
 
 static const char* Window_Name = "Minor Planet Mayhem";
