@@ -33,11 +33,6 @@ public:
    virtual void InitializeRenderingState() override;
 
    virtual void KeyPressed(Locus::Key_t key) override;
-   virtual void KeyReleased(Locus::Key_t key) override;
-
-   virtual void MousePressed(Locus::MouseButton_t button, int x, int y) override;
-   virtual void MouseReleased(Locus::MouseButton_t button, int x, int y) override;
-   virtual void MouseMoved(int x, int y) override;
 
    virtual void Resized(int width, int height) override;
 

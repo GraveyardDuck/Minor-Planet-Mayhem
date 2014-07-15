@@ -85,8 +85,19 @@ static const Locus::Key_t KEY_INITIALIZE = Locus::Key_I;
 static const Locus::Key_t KEY_LIGHTS = Locus::Key_L;
 
 DemoScene::DemoScene(Locus::SceneManager& sceneManager, unsigned int resolutionX, unsigned int resolutionY)
-   : Scene(sceneManager), dieOnNextFrame(false), maxLights(1), resolutionX(resolutionX), resolutionY(resolutionY),
-     score(0), lives(3), level(1), crosshairsX(resolutionX/2), crosshairsY(resolutionY/2), skyBox(SKY_BOX_RADIUS)
+   : Scene(sceneManager),
+     dieOnNextFrame(false),
+     maxLights(1),
+     resolutionX(resolutionX),
+     resolutionY(resolutionY),
+     lastMouseX(0),
+     lastMouseY(0),
+     score(0),
+     lives(3),
+     level(1),
+     crosshairsX(resolutionX/2),
+     crosshairsY(resolutionY/2),
+     skyBox(SKY_BOX_RADIUS)
 {
    if (!Locus::ParseSAPFile(Locus::MountedFilePath("data/" + Config::GetModelFile()), asteroidMeshes))
    {
@@ -119,10 +130,10 @@ void DemoScene::Load()
 
 void DemoScene::Initialize()
 {
-   initializeMeshes();
-   initializeStars();
-   initializePlanets();
-   initializeAsteroids();
+   InitializeMeshes();
+   InitializeStars();
+   InitializePlanets();
+   InitializeAsteroids();
 }
 
 void DemoScene::LoadRenderingState()
@@ -263,7 +274,7 @@ void DemoScene::LoadAudioState()
    //Asteroid::asteroidAsteroidCollsionSoundEffect->Load(Locus::MountedFilePath("audio/asteroid_asteroid_collision.ogg"));
 }
 
-void DemoScene::initializeMeshes()
+void DemoScene::InitializeMeshes()
 {
    planetMesh = Locus::MeshUtility::MakeSphere(1.0, 3);
    planetMesh.CreateGPUVertexData();
@@ -300,7 +311,7 @@ void DemoScene::InitializeSkyBoxAndHUD()
    hud.UpdateGPUVertexData();
 }
 
-void DemoScene::initializeStars()
+void DemoScene::InitializeStars()
 {
    //randomly place a set amount of stars on the surface of a sphere
    //of radius STAR_DISTANCE centered at the origin
@@ -351,7 +362,7 @@ void DemoScene::initializeStars()
    stars.UpdateGPUVertexData();
 }
 
-void DemoScene::initializePlanets()
+void DemoScene::InitializePlanets()
 {
    //randomly place a certain amount of planets (between MIN_PLANETS and MAX_PLANETS) a certain distance
    //away (between MIN_PLANET_DISTANCE and MAX_PLANET_DISTANCE) from the origin.  Also place a certain
@@ -433,7 +444,7 @@ void DemoScene::initializePlanets()
    }
 }
 
-void DemoScene::initializeAsteroids()
+void DemoScene::InitializeAsteroids()
 {
    for (std::unique_ptr<Asteroid>& asteroid : asteroids)
    {
@@ -555,7 +566,7 @@ void DemoScene::initializeAsteroids()
    collisionManager.FinishAddRemoveBatch();
 }
 
-void DemoScene::shotFired()
+void DemoScene::ShotFired()
 {
    if (shots.size() < Config::GetNumShots())
    {
@@ -583,7 +594,7 @@ void DemoScene::shotFired()
    }
 }
 
-void DemoScene::updateShotPositions(double DT)
+void DemoScene::UpdateShotPositions(double DT)
 {
    std::size_t numShots = shots.size();
 
@@ -637,7 +648,7 @@ void DemoScene::updateShotPositions(double DT)
    }
 }
 
-Locus::Plane DemoScene::makeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid)
+Locus::Plane DemoScene::MakeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid)
 {
    Locus::Plane orthogonalPlane(asteroidCentroid, player.viewpoint.GetForward());
    Locus::Vector3 shotProjection = orthogonalPlane.getProjection(shotPosition);
@@ -648,7 +659,7 @@ Locus::Plane DemoScene::makeHalfSplitPlane(const Locus::Vector3& shotPosition, c
    return Locus::Plane(asteroidCentroid, normal);
 }
 
-void DemoScene::splitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition)
+void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition)
 {
    //split an asteroid in two. If it has no more hits left,
    //simply remove the asteroid from the game
@@ -686,7 +697,7 @@ void DemoScene::splitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
       asteroids[newAsteroidIndex1]->SetTexture(asteroids[splitIndex]->GetTexture());
       asteroids[newAsteroidIndex2]->SetTexture(asteroids[splitIndex]->GetTexture());
 
-      Locus::Plane splitPlane = makeHalfSplitPlane(shotPosition, asteroids[splitIndex]->Position());
+      Locus::Plane splitPlane = MakeHalfSplitPlane(shotPosition, asteroids[splitIndex]->Position());
 
       asteroids[splitIndex]->DetermineSplit(splitPlane, asteroids[splitIndex]->CurrentModelTransformation(), *asteroids[newAsteroidIndex1], *asteroids[newAsteroidIndex2]);
 
@@ -751,7 +762,7 @@ void DemoScene::KeyPressed(Locus::Key_t key)
          break;
 
       case KEY_INITIALIZE:
-         initializeAsteroids();
+         InitializeAsteroids();
          break;
 
       case KEY_LIGHTS:
@@ -768,27 +779,27 @@ void DemoScene::KeyPressed(Locus::Key_t key)
          break;
 
       case KEY_FORWARD:
-         moveCameraForward();
+         player.translateAhead = true;
          break;
 
       case KEY_BACKWARD:
-         moveCameraBackward();
+         player.translateBack = true;
          break;
 
       case KEY_LEFT:
-         moveCameraLeft();
+         player.translateLeft = true;
          break;
 
       case KEY_RIGHT:
-         moveCameraRight();
+         player.translateRight = true;
          break;
 
       case KEY_UP:
-         moveCameraUp();
+         player.translateUp = true;
          break;
 
       case KEY_DOWN:
-         moveCameraDown();
+         player.translateDown = true;
          break;
    }
 }
@@ -798,51 +809,53 @@ void DemoScene::KeyReleased(Locus::Key_t key)
    switch (key)
    {
       case KEY_FORWARD:
-         stopMoveCameraForward();
+         player.translateAhead = false;
          break;
 
       case KEY_BACKWARD:
-         stopMoveCameraBackward();
+         player.translateBack = false;
          break;
 
       case KEY_LEFT:
-         stopMoveCameraLeft();
+         player.translateLeft = false;
          break;
 
       case KEY_RIGHT:
-         stopMoveCameraRight();
+         player.translateRight = false;
          break;
 
       case KEY_UP:
-         stopMoveCameraUp();
+         player.translateUp = false;
          break;
 
       case KEY_DOWN:
-         stopMoveCameraDown();
+         player.translateDown = false;
          break;
    }
 }
 
-void DemoScene::MousePressed(Locus::MouseButton_t button, int /*x*/, int /*y*/)
+void DemoScene::MousePressed(Locus::MouseButton_t button)
 {
    if (button == Locus::Mouse_Button_Left)
    {
-      shotFired();
+      ShotFired();
    }
-}
-
-void DemoScene::MouseReleased(Locus::MouseButton_t /*button*/, int /*x*/, int /*y*/)
-{
 }
 
 void DemoScene::MouseMoved(int x, int y)
 {
-   Locus::Vector3 difference(static_cast<float>(x), static_cast<float>(y), 0.0f);
+   int diffX = x - lastMouseX;
+   int diffY = y - lastMouseY;
+
+   Locus::Vector3 difference(static_cast<float>(diffX), static_cast<float>(diffY), 0.0f);
+
    Locus::Vector3 rotation((-difference.y/resolutionY) * FIELD_OF_VIEW * Locus::TO_RADIANS, (-difference.x/resolutionX)* FIELD_OF_VIEW * Locus::TO_RADIANS, 0.0f);
 
-   rotateCamera(rotation);
+   player.Rotate(rotation);
 
    sceneManager.CenterMouse();
+
+   UpdateLastMousePosition();
 }
 
 void DemoScene::Resized(int width, int height)
@@ -854,84 +867,25 @@ void DemoScene::Resized(int width, int height)
 
    resolutionX = width;
    resolutionY = height;
+
+   crosshairsX = (resolutionX / 2);
+   crosshairsY = (resolutionY / 2);
+
+   hud.Update(score, level, lives, shots.size(), crosshairsX, crosshairsY, 1);
 }
-
-//////////////////////////////////////Camera Functions//////////////////////////////////////////
-
-//////////Begin Translating////////////////////////
-void DemoScene::moveCameraForward()
-{
-   player.translateAhead = true;
-}
-
-void DemoScene::moveCameraBackward()
-{
-   player.translateBack = true;
-}
-
-void DemoScene::moveCameraRight()
-{
-   player.translateRight = true;
-}
-
-void DemoScene::moveCameraLeft()
-{
-   player.translateLeft = true;
-}
-
-void DemoScene::moveCameraUp()
-{
-   player.translateUp = true;
-}
-
-void DemoScene::moveCameraDown()
-{
-   player.translateDown = true;
-}
-
-/////////////Stop Translating/////////////
-void DemoScene::stopMoveCameraForward()
-{
-   player.translateAhead = false;
-}
-
-void DemoScene::stopMoveCameraBackward()
-{
-   player.translateBack = false;
-}
-
-void DemoScene::stopMoveCameraRight()
-{
-   player.translateRight = false;
-}
-
-void DemoScene::stopMoveCameraLeft()
-{
-   player.translateLeft = false;
-}
-
-void DemoScene::stopMoveCameraUp()
-{
-   player.translateUp = false;
-}
-
-void DemoScene::stopMoveCameraDown()
-{
-   player.translateDown = false;
-}
-
-void DemoScene::rotateCamera(const Locus::Vector3& rotation)
-{
-   player.Rotate(rotation);
-}
-
-//////////////////////////////////////Game Main Loop Functions//////////////////////////////////////////
 
 void DemoScene::Activate()
 {
    sceneManager.MakeFullScreen();
    sceneManager.HideMouse();
    sceneManager.CenterMouse();
+
+   UpdateLastMousePosition();
+}
+
+void DemoScene::UpdateLastMousePosition()
+{
+   sceneManager.GetMousePosition(lastMouseX, lastMouseY);
 }
 
 bool DemoScene::Update(double DT)
@@ -944,8 +898,8 @@ bool DemoScene::Update(double DT)
    player.tick(DT);
    collisionManager.Update(player);
 
-   tickAsteroids(DT);
-   updateShotPositions(DT);
+   TickAsteroids(DT);
+   UpdateShotPositions(DT);
 
    for (std::unique_ptr<Planet>& planet : planets)
    {
@@ -962,7 +916,7 @@ bool DemoScene::Update(double DT)
    return true;
 }
 
-void DemoScene::tickAsteroids(double DT)
+void DemoScene::TickAsteroids(double DT)
 {
    //this function updates all asteroids' positions. If an asteroid is
    //about to go beyond the asteroid boundary, it bounces off the side.
@@ -1021,7 +975,7 @@ void DemoScene::CheckForAsteroidHits()
             collisionManager.StartAddRemoveBatch();
          }
 
-         splitAsteroid(asteroidIndex, asteroids[asteroidIndex]->GetHitLocation());
+         SplitAsteroid(asteroidIndex, asteroids[asteroidIndex]->GetHitLocation());
 
          hadAnyHits = true;
       }
@@ -1038,22 +992,17 @@ void DemoScene::Draw()
 {
    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-   drawBackground();
+   DrawSkyBox();
+   DrawStars();
+   DrawPlanets();
 
-   drawAsteroids();
-   drawShots();
+   DrawAsteroids();
+   DrawShots();
 
-   drawHUD();
+   DrawHUD();
 }
 
-void DemoScene::drawBackground()
-{
-   drawSkyBox();
-   drawStars();
-   drawPlanets();
-}
-
-void DemoScene::drawSkyBox()
+void DemoScene::DrawSkyBox()
 {
    //the sky box is a cube of length 2*SKY_BOX_RADIUS centered at
    //the camera. In the asteroids game, it shows a bunch of super novae
@@ -1074,7 +1023,7 @@ void DemoScene::drawSkyBox()
    glEnable(GL_DEPTH_TEST);
 }
 
-void DemoScene::drawStars()
+void DemoScene::DrawStars()
 {
    renderingState->shaderController.UseProgram(ShaderNames::NotTexturedNotLit);
 
@@ -1094,7 +1043,7 @@ void DemoScene::drawStars()
    glEnable(GL_DEPTH_TEST);
 }
 
-void DemoScene::drawPlanets()
+void DemoScene::DrawPlanets()
 {
    for (std::unique_ptr<Planet>& planet : planets)
    {
@@ -1110,7 +1059,7 @@ void DemoScene::drawPlanets()
    }
 }
 
-void DemoScene::drawAsteroids()
+void DemoScene::DrawAsteroids()
 {
    bool shaderChanged = false;
 
@@ -1188,7 +1137,7 @@ void DemoScene::drawAsteroids()
    }
 }
 
-void DemoScene::drawShots()
+void DemoScene::DrawShots()
 {
    textureManager->GetTexture(MPM::TextureManager::Shot_TextureName)->Bind();
 
@@ -1210,7 +1159,7 @@ void DemoScene::drawShots()
    }
 }
 
-void DemoScene::drawHUD()
+void DemoScene::DrawHUD()
 {
    Locus::DrawUtility::BeginDrawing2D(*renderingState, resolutionX, resolutionY);
 

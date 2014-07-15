@@ -60,8 +60,7 @@ public:
    virtual void KeyPressed(Locus::Key_t key) override;
    virtual void KeyReleased(Locus::Key_t key) override;
 
-   virtual void MousePressed(Locus::MouseButton_t button, int x, int y) override;
-   virtual void MouseReleased(Locus::MouseButton_t button, int x, int y) override;
+   virtual void MousePressed(Locus::MouseButton_t button) override;
    virtual void MouseMoved(int x, int y) override;
 
    virtual void Resized(int width, int height) override;
@@ -90,6 +89,9 @@ private:
    unsigned int resolutionX;
    unsigned int resolutionY;
 
+   int lastMouseX;
+   int lastMouseY;
+
    int score;
    int lives;
    int level;
@@ -113,16 +115,15 @@ private:
    Locus::SkyBox skyBox;
 
    std::vector<Locus::Mesh> asteroidMeshes;
-   std::vector<std::unique_ptr<Asteroid>> asteroids; //all current asteroids in the game
+   std::vector<std::unique_ptr<Asteroid>> asteroids;
 
    HUD hud;
 
-   //initialization functions
    void Initialize();
-   void initializeStars();
-   void initializeAsteroids();
-   void initializeMeshes();
-   void initializePlanets();
+   void InitializeStars();
+   void InitializeAsteroids();
+   void InitializeMeshes();
+   void InitializePlanets();
    void InitializeSkyBoxAndHUD();
 
    void Load();
@@ -135,41 +136,22 @@ private:
 
    void DestroyRenderingState();
 
-   void tickAsteroids(double DT);
+   void UpdateLastMousePosition();
+
+   void TickAsteroids(double DT);
    void CheckForAsteroidHits();
 
-   void drawShots();
-   void drawAsteroids();
+   Locus::Plane MakeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid);
+   void SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition);
+   void UpdateShotPositions(double DT);
+   void ShotFired();
 
-   void drawHUD();
-
-   void rotateCamera(const Locus::Vector3& rotation);
-
-   //game logic functions
-   Locus::Plane makeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid);
-   void splitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition);
-   void updateShotPositions(double DT);
-   void shotFired();
-
-   //game main loop functions
-   void drawBackground();
-   void drawSkyBox();
-   void drawStars();
-   void drawPlanets();
-
-   void moveCameraForward();
-   void moveCameraBackward();
-   void moveCameraLeft();
-   void moveCameraRight();
-   void moveCameraUp();
-   void moveCameraDown();
-
-   void stopMoveCameraForward();
-   void stopMoveCameraBackward();
-   void stopMoveCameraLeft();
-   void stopMoveCameraRight();
-   void stopMoveCameraUp();
-   void stopMoveCameraDown();
+   void DrawShots();
+   void DrawAsteroids();
+   void DrawHUD();
+   void DrawSkyBox();
+   void DrawStars();
+   void DrawPlanets();
 };
 
 }

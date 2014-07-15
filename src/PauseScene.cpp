@@ -48,22 +48,6 @@ void PauseScene::KeyPressed(Locus::Key_t key)
    }
 }
 
-void PauseScene::KeyReleased(Locus::Key_t /*key*/)
-{
-}
-
-void PauseScene::MousePressed(Locus::MouseButton_t /*button*/, int /*x*/, int /*y*/)
-{
-}
-
-void PauseScene::MouseReleased(Locus::MouseButton_t /*button*/, int /*x*/, int /*y*/)
-{
-}
-
-void PauseScene::MouseMoved(int /*x*/, int /*y*/)
-{
-}
-
 void PauseScene::Resized(int width, int height)
 {
    sceneCurrentlyPaused.Resized(width, height);
