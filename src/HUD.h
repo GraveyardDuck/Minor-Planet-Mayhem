@@ -11,7 +11,7 @@
 #pragma once
 
 #include "Locus/Rendering/Drawable.h"
-#include "Locus/Rendering/LineCollection.h"
+#include "Locus/Rendering/LineSegmentCollection.h"
 #include "Locus/Rendering/Quad.h"
 
 #include "TextureManager.h"
@@ -63,7 +63,7 @@ private:
 
    static const float ammoPadding;
 
-   Locus::LineCollection crosshairs;
+   Locus::LineSegmentCollection crosshairs;
    Locus::Quad livesIcon;
    Locus::Quad livesTimes;
    Locus::Quad livesQuad;

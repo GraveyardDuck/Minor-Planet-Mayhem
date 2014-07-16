@@ -60,8 +60,10 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
    //make crosshair circle
    const int crosshairsWidth = static_cast<int>( (15.0f/800) * resolutionX );
 
-   Locus::Vector3 previousPoint;
-   Locus::Vector3 currentPoint;
+   Locus::LineSegmentCollection::ColoredLineSegment lineSegment;
+
+   lineSegment.color = Locus::Color::White();
+
    bool makeLine = false;
 
    double increment = 0.2;
@@ -73,46 +75,42 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
       for (int j = 1; j <= 5; ++j)
       {
          float angle = static_cast<float>( (i + j * increment) * Locus::TO_RADIANS );
-         currentPoint = Locus::Vector3(sin(angle) * crosshairsWidth, cos(angle) * crosshairsWidth, 0.0);
+         lineSegment.segment.P2 = Locus::Vector3(sin(angle) * crosshairsWidth, cos(angle) * crosshairsWidth, 0.0);
 
          if (makeLine)
          {
-            crosshairs.AddLine( Locus::LineCollection::line_t(previousPoint, currentPoint) );
+            crosshairs.AddLineSegment(lineSegment);
          }
 
-         previousPoint = currentPoint;
+         lineSegment.segment.P1 = lineSegment.segment.P2;
          makeLine = true;
       }
    }
 
    float firstAngle = static_cast<float>( increment * Locus::TO_RADIANS );
-   Locus::Vector3 firstPoint(sin(firstAngle) * crosshairsWidth, cos(firstAngle) * crosshairsWidth, 0.0);
 
-   crosshairs.AddLine( Locus::LineCollection::line_t(previousPoint, firstPoint) );
+   lineSegment.segment.P1 = lineSegment.segment.P2;
+   lineSegment.segment.P2.set(sin(firstAngle) * crosshairsWidth, cos(firstAngle) * crosshairsWidth, 0.0f);
+   crosshairs.AddLineSegment(lineSegment);
 
    //make crosshair lines
    int halfWidth = crosshairsWidth/2;
 
-   crosshairs.AddLine(Locus::LineCollection::line_t
-                     (
-                     Locus::Vector3(0.0f, static_cast<float>(-halfWidth), 0.0f),
-                     Locus::Vector3(0.0f, static_cast<float>(-3*halfWidth), 0.0f)
-                     ));
-   crosshairs.AddLine(Locus::LineCollection::line_t
-                      (
-                        Locus::Vector3(0.0f, static_cast<float>(halfWidth), 0.0f),
-                        Locus::Vector3(0.0f, static_cast<float>(3*halfWidth), 0.0f)
-                      ));
-   crosshairs.AddLine(Locus::LineCollection::line_t
-                      (
-                        Locus::Vector3(static_cast<float>(-halfWidth), 0.0f, 0.0f),
-                        Locus::Vector3(static_cast<float>(-3*halfWidth), 0.0f, 0.0f)
-                      ));
-   crosshairs.AddLine(Locus::LineCollection::line_t
-                      (
-                        Locus::Vector3(static_cast<float>(halfWidth), 0.0f, 0.0f),
-                        Locus::Vector3(static_cast<float>(3*halfWidth), 0.0f, 0.0f)
-                      ));
+   lineSegment.segment.P1.set(0.0f, static_cast<float>(-halfWidth), 0.0f);
+   lineSegment.segment.P2.set(0.0f, static_cast<float>(-3*halfWidth), 0.0f);
+   crosshairs.AddLineSegment(lineSegment);
+
+   lineSegment.segment.P1.set(0.0f, static_cast<float>(halfWidth), 0.0f);
+   lineSegment.segment.P2.set(0.0f, static_cast<float>(3*halfWidth), 0.0f);
+   crosshairs.AddLineSegment(lineSegment);
+
+   lineSegment.segment.P1.set(static_cast<float>(-halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P2.set(static_cast<float>(-3*halfWidth), 0.0f, 0.0f);
+   crosshairs.AddLineSegment(lineSegment);
+
+   lineSegment.segment.P1.set(static_cast<float>(halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P2.set(static_cast<float>(3*halfWidth), 0.0f, 0.0f);
+   crosshairs.AddLineSegment(lineSegment);
 
    Locus::Vector3 right(1.0, 0.0, 0.0);
    Locus::Vector3 up(0.0, -1.0, 0.0);
