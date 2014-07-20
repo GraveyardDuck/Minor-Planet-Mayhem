@@ -104,7 +104,7 @@ void ShowFatalError(const std::string& error)
 
       Locus::SceneManager sceneManager(window);
 
-      sceneManager.RunSimulation( std::unique_ptr<Locus::Scene>(new MPM::DemoScene(sceneManager, monitorWidth, monitorHeight)) );
+      sceneManager.RunSimulation( std::make_unique<MPM::DemoScene>(sceneManager, monitorWidth, monitorHeight) );
    }
    catch (Locus::Exception& locusException)
    {

@@ -35,7 +35,7 @@ void Player::SetModel(float radius)
 {
    model = Locus::ModelUtility::MakeCube(2 * radius);
 
-   boundingVolumeHierarchy.reset( new Locus::SphereTree_t(model, 6) );
+   boundingVolumeHierarchy = std::make_unique<Locus::SphereTree_t>(model, 6);
 
    model.UpdateMaxDistanceToCenter();
 
@@ -50,7 +50,7 @@ void Player::Rotate(const Locus::Vector3& rotation)
 
 void Player::LoadCollisionSoundEffect(const std::string& pathToSoundEffect)
 {
-   collisionSoundEffect.reset(new Locus::SoundEffect());
+   collisionSoundEffect = std::make_unique<Locus::SoundEffect>();
 
    collisionSoundEffect->Load(Locus::MountedFilePath(pathToSoundEffect));
 }

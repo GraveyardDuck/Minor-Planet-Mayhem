@@ -39,7 +39,7 @@ endif()
 #--------------------------------------------------------------------
 if (UNIX)
     add_definitions(-Wall)
-    add_definitions(-std=c++11)
+    add_definitions(-std=c++1y)
 
     if (BUILD_SHARED_LIBS)
         add_definitions(-fvisibility=hidden)
@@ -56,7 +56,7 @@ set(THIRD_PARTY_DIR ${LOCUS_DIR}/third-party)
 
 include_directories(${LOCUS_INCLUDE}
                     ${THIRD_PARTY_DIR}/GLEW/include
-					${THIRD_PARTY_DIR}/RapidXML/include)
+                    ${THIRD_PARTY_DIR}/RapidXML/include)
 
 add_executable(MPM
 			   Asteroid.cpp

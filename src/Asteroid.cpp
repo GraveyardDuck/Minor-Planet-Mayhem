@@ -46,7 +46,7 @@ Asteroid::Asteroid(const Asteroid& other)
    hitsLeft(other.hitsLeft),
    hit(other.hit),
    hitLocation(other.hitLocation),
-   boundingVolumeHierarchy( new Locus::SphereTree_t(*other.boundingVolumeHierarchy) )
+   boundingVolumeHierarchy( std::make_unique<Locus::SphereTree_t>(*other.boundingVolumeHierarchy) )
 {
 }
 
@@ -60,7 +60,7 @@ Asteroid& Asteroid::operator=(const Asteroid& other)
       hit = other.hit;
       hitLocation = other.hitLocation;
 
-      boundingVolumeHierarchy.reset( new Locus::SphereTree_t(*other.boundingVolumeHierarchy) );
+      boundingVolumeHierarchy = std::make_unique<Locus::SphereTree_t>(*other.boundingVolumeHierarchy);
 
       visible = other.visible;
       lastCollision = other.lastCollision;
@@ -100,7 +100,7 @@ void Asteroid::GrabMeshAndCollidable(const Asteroid& other)
    GrabMesh(other);
    Collidable::operator=(other);
 
-   boundingVolumeHierarchy.reset( new Locus::SphereTree_t(*other.boundingVolumeHierarchy) );
+   boundingVolumeHierarchy = std::make_unique<Locus::SphereTree_t>(*other.boundingVolumeHierarchy);
 }
 
 //////////////////////////////////////Asteroid logic//////////////////////////////////////////
@@ -141,7 +141,7 @@ void Asteroid::UpdateBroadCollisionExtent()
 
 void Asteroid::CreateBoundingVolumeHierarchy()
 {
-   boundingVolumeHierarchy.reset( new Locus::SphereTree_t(*this, 6) );
+   boundingVolumeHierarchy = std::make_unique<Locus::SphereTree_t>(*this, 6);
 }
 
 bool Asteroid::GetAsteroidIntersection(Asteroid& other,  Locus::Triangle3D_t& intersectingTriangle1, Locus::Triangle3D_t& intersectingTriangle2)

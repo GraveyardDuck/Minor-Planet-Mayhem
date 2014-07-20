@@ -139,9 +139,9 @@ void DemoScene::Initialize()
 void DemoScene::LoadRenderingState()
 {
    //throws an exception if GLSL can't be loaded, or if the requested GLSL version isn't supported
-   renderingState.reset( new Locus::RenderingState(Locus::GLInfo::GLSLVersion::V_110, true) );
+   renderingState = std::make_unique<Locus::RenderingState>(Locus::GLInfo::GLSLVersion::V_110, true);
 
-   textureManager.reset( new MPM::TextureManager(renderingState->glInfo) );
+   textureManager = std::make_unique<MPM::TextureManager>(renderingState->glInfo);
 
    LoadShaderPrograms();
    LoadLights();
@@ -260,17 +260,17 @@ void DemoScene::LoadTextures()
 
 void DemoScene::LoadAudioState()
 {
-   soundState.reset(new Locus::SoundState());
+   soundState = std::make_unique<Locus::SoundState>();
 
-   shotSoundEffect.reset(new Locus::SoundEffect());
+   shotSoundEffect = std::make_unique<Locus::SoundEffect>();
    shotSoundEffect->Load(Locus::MountedFilePath("audio/shot.ogg"));
 
-   asteroidShotCollisionSoundEffect.reset(new Locus::SoundEffect());
+   asteroidShotCollisionSoundEffect = std::make_unique<Locus::SoundEffect>();
    asteroidShotCollisionSoundEffect->Load(Locus::MountedFilePath("audio/asteroid_shot_collision.ogg"));
 
    //player.LoadCollisionSoundEffect("audio/asteroid_ship_collision.ogg");
 
-   //Asteroid::asteroidAsteroidCollsionSoundEffect.reset(new Locus::SoundEffect());
+   //Asteroid::asteroidAsteroidCollsionSoundEffect = std::make_unique<Locus::SoundEffect>();
    //Asteroid::asteroidAsteroidCollsionSoundEffect->Load(Locus::MountedFilePath("audio/asteroid_asteroid_collision.ogg"));
 }
 
@@ -421,7 +421,7 @@ void DemoScene::InitializePlanets()
       int planetTextureIndex = r.randomInt(0, static_cast<int>(textureManager->NumPlanetTextures()) - 1);
       float planetRadius = static_cast<float>(r.randomDouble(Config::GetMinPlanetRadius(), Config::GetMaxPlanetRadius()));
 
-      std::unique_ptr<Planet> planet( new Planet(planetRadius, planetTextureIndex, &planetMesh) );
+      std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, &planetMesh) );
       planet->Translate(planetLocation);
       planet->Scale( Locus::Vector3(planetRadius, planetRadius, planetRadius) );
 
@@ -435,9 +435,7 @@ void DemoScene::InitializePlanets()
 
          float rotationSpeed = static_cast<float>( r.randomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
 
-         std::unique_ptr<Moon> moon( new Moon(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, &moonMesh) );
-
-         planet->addMoon(std::move(moon));
+         planet->addMoon( std::make_unique<Moon>(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, &moonMesh) );
       }
 
       planets.push_back(std::move(planet));
@@ -491,7 +489,7 @@ void DemoScene::InitializeAsteroids()
       //get asteroid type
       //std::size_t whichMesh = r.randomInt(0, numAsteroidTemplates - 1);
 
-      asteroids[i].reset( new Asteroid(MAX_ASTEROID_HITS) );
+      asteroids[i] = std::make_unique<Asteroid>(MAX_ASTEROID_HITS);
       asteroids[i]->GrabMeshAndCollidable(asteroidTemplates[whichMesh]);
 
       whichMesh = (whichMesh + 1) % numAsteroidTemplates;
@@ -570,7 +568,7 @@ void DemoScene::ShotFired()
 {
    if (shots.size() < Config::GetNumShots())
    {
-      std::unique_ptr<Shot> shot( new Shot(player.viewpoint.GetForward(), player.viewpoint.GetPosition() + player.viewpoint.GetForward(), &shotMesh) );
+      std::unique_ptr<Shot> shot( std::make_unique<Shot>(player.viewpoint.GetForward(), player.viewpoint.GetPosition() + player.viewpoint.GetForward(), &shotMesh) );
       shot->UpdateBroadCollisionExtent();
 
       std::size_t numLightColors = lightColors.size();
@@ -678,8 +676,8 @@ void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
    }
    else
    {
-      asteroids.push_back( std::unique_ptr<Asteroid>( new Asteroid(asteroids[splitIndex]->getHitsLeft()) ) );
-      asteroids.push_back( std::unique_ptr<Asteroid>( new Asteroid(asteroids[splitIndex]->getHitsLeft()) ) );
+      asteroids.push_back( std::make_unique<Asteroid>(asteroids[splitIndex]->getHitsLeft()) );
+      asteroids.push_back( std::make_unique<Asteroid>(asteroids[splitIndex]->getHitsLeft()) );
 
       std::size_t newAsteroidIndex1 = asteroids.size() - 2;
       std::size_t newAsteroidIndex2 = asteroids.size() - 1;
@@ -770,7 +768,7 @@ void DemoScene::KeyPressed(Locus::Key_t key)
          break;
 
       case KEY_PAUSE:
-         sceneManager.AddScene( std::unique_ptr<Locus::Scene>(new PauseScene(sceneManager, *this, KEY_PAUSE)) );
+         sceneManager.AddScene( std::make_unique<PauseScene>(sceneManager, *this, KEY_PAUSE) );
          break;
 
       case Locus::Key_ESCAPE:

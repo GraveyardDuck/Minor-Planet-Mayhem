@@ -8,7 +8,7 @@ Minor Planet Mayhem is a cross-platform 3D first person space shooter game writt
 ##Supported Platforms
 
 * Windows (compiles with Visual Studio 2013)
-* Linux (compiles with GCC 4.8.2)
+* Linux (compiles with GCC 4.9.1)
 * Mac support and support for other compilers is forthcoming
 
 ##Hardware Requirements
