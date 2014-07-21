@@ -477,7 +477,7 @@ void DemoScene::InitializeAsteroids()
    collisionManager.StartAddRemoveBatch();
 
    player.SetModel(Config::GetPlayerCollisionRadius());
-   collisionManager.Add(player);
+   collisionManager.Add(&player);
 
    float minAsteroidDistance = 0.0f;
    float maxAsteroidDistance = Config::GetAsteroidsBoundary() - 5.0f;
@@ -558,7 +558,7 @@ void DemoScene::InitializeAsteroids()
       asteroids[i]->UpdateMaxDistanceToCenter();
       asteroids[i]->UpdateBroadCollisionExtent();
 
-      collisionManager.Add(*asteroids[i]);
+      collisionManager.Add(asteroids[i].get());
    }
 
    collisionManager.FinishAddRemoveBatch();
@@ -573,15 +573,11 @@ void DemoScene::ShotFired()
 
       std::size_t numLightColors = lightColors.size();
 
-      if (currentLightColorIndex >= numLightColors)
-      {
-         currentLightColorIndex = 0;
-      }
-
       shot->color = lightColors[currentLightColorIndex];
+
       currentLightColorIndex = (currentLightColorIndex + 1) % numLightColors;
 
-      collisionManager.Add(*shot);
+      collisionManager.Add(shot.get());
 
       shot->CreateGPUVertexData();
       shot->UpdateGPUVertexData();
@@ -617,7 +613,7 @@ void DemoScene::UpdateShotPositions(double DT)
          {
             shots[shotIndex]->UpdateBroadCollisionExtent();
 
-            collisionManager.Update(*shots[shotIndex]);
+            collisionManager.Update(shots[shotIndex].get());
          }
       }
       else
@@ -636,7 +632,7 @@ void DemoScene::UpdateShotPositions(double DT)
          std::size_t indexOfShotToRemove = shotsToRemove.top();
          shotsToRemove.pop();
 
-         collisionManager.Remove(*shots[indexOfShotToRemove]);
+         collisionManager.Remove(shots[indexOfShotToRemove].get());
 
          shots.erase(shots.begin() + indexOfShotToRemove);
 
@@ -666,87 +662,81 @@ void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
 
    asteroids[splitIndex]->decreaseHitsLeft();
 
-   if (asteroids[splitIndex]->getHitsLeft() == 0)
-   {
-      //asteroid is destroyed
-      asteroids[splitIndex]->DeleteGPUVertexData();
-      collisionManager.Remove(*asteroids[splitIndex]);
+   int hitsLeft = asteroids[splitIndex]->getHitsLeft();
 
-      asteroids.erase(asteroids.begin() + splitIndex);
-   }
-   else
+   if (hitsLeft > 0)
    {
-      asteroids.push_back( std::make_unique<Asteroid>(asteroids[splitIndex]->getHitsLeft()) );
-      asteroids.push_back( std::make_unique<Asteroid>(asteroids[splitIndex]->getHitsLeft()) );
-
-      std::size_t newAsteroidIndex1 = asteroids.size() - 2;
-      std::size_t newAsteroidIndex2 = asteroids.size() - 1;
+      std::unique_ptr<Asteroid> splitAsteroid1( std::make_unique<Asteroid>(hitsLeft) );
+      std::unique_ptr<Asteroid> splitAsteroid2( std::make_unique<Asteroid>(hitsLeft) );
 
       Locus::Random random;
 
       float xRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
       float yRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
       float zRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
-      asteroids[newAsteroidIndex1]->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
-      asteroids[newAsteroidIndex2]->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
 
-      asteroids[newAsteroidIndex1]->motionProperties.angularSpeed = asteroids[splitIndex]->motionProperties.angularSpeed;
-      asteroids[newAsteroidIndex2]->motionProperties.angularSpeed = asteroids[splitIndex]->motionProperties.angularSpeed;
-      asteroids[newAsteroidIndex1]->SetTexture(asteroids[splitIndex]->GetTexture());
-      asteroids[newAsteroidIndex2]->SetTexture(asteroids[splitIndex]->GetTexture());
+      splitAsteroid1->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
+      splitAsteroid2->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
 
-      Locus::Plane splitPlane = MakeHalfSplitPlane(shotPosition, asteroids[splitIndex]->Position());
+      std::unique_ptr<Asteroid>& asteroidToSplit = asteroids[splitIndex];
 
-      asteroids[splitIndex]->DetermineSplit(splitPlane, asteroids[splitIndex]->CurrentModelTransformation(), *asteroids[newAsteroidIndex1], *asteroids[newAsteroidIndex2]);
+      splitAsteroid1->motionProperties.angularSpeed = asteroidToSplit->motionProperties.angularSpeed;
+      splitAsteroid2->motionProperties.angularSpeed = asteroidToSplit->motionProperties.angularSpeed;
 
-      if ((asteroids[newAsteroidIndex1]->NumFaces() > 0) && (asteroids[newAsteroidIndex2]->NumFaces() > 0))
+      splitAsteroid1->SetTexture(asteroidToSplit->GetTexture());
+      splitAsteroid2->SetTexture(asteroidToSplit->GetTexture());
+
+      Locus::Plane splitPlane = MakeHalfSplitPlane(shotPosition, asteroidToSplit->Position());
+
+      asteroidToSplit->DetermineSplit(splitPlane, asteroidToSplit->CurrentModelTransformation(), *splitAsteroid1, *splitAsteroid2);
+
+      if ((splitAsteroid1->NumFaces() > 0) && (splitAsteroid2->NumFaces() > 0))
       {
-         asteroids[newAsteroidIndex1]->Reset(asteroids[newAsteroidIndex1]->centroid);
-         asteroids[newAsteroidIndex2]->Reset(asteroids[newAsteroidIndex2]->centroid);
+         splitAsteroid1->Reset(splitAsteroid1->centroid);
+         splitAsteroid2->Reset(splitAsteroid2->centroid);
 
-         asteroids[newAsteroidIndex1]->motionProperties.speed = asteroids[splitIndex]->motionProperties.speed;
-         asteroids[newAsteroidIndex2]->motionProperties.speed = asteroids[splitIndex]->motionProperties.speed;
+         splitAsteroid1->motionProperties.speed = asteroidToSplit->motionProperties.speed;
+         splitAsteroid2->motionProperties.speed = asteroidToSplit->motionProperties.speed;
 
-         asteroids[newAsteroidIndex1]->motionProperties.direction = splitPlane.getNormal();
-         asteroids[newAsteroidIndex1]->motionProperties.direction.normalize();
+         splitAsteroid1->motionProperties.direction = splitPlane.getNormal();
+         splitAsteroid1->motionProperties.direction.normalize();
 
-         asteroids[newAsteroidIndex2]->motionProperties.direction = -asteroids[newAsteroidIndex1]->motionProperties.direction;
+         splitAsteroid2->motionProperties.direction = -(splitAsteroid1->motionProperties.direction);
 
          //avoiding immediate interpenetration
-         asteroids[newAsteroidIndex1]->lastCollision = asteroids[newAsteroidIndex2].get();
-         asteroids[newAsteroidIndex2]->lastCollision = asteroids[newAsteroidIndex1].get();
+         splitAsteroid1->lastCollision = splitAsteroid2.get();
+         splitAsteroid2->lastCollision = splitAsteroid1.get();
 
-         asteroids[newAsteroidIndex1]->lastCollisionTime = asteroids[newAsteroidIndex2]->lastCollisionTime = std::chrono::high_resolution_clock::now();
+         splitAsteroid1->lastCollisionTime = splitAsteroid2->lastCollisionTime = std::chrono::high_resolution_clock::now();
 
-         asteroids[newAsteroidIndex1]->AssignNormals();
-         asteroids[newAsteroidIndex2]->AssignNormals();
+         splitAsteroid1->AssignNormals();
+         splitAsteroid2->AssignNormals();
 
-         asteroids[newAsteroidIndex1]->CreateGPUVertexData();
-         asteroids[newAsteroidIndex1]->UpdateGPUVertexData();
-         asteroids[newAsteroidIndex1]->UpdateMaxDistanceToCenter();
-         asteroids[newAsteroidIndex1]->UpdateBroadCollisionExtent();
-         asteroids[newAsteroidIndex1]->CreateBoundingVolumeHierarchy();
+         splitAsteroid1->CreateGPUVertexData();
+         splitAsteroid1->UpdateGPUVertexData();
+         splitAsteroid1->UpdateMaxDistanceToCenter();
+         splitAsteroid1->UpdateBroadCollisionExtent();
+         splitAsteroid1->CreateBoundingVolumeHierarchy();
 
-         asteroids[newAsteroidIndex2]->CreateGPUVertexData();
-         asteroids[newAsteroidIndex2]->UpdateGPUVertexData();
-         asteroids[newAsteroidIndex2]->UpdateMaxDistanceToCenter();
-         asteroids[newAsteroidIndex2]->UpdateBroadCollisionExtent();
-         asteroids[newAsteroidIndex2]->CreateBoundingVolumeHierarchy();
+         splitAsteroid2->CreateGPUVertexData();
+         splitAsteroid2->UpdateGPUVertexData();
+         splitAsteroid2->UpdateMaxDistanceToCenter();
+         splitAsteroid2->UpdateBroadCollisionExtent();
+         splitAsteroid2->CreateBoundingVolumeHierarchy();
 
-         collisionManager.Add(*asteroids[newAsteroidIndex1]);
-         collisionManager.Add(*asteroids[newAsteroidIndex2]);
+         collisionManager.Add(splitAsteroid1.get());
+         collisionManager.Add(splitAsteroid2.get());
+
+         asteroids.emplace_back( std::move(splitAsteroid1) );
+         asteroids.emplace_back( std::move(splitAsteroid2) );
       }
-      else
-      {
-         asteroids.pop_back();
-         asteroids.pop_back();
-      }
-
-      asteroids[splitIndex]->DeleteGPUVertexData();
-      collisionManager.Remove(*asteroids[splitIndex]);
-
-      asteroids.erase(asteroids.begin() + splitIndex);
    }
+
+   asteroids[splitIndex]->DeleteGPUVertexData();
+
+   collisionManager.Remove(asteroids[splitIndex].get());
+
+   asteroids.erase(asteroids.begin() + splitIndex);
 }
 
 //////////////////////////////////////Events//////////////////////////////////////////
@@ -894,7 +884,7 @@ bool DemoScene::Update(double DT)
    }
 
    player.tick(DT);
-   collisionManager.Update(player);
+   collisionManager.Update(&player);
 
    TickAsteroids(DT);
    UpdateShotPositions(DT);
@@ -942,7 +932,7 @@ void DemoScene::TickAsteroids(double DT)
       asteroid->tick(DT);
       asteroid->UpdateBroadCollisionExtent();
 
-      collisionManager.Update(*asteroid);
+      collisionManager.Update(asteroid.get());
    }
 
    //update asteroid visibility with camera frustum
