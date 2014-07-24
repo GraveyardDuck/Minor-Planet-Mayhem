@@ -15,7 +15,7 @@ Minor Planet Mayhem is a cross-platform 3D first person space shooter game writt
 
 * GPU: An OpenGL 2.1 compatible graphics card
 * CPU: 2.40 GHz or faster recommended
-* RAM: At least 100 - 200 MB available at time of play
+* RAM: Approximately 50 MB available at time of play
 
 ##Controls
 
