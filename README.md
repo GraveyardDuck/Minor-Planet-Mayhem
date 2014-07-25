@@ -53,7 +53,7 @@ Minor Planet Mayhem Copyright (c) 2014 Shachar Avni. All rights reserved.
 ##Third-Party Software
 
 Minor Planet Mayhem makes use of the following third-party software (indirectly through use of the Locus Game Engine) whose licenses
-are available in the accompanying THIRD-PARTY-LICENSE.txt:
+are available in the accompanying LICENSE.txt:
 
 * [GLFW](http://www.glfw.org/ "GLFW Homepage") 3.0.3  
   Copyright (c) 2002-2006 Marcus Geelnard  
