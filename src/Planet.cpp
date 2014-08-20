@@ -41,11 +41,11 @@ void Planet::SetRandomTextures(const MPM::TextureManager& textureManager)
 {
    Locus::Random random;
 
-   textureIndex = static_cast<unsigned int>( random.randomInt(0, static_cast<int>(textureManager.NumPlanetTextures()) - 1) );
+   textureIndex = static_cast<unsigned int>( random.RandomInt(0, static_cast<int>(textureManager.NumPlanetTextures()) - 1) );
 
    for (std::unique_ptr<Moon>& moon : moons)
    {
-      moon->textureIndex = static_cast<unsigned int>( random.randomInt(0, static_cast<int>(textureManager.NumMoonTextures()) - 1) );
+      moon->textureIndex = static_cast<unsigned int>( random.RandomInt(0, static_cast<int>(textureManager.NumMoonTextures()) - 1) );
    }
 }
 

@@ -330,14 +330,14 @@ void DemoScene::InitializeStars()
 
       while (!goodPair)
       {
-         x = static_cast<float>(random.randomDouble(-starDistance, starDistance));
-         y = static_cast<float>(random.randomDouble(-starDistance, starDistance));
+         x = static_cast<float>(random.RandomDouble(-starDistance, starDistance));
+         y = static_cast<float>(random.RandomDouble(-starDistance, starDistance));
          goodPair = ((x*x + y*y) <= (starDistance*starDistance));
       }
 
       float z = sqrt(starDistance*starDistance - (x*x + y*y)) - 10;
 
-      if (random.flipCoin(0.5))
+      if (random.FlipCoin(0.5))
       {
          z = (-1) * z;
       }
@@ -346,11 +346,11 @@ void DemoScene::InitializeStars()
       unsigned char g = 255;
       unsigned char b = 255;
 
-      if (random.flipCoin(0.15))
+      if (random.FlipCoin(0.15))
       {
-         r = static_cast<unsigned char>(random.randomInt(0, 255));
-         g = static_cast<unsigned char>(random.randomInt(0, 255));
-         b = static_cast<unsigned char>(random.randomInt(0, 255));
+         r = static_cast<unsigned char>(random.RandomInt(0, 255));
+         g = static_cast<unsigned char>(random.RandomInt(0, 255));
+         b = static_cast<unsigned char>(random.RandomInt(0, 255));
       }
 
       starPositions.push_back( Locus::Vector3(x, y, z) );
@@ -373,7 +373,7 @@ void DemoScene::InitializePlanets()
 
    int maxTries = 10;
 
-   int numPlanets = r.randomInt(Config::GetMinPlanets(), Config::GetMaxPlanets());
+   int numPlanets = r.RandomInt(Config::GetMinPlanets(), Config::GetMaxPlanets());
 
    for (int i = 0; i < numPlanets; ++i)
    {
@@ -387,18 +387,18 @@ void DemoScene::InitializePlanets()
       {
          goodLocation = true;
 
-         float distance = static_cast<float>(r.randomDouble(minPlanetDistance, maxPlanetDistance));
+         float distance = static_cast<float>(r.RandomDouble(minPlanetDistance, maxPlanetDistance));
 
          while (!goodPair)
          {
-            planetLocation.x = static_cast<float>(r.randomDouble(-distance, distance));
-            planetLocation.y = static_cast<float>(r.randomDouble(-distance, distance));
+            planetLocation.x = static_cast<float>(r.RandomDouble(-distance, distance));
+            planetLocation.y = static_cast<float>(r.RandomDouble(-distance, distance));
             goodPair = ((planetLocation.x * planetLocation.x + planetLocation.y * planetLocation.y) <= (distance*distance));
          }
 
          planetLocation.z = sqrt(distance*distance - (planetLocation.x * planetLocation.x + planetLocation.y * planetLocation.y)) - 5;
 
-         if (r.flipCoin(0.5))
+         if (r.FlipCoin(0.5))
          {
             planetLocation.z = (-1) * planetLocation.z;
          }
@@ -418,22 +418,22 @@ void DemoScene::InitializePlanets()
          }
       }
 
-      int planetTextureIndex = r.randomInt(0, static_cast<int>(textureManager->NumPlanetTextures()) - 1);
-      float planetRadius = static_cast<float>(r.randomDouble(Config::GetMinPlanetRadius(), Config::GetMaxPlanetRadius()));
+      int planetTextureIndex = r.RandomInt(0, static_cast<int>(textureManager->NumPlanetTextures()) - 1);
+      float planetRadius = static_cast<float>(r.RandomDouble(Config::GetMinPlanetRadius(), Config::GetMaxPlanetRadius()));
 
       std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, &planetMesh) );
       planet->Translate(planetLocation);
       planet->Scale( Locus::Vector3(planetRadius, planetRadius, planetRadius) );
 
-      int numMoons = r.randomInt(Config::GetMinMoons(), Config::GetMaxMoons());
+      int numMoons = r.RandomInt(Config::GetMinMoons(), Config::GetMaxMoons());
 
       float moonDistance = planetRadius + MOON_ORBIT_DISTANCE;
 
       for (int j = 0; j < numMoons; ++j)
       {
-         int moonTextureIndex = r.randomInt(0, static_cast<int>(textureManager->NumMoonTextures()) - 1);
+         int moonTextureIndex = r.RandomInt(0, static_cast<int>(textureManager->NumMoonTextures()) - 1);
 
-         float rotationSpeed = static_cast<float>( r.randomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
+         float rotationSpeed = static_cast<float>( r.RandomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
 
          planet->addMoon( std::make_unique<Moon>(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, &moonMesh) );
       }
@@ -495,28 +495,28 @@ void DemoScene::InitializeAsteroids()
       whichMesh = (whichMesh + 1) % numAsteroidTemplates;
 
       //randomize direction
-      float xDirection = static_cast<float>(r.randomDouble(-1, 1));
-      float yDirection = static_cast<float>(r.randomDouble(-1, 1));
-      float zDirection = static_cast<float>(r.randomDouble(-1, 1));
+      float xDirection = static_cast<float>(r.RandomDouble(-1, 1));
+      float yDirection = static_cast<float>(r.RandomDouble(-1, 1));
+      float zDirection = static_cast<float>(r.RandomDouble(-1, 1));
 
       asteroids[i]->motionProperties.direction.set(xDirection, yDirection, zDirection);
       asteroids[i]->motionProperties.direction.normalize();
 
       //randomize speed
-      asteroids[i]->motionProperties.speed = static_cast<float>(r.randomDouble(Config::GetMinAsteroidSpeed(), Config::GetMaxAsteroidSpeed()));
+      asteroids[i]->motionProperties.speed = static_cast<float>(r.RandomDouble(Config::GetMinAsteroidSpeed(), Config::GetMaxAsteroidSpeed()));
 
       //randomize rotation direction
-      xDirection = static_cast<float>(r.randomDouble(-1, 1));
-      yDirection = static_cast<float>(r.randomDouble(-1, 1));
-      zDirection = static_cast<float>(r.randomDouble(-1, 1));
+      xDirection = static_cast<float>(r.RandomDouble(-1, 1));
+      yDirection = static_cast<float>(r.RandomDouble(-1, 1));
+      zDirection = static_cast<float>(r.RandomDouble(-1, 1));
 
       asteroids[i]->motionProperties.rotation.set(xDirection, yDirection, zDirection);
       
       //randomize rotation speed
-      asteroids[i]->motionProperties.angularSpeed = static_cast<float>(r.randomDouble(Config::GetMinAsteroidRotationSpeed(), Config::GetMaxAsteroidRotationSpeed()));
+      asteroids[i]->motionProperties.angularSpeed = static_cast<float>(r.RandomDouble(Config::GetMinAsteroidRotationSpeed(), Config::GetMaxAsteroidRotationSpeed()));
 
       //randomize size
-      float scale = static_cast<float>(r.randomDouble(MIN_ASTEROID_SCALE, MAX_ASTEROID_SCALE));
+      float scale = static_cast<float>(r.RandomDouble(MIN_ASTEROID_SCALE, MAX_ASTEROID_SCALE));
       asteroids[i]->Scale( Locus::Vector3(scale, scale, scale) );
 
       //randomize position (centroid)
@@ -531,9 +531,9 @@ void DemoScene::InitializeAsteroids()
 
          while (!goodPoint)
          {
-            asteroidPosition.x = static_cast<float>(r.randomDouble(-maxAsteroidDistance, maxAsteroidDistance));
-            asteroidPosition.y = static_cast<float>(r.randomDouble(-maxAsteroidDistance, maxAsteroidDistance));
-            asteroidPosition.z = static_cast<float>(r.randomDouble(-maxAsteroidDistance, maxAsteroidDistance));
+            asteroidPosition.x = static_cast<float>(r.RandomDouble(-maxAsteroidDistance, maxAsteroidDistance));
+            asteroidPosition.y = static_cast<float>(r.RandomDouble(-maxAsteroidDistance, maxAsteroidDistance));
+            asteroidPosition.z = static_cast<float>(r.RandomDouble(-maxAsteroidDistance, maxAsteroidDistance));
 
             goodPoint = asteroidPosition.distanceTo(Locus::Vector3::ZeroVector()) >= minAsteroidDistance;
          }
@@ -671,9 +671,9 @@ void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
 
       Locus::Random random;
 
-      float xRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
-      float yRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
-      float zRotationDirection = static_cast<float>( random.randomDouble(-1, 1) );
+      float xRotationDirection = static_cast<float>( random.RandomDouble(-1, 1) );
+      float yRotationDirection = static_cast<float>( random.RandomDouble(-1, 1) );
+      float zRotationDirection = static_cast<float>( random.RandomDouble(-1, 1) );
 
       splitAsteroid1->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
       splitAsteroid2->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
@@ -1093,7 +1093,7 @@ void DemoScene::DrawAsteroids()
 
       for (unsigned int shotPositionIndex = 0; shotPositionIndex < numShotPositionsToUse; ++shotPositionIndex)
       {
-         lights[shotPositionIndex].eyePosition = player.viewpoint.GetTransformation().GetInverse().MultVertex(shotPositionsAndDistances[shotPositionIndex].position);
+         lights[shotPositionIndex].eyePosition = player.viewpoint.ToEyePosition(shotPositionsAndDistances[shotPositionIndex].position);
          lights[shotPositionIndex].diffuseColor = shotPositionsAndDistances[shotPositionIndex].shot->color;
 
          renderingState->shaderController.SetLightUniforms(shotPositionIndex, lights[shotPositionIndex]);

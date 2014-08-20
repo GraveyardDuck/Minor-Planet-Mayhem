@@ -26,15 +26,15 @@ Moon::Moon(unsigned int t, float radius, float distanceFromPlanetCenter, float r
 {
    Locus::Random random;
 
-   rotationAxis.x = static_cast<float>(random.randomDouble(-1.0, 1.0));
-   rotationAxis.y = static_cast<float>(random.randomDouble(-1.0, 1.0));
-   rotationAxis.z = static_cast<float>(random.randomDouble(-1.0, 1.0));
+   rotationAxis.x = static_cast<float>(random.RandomDouble(-1.0, 1.0));
+   rotationAxis.y = static_cast<float>(random.RandomDouble(-1.0, 1.0));
+   rotationAxis.z = static_cast<float>(random.RandomDouble(-1.0, 1.0));
 
    rotationAxis.normalize();
 
    Locus::Vector3 axisOrthogonalToRotationAxis;
-   axisOrthogonalToRotationAxis.x = static_cast<float>(random.randomDouble(-1.0, 1.0));
-   axisOrthogonalToRotationAxis.y = static_cast<float>(random.randomDouble(-1.0, 1.0));
+   axisOrthogonalToRotationAxis.x = static_cast<float>(random.RandomDouble(-1.0, 1.0));
+   axisOrthogonalToRotationAxis.y = static_cast<float>(random.RandomDouble(-1.0, 1.0));
 
    //set z such that the dot product is zero
    axisOrthogonalToRotationAxis.z = (-rotationAxis.x * axisOrthogonalToRotationAxis.x - rotationAxis.y * axisOrthogonalToRotationAxis.y) / rotationAxis.z;
