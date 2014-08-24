@@ -20,14 +20,14 @@ namespace MPM
 
 bool ParseXMLFile(const std::string& filePath, rapidxml::xml_document<char>& xmlDocument, std::vector<char>& xmlContents)
 {
-   Locus::FileOnDisk fileOnDisk(filePath, Locus::DataStream::OpenOperation::Read);
+   Locus::FileOnDisk fileOnDisk(filePath, Locus::DataStream::OpenMode::Read);
 
    return ParseXMLFile(fileOnDisk, xmlDocument, xmlContents);
 }
 
 bool ParseXMLFile(const Locus::MountedFilePath& mountedFilePath, rapidxml::xml_document<char>& xmlDocument, std::vector<char>& xmlContents)
 {
-   Locus::File file(mountedFilePath, Locus::DataStream::OpenOperation::Read);
+   Locus::File file(mountedFilePath, Locus::DataStream::OpenMode::Read);
 
    return ParseXMLFile(file, xmlDocument, xmlContents);
 }
