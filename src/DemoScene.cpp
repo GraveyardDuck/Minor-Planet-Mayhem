@@ -18,7 +18,9 @@
 #include "PauseScene.h"
 
 #include "Locus/Common/Random.h"
+
 #include "Locus/FileSystem/FileSystemUtil.h"
+#include "Locus/FileSystem/MountedFilePath.h"
 
 #include "Locus/Geometry/Geometry.h"
 #include "Locus/Geometry/Line.h"
@@ -39,7 +41,7 @@
 #include "Locus/Simulation/UserEvents.h"
 #include "Locus/Simulation/SceneManager.h"
 
-#include <Locus/Rendering/Locus_glew.h>
+#include "Locus/Rendering/Locus_glew.h"
 
 #include <stack>
 #include <unordered_map>

@@ -12,9 +12,14 @@
 
 #include "Locus/Rendering/TextureManager.h"
 
-#include "Locus/FileSystem/MountedFilePath.h"
-
 #include <cstddef>
+
+namespace Locus
+{
+
+struct MountedFilePath;
+
+}
 
 namespace MPM
 {

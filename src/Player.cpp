@@ -16,7 +16,9 @@
 #include "Locus/Geometry/Geometry.h"
 #include "Locus/Geometry/ModelUtility.h"
 
-#include <math.h>
+#include "Locus/FileSystem/MountedFilePath.h"
+
+#include <cmath>
 
 #define RESTRICT_CAMERA true
 //#define CAMERA_BOUNDARY ASTEROIDS_BOUNDARY
@@ -143,7 +145,8 @@ void Player::tick(double DT)
       //camera is bound within a cube with length 2*CAMERA_BOUNDARY centered at the origin
       float boundary = Config::GetAsteroidsBoundary();
 
-      bool inBoundary = (abs((int)newPosition.x) <= boundary) && (abs((int)newPosition.y) <= boundary) && (abs((int)newPosition.z) <= boundary);
+      bool inBoundary = (std::abs((int)newPosition.x) <= boundary) && (std::abs((int)newPosition.y) <= boundary) && (std::abs((int)newPosition.z) <= boundary);
+
       move = inBoundary || !(RESTRICT_CAMERA);
    }
 

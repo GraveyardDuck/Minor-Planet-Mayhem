@@ -10,9 +10,10 @@
 
 #include "Config.h"
 
-#include "Locus/FileSystem/FileSystemUtil.h"
-
 #include "Locus/Common/Parsing.h"
+
+#include "Locus/FileSystem/FileSystemUtil.h"
+#include "Locus/FileSystem/MountedFilePath.h"
 
 #include "RapidXML/rapidxml.hpp"
 

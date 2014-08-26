@@ -10,8 +10,6 @@
 
 #pragma once
 
-#include "Locus/FileSystem/MountedFilePath.h"
-
 #include <string>
 #include <vector>
 
@@ -19,6 +17,7 @@ namespace Locus
 {
 
 class DataStream;
+struct MountedFilePath;
 
 }
 
