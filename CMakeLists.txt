@@ -12,17 +12,13 @@ project(MPM)
 
 cmake_minimum_required(VERSION 2.8)
 
-option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+set(LOCUS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Locus-Game-Engine")
 
-if (MSVC)
-	option(USE_MSVC_RUNTIME_LIBRARY_DLL "Use MSVC runtime library DLL" OFF)
-endif()
+include(${LOCUS_DIR}/cmake/GlobalProjectOptions.cmake)
 
-set(LocusDir "${CMAKE_CURRENT_SOURCE_DIR}/Locus-Game-Engine")
+include(${LOCUS_DIR}/cmake/Config.cmake)
 
-include(${LocusDir}/cmake/Config.cmake)
-
-add_subdirectory(${LocusDir} "${CMAKE_CURRENT_BINARY_DIR}/Locus")
+add_subdirectory(${LOCUS_DIR} "${CMAKE_CURRENT_BINARY_DIR}/Locus")
 add_subdirectory(src)
 
 add_custom_target(MPM_Copy_Target_Files)
@@ -34,9 +30,9 @@ set(Make_Copy_PDB_Files_Target OFF)
 
 if(WINDOWS)
 	if(ARCH_32BITS)
-		set(OPENAL_DLL ${LocusDir}/third-party/OpenAL/bin/x86/openal32.dll)
+		set(OPENAL_DLL ${LOCUS_DIR}/third-party/OpenAL/bin/x86/openal32.dll)
 	else()
-		set(OPENAL_DLL ${LocusDir}/third-party/OpenAL/bin/x64/openal32.dll)
+		set(OPENAL_DLL ${LOCUS_DIR}/third-party/OpenAL/bin/x64/openal32.dll)
 	endif()
 
 	add_custom_command(TARGET MPM_Copy_Target_Files POST_BUILD
@@ -129,21 +125,21 @@ else()
 endif()
 
 set(MPM_ALL_DEPENDENCIES
-	freetype
-	glew
-	glfw
-	ogg
-	${PHYSFS_LIB_NAME}
-	stb_image
-	vorbis
-	vorbisfile
-	Locus_Common
-	Locus_Audio
-	Locus_FileSystem
-	Locus_Math
-	Locus_Geometry
-	Locus_Rendering
-	Locus_Simulation)
+    freetype
+    glew
+    glfw
+    ogg
+    ${PHYSFS_LIB_NAME}
+    stb_image
+    vorbis
+    vorbisfile
+    Locus_Common
+    Locus_Audio
+    Locus_FileSystem
+    Locus_Math
+    Locus_Geometry
+    Locus_Rendering
+    Locus_Simulation)
 
 foreach(DEPENDENCY ${MPM_ALL_DEPENDENCIES})
 	add_dependencies(MPM_Copy_Target_Files ${DEPENDENCY})

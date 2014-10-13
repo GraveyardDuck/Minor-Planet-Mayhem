@@ -10,14 +10,13 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+set(LOCUS_DIR "../Locus-Game-Engine")
+
+include(${LOCUS_DIR}/cmake/GlobalProjectOptions.cmake)
+
 option(MPM_USE_ARCHIVED_RESOURCES "Use MPM resources in an archive" OFF)
 
 find_package(OpenGL REQUIRED)
-
-if (MSVC)
-    option(USE_MSVC_RUNTIME_LIBRARY_DLL "Use MSVC runtime library DLL" OFF)
-endif()
 
 if(BUILD_SHARED_LIBS)
 	add_definitions(-DLOCUS_SHARED)
@@ -34,22 +33,12 @@ if (MPM_USE_ARCHIVED_RESOURCES)
 	add_definitions(-DMPM_USE_ARCHIVE)
 endif()
 
-#--------------------------------------------------------------------
-# Set compiler specific flags
-#--------------------------------------------------------------------
-if (UNIX)
-    add_definitions(-Wall)
-    add_definitions(-std=c++1y)
+include(${LOCUS_DIR}/cmake/UnixOptions.cmake)
+include(${LOCUS_DIR}/cmake/MSVCOptions.cmake)
 
-    if (BUILD_SHARED_LIBS)
-        add_definitions(-fvisibility=hidden)
-    endif()
-endif()
-
-set(LOCUS_DIR "../Locus-Game-Engine")
-
-include(${LOCUS_DIR}/cmake/SetMSVCRuntimeLibrarySettings.cmake)
-include(${LOCUS_DIR}/cmake/SetMSVCWarningLevel4.cmake)
+SetUnixOptions(TRUE, TRUE)
+SetMSVCRuntimeLibrarySettings(TRUE)
+SetMSVCWarningLevel4()
 
 set(LOCUS_INCLUDE ${LOCUS_DIR}/include)
 set(THIRD_PARTY_DIR ${LOCUS_DIR}/third-party)
@@ -59,33 +48,33 @@ include_directories(${LOCUS_INCLUDE}
                     ${THIRD_PARTY_DIR}/RapidXML/include)
 
 add_executable(MPM
-			   Asteroid.cpp
-			   Asteroid.h
-			   CelestialObject.cpp
-			   CelestialObject.h
-			   CollidableTypes.h
-			   Config.cpp
-			   Config.h
-			   DemoScene.cpp
-			   DemoScene.h
-			   HUD.cpp
-			   HUD.h
-			   Moon.cpp
-			   Moon.h
-			   MPM.cpp
-			   PauseScene.cpp
-			   PauseScene.h
-			   Planet.cpp
-			   Planet.h
-			   Player.cpp
-			   Player.h
-			   ShaderNames.h
-			   Shot.cpp
-			   Shot.h
-			   TextureManager.cpp
-			   TextureManager.h
-			   XML.cpp
-			   XML.h)
+               Asteroid.cpp
+               Asteroid.h
+               CelestialObject.cpp
+               CelestialObject.h
+               CollidableTypes.h
+               Config.cpp
+               Config.h
+               DemoScene.cpp
+               DemoScene.h
+               HUD.cpp
+               HUD.h
+               Moon.cpp
+               Moon.h
+               MPM.cpp
+               PauseScene.cpp
+               PauseScene.h
+               Planet.cpp
+               Planet.h
+               Player.cpp
+               Player.h
+               ShaderNames.h
+               Shot.cpp
+               Shot.h
+               TextureManager.cpp
+               TextureManager.h
+               XML.cpp
+               XML.h)
 
 if(WIN32)
 	if(MSVC)
