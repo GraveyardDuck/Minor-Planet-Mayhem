@@ -15,7 +15,7 @@
 #include "Locus/Geometry/Quaternion.h"
 
 #include "Locus/Rendering/Mesh.h"
-#include "Locus/Rendering/GPUVertexData.h"
+#include "Locus/Rendering/DefaultGPUVertexData.h"
 #include "Locus/Rendering/RenderingState.h"
 
 #include <Locus/Rendering/Locus_glew.h>
@@ -96,12 +96,12 @@ void Shot::ResolveCollision(Asteroid& asteroid)
 
 void Shot::UpdateGPUVertexData()
 {
-   if ((gpuVertexData != nullptr) && (mesh != nullptr))
+   if ((defaultGPUVertexData != nullptr) && (mesh != nullptr))
    {
       std::size_t numTotalVertices = mesh->NumFaces() * Locus::Triangle3D_t::NumPointsOnATriangle;
 
-      gpuVertexData->Bind();
-      gpuVertexData->Buffer(numTotalVertices, GL_STATIC_DRAW);
+      defaultGPUVertexData->Bind();
+      defaultGPUVertexData->Buffer(numTotalVertices, GL_STATIC_DRAW);
 
       Locus::GPUVertexDataStorage colorAsGPUVertexDataStorage;
       Locus::ZeroFill(colorAsGPUVertexDataStorage);
@@ -113,14 +113,14 @@ void Shot::UpdateGPUVertexData()
 
       std::vector<Locus::GPUVertexDataStorage> vertData(numTotalVertices, colorAsGPUVertexDataStorage);
 
-      gpuVertexData->BufferSub(0, numTotalVertices, vertData.data());
+      defaultGPUVertexData->BufferSub(0, numTotalVertices, vertData.data());
 
-      gpuVertexData->transferInfo.sendPositions = false;
-      gpuVertexData->transferInfo.sendColors = true;
-      gpuVertexData->transferInfo.sendNormals = false;
-      gpuVertexData->transferInfo.sendTexCoords = false;
+      defaultGPUVertexData->transferInfo.sendPositions = false;
+      defaultGPUVertexData->transferInfo.sendColors = true;
+      defaultGPUVertexData->transferInfo.sendNormals = false;
+      defaultGPUVertexData->transferInfo.sendTexCoords = false;
 
-      gpuVertexData->drawMode = GL_TRIANGLES;
+      defaultGPUVertexData->drawMode = GL_TRIANGLES;
    }
 }
 

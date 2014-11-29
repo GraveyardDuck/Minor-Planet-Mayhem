@@ -224,9 +224,9 @@ void DemoScene::DestroyRenderingState()
    renderingState.reset();
    textureManager.reset();
 
-   planetMesh.DeleteGPUVertexData();
-   moonMesh.DeleteGPUVertexData();
-   shotMesh.DeleteGPUVertexData();
+   planetMesh->DeleteGPUVertexData();
+   moonMesh->DeleteGPUVertexData();
+   shotMesh->DeleteGPUVertexData();
    skyBox.DeleteGPUVertexData();
    hud.DeleteGPUVertexData();
 
@@ -279,19 +279,19 @@ void DemoScene::LoadAudioState()
 void DemoScene::InitializeMeshes()
 {
    planetMesh = Locus::MeshUtility::MakeSphere(1.0, 3);
-   planetMesh.CreateGPUVertexData();
-   planetMesh.UpdateGPUVertexData();
+   planetMesh->CreateGPUVertexData();
+   planetMesh->UpdateGPUVertexData();
 
    moonMesh = Locus::MeshUtility::MakeSphere(1.0, 2);
-   moonMesh.CreateGPUVertexData();
-   moonMesh.UpdateGPUVertexData();
+   moonMesh->CreateGPUVertexData();
+   moonMesh->UpdateGPUVertexData();
 
    shotMesh = Locus::MeshUtility::MakeIcosahedron(SHOT_RADIUS);
-   shotMesh.gpuVertexDataTransferInfo.sendColors = false;
-   shotMesh.gpuVertexDataTransferInfo.sendNormals = false;
+   shotMesh->gpuVertexDataTransferInfo.sendColors = false;
+   shotMesh->gpuVertexDataTransferInfo.sendNormals = false;
 
-   shotMesh.CreateGPUVertexData();
-   shotMesh.UpdateGPUVertexData();
+   shotMesh->CreateGPUVertexData();
+   shotMesh->UpdateGPUVertexData();
 
    InitializeSkyBoxAndHUD();
 }
@@ -423,7 +423,7 @@ void DemoScene::InitializePlanets()
       int planetTextureIndex = r.RandomInt(0, static_cast<int>(textureManager->NumPlanetTextures()) - 1);
       float planetRadius = static_cast<float>(r.RandomDouble(Config::GetMinPlanetRadius(), Config::GetMaxPlanetRadius()));
 
-      std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, &planetMesh) );
+      std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, planetMesh.get()) );
       planet->Translate(planetLocation);
       planet->Scale( Locus::Vector3(planetRadius, planetRadius, planetRadius) );
 
@@ -437,7 +437,7 @@ void DemoScene::InitializePlanets()
 
          float rotationSpeed = static_cast<float>( r.RandomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
 
-         planet->addMoon( std::make_unique<Moon>(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, &moonMesh) );
+         planet->addMoon( std::make_unique<Moon>(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, moonMesh.get()) );
       }
 
       planets.push_back(std::move(planet));
@@ -470,7 +470,7 @@ void DemoScene::InitializeAsteroids()
    std::vector<Asteroid> asteroidTemplates(numAsteroidMeshes);
    for (std::size_t asteroidTemplateIndex = 0; asteroidTemplateIndex < numAsteroidMeshes; ++asteroidTemplateIndex)
    {
-      asteroidTemplates[asteroidTemplateIndex].GrabMesh(asteroidMeshes[asteroidTemplateIndex]);
+      asteroidTemplates[asteroidTemplateIndex].GrabMesh(*asteroidMeshes[asteroidTemplateIndex]);
       asteroidTemplates[asteroidTemplateIndex].CreateBoundingVolumeHierarchy();
    }
 
@@ -570,7 +570,7 @@ void DemoScene::ShotFired()
 {
    if (shots.size() < Config::GetNumShots())
    {
-      std::unique_ptr<Shot> shot( std::make_unique<Shot>(player.viewpoint.GetForward(), player.viewpoint.GetPosition() + player.viewpoint.GetForward(), &shotMesh) );
+      std::unique_ptr<Shot> shot( std::make_unique<Shot>(player.viewpoint.GetForward(), player.viewpoint.GetPosition() + player.viewpoint.GetForward(), shotMesh.get()) );
       shot->UpdateBroadCollisionExtent();
 
       std::size_t numLightColors = lightColors.size();
@@ -944,6 +944,7 @@ void DemoScene::TickAsteroids(double DT)
 
    Locus::Vector3 point = player.viewpoint.GetPosition();
 
+   //TODO: Fix fudging going on here
    Locus::Frustum viewFrustum(point, forward, up, 2.5f * FIELD_OF_VIEW * (static_cast<float>(resolutionX)/resolutionY), FRUSTUM_VERTICAL_FIELD_OF_VIEW, FRUSTUM_NEAR_DISTANCE, starDistance * 4.0f);
 
    for (std::unique_ptr<Asteroid>& asteroid : asteroids)

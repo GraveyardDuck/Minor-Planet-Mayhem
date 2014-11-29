@@ -104,17 +104,17 @@ private:
    float starDistance;
    float z_far;
 
-   Locus::Mesh planetMesh;
-   Locus::Mesh moonMesh;
+   std::unique_ptr<Locus::Mesh> planetMesh;
+   std::unique_ptr<Locus::Mesh> moonMesh;
 
    std::vector<std::unique_ptr<Planet>> planets;
    Locus::DrawablePointCloud stars;
 
    std::vector<std::unique_ptr<Shot>> shots;
-   Locus::Mesh shotMesh;
+   std::unique_ptr<Locus::Mesh> shotMesh;
    Locus::SkyBox skyBox;
 
-   std::vector<Locus::Mesh> asteroidMeshes;
+   std::vector<std::unique_ptr<Locus::Mesh>> asteroidMeshes;
    std::vector<std::unique_ptr<Asteroid>> asteroids;
 
    HUD hud;

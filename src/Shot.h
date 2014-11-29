@@ -16,7 +16,7 @@
 #include "Locus/Geometry/OrientedBox.h"
 
 #include "Locus/Rendering/Color.h"
-#include "Locus/Rendering/SingleDrawable.h"
+#include "Locus/Rendering/DefaultSingleDrawable.h"
 
 //TODO: Remove magic numbers, either by putting in data files or use a scripting interface
 #define SHOT_RADIUS 0.5f
@@ -33,7 +33,7 @@ namespace MPM
 
 class Asteroid;
 
-class Shot : public Locus::Collidable, public Locus::SingleDrawable
+class Shot : public Locus::Collidable, public Locus::DefaultSingleDrawable
 {
 public:
    Shot(const Locus::Vector3& direction, const Locus::Vector3& position, Locus::Mesh* mesh);

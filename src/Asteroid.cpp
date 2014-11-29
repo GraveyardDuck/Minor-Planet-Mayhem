@@ -92,7 +92,7 @@ void Asteroid::SetTexture(Locus::Texture* texture)
 
 void Asteroid::GrabMesh(const Mesh& mesh)
 {
-   Mesh::operator=(mesh);
+   Mesh::CopyFrom(mesh);
 }
 
 void Asteroid::GrabMeshAndCollidable(const Asteroid& other)
