@@ -89,6 +89,9 @@ if(WINDOWS)
 		list(APPEND DLL_ORIGIN_PATHS "${PROJECT_BINARY_DIR}/Locus/src/Simulation/$<CONFIGURATION>")
 		list(APPEND DLL_NAMES "Locus_Simulation")
 
+      list(APPEND DLL_ORIGIN_PATHS "${PROJECT_BINARY_DIR}/Locus/src/XML/$<CONFIGURATION>")
+		list(APPEND DLL_NAMES "Locus_XML")
+
 		list(LENGTH DLL_ORIGIN_PATHS NUM_DLLS)
 		math(EXPR NUM_DLLS "${NUM_DLLS}-1")
 		foreach(i RANGE ${NUM_DLLS})
@@ -139,7 +142,8 @@ set(MPM_ALL_DEPENDENCIES
     Locus_Math
     Locus_Geometry
     Locus_Rendering
-    Locus_Simulation)
+    Locus_Simulation
+    Locus_XML)
 
 foreach(DEPENDENCY ${MPM_ALL_DEPENDENCIES})
 	add_dependencies(MPM_Copy_Target_Files ${DEPENDENCY})
