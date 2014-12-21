@@ -44,8 +44,7 @@ set(LOCUS_INCLUDE ${LOCUS_DIR}/include)
 set(THIRD_PARTY_DIR ${LOCUS_DIR}/third-party)
 
 include_directories(${LOCUS_INCLUDE}
-                    ${THIRD_PARTY_DIR}/GLEW/include
-                    ${THIRD_PARTY_DIR}/RapidXML/include)
+                    ${THIRD_PARTY_DIR}/GLEW/include)
 
 add_executable(MPM
                Asteroid.cpp
@@ -68,13 +67,13 @@ add_executable(MPM
                Planet.h
                Player.cpp
                Player.h
+               SAPReading.cpp
+               SAPReading.h
                ShaderNames.h
                Shot.cpp
                Shot.h
                TextureManager.cpp
-               TextureManager.h
-               XML.cpp
-               XML.h)
+               TextureManager.h)
 
 if(WIN32)
 	if(MSVC)

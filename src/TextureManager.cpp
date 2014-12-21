@@ -12,12 +12,10 @@
 
 #include "Locus/Common/Parsing.h"
 
-#include "Locus/FileSystem/FileSystemUtil.h"
 #include "Locus/FileSystem/MountedFilePath.h"
 
-#include "RapidXML/rapidxml.hpp"
-
-#include "XML.h"
+#include "Locus/XML/XMLParsing.h"
+#include "Locus/XML/XMLTag.h"
 
 #include <utility>
 
@@ -45,7 +43,7 @@ const std::string TextureManager::Digit_Base_TextureName = "Digit";
 static const char* Textures_Config_XML_Root = "Textures";
 static const char* Asteroids_XML_Node = "Asteroids";
 static const char* Planets_XML_Node = "Planets";
-static const char* Moons_XML_Node = "Planets";
+static const char* Moons_XML_Node = "Moons";
 static const char* Single_Texture_XML_Node = "Texture";
 
 TextureManager::TextureManager(const Locus::GLInfo& glInfo)
@@ -131,109 +129,91 @@ void TextureManager::LoadAllTextures()
 {
    UnLoad();
 
-   rapidxml::xml_document<> xmlDocument;
-   std::vector<char> xmlContents;
+   Locus::XMLTag rootTag;
 
-   if (!ParseXMLFile(Locus::MountedFilePath("config/textures.config.xml"), xmlDocument, xmlContents))
-   {
-      throw std::runtime_error("Failed to read textures.config.xml");
-   }
+   Locus::ParseXMLFile(Locus::MountedFilePath("config/textures.config.xml"), rootTag);
 
    Locus::MountedFilePath texturesPath("textures/");
 
-   #define CHECK_NODE(node, name) if (node == nullptr) throw std::runtime_error(std::string("Failed to parse textures.config.xml. ") + name + " not found");
-
-   rapidxml::xml_node<>* rootNode = xmlDocument.first_node(Textures_Config_XML_Root);
-   CHECK_NODE(rootNode, Textures_Config_XML_Root)
+   #define CHECK_TAG(node, name) if (node == nullptr) throw std::runtime_error(std::string("Failed to parse textures.config.xml. ") + name + " not found")
+   #define CHECK_TAG_NAME(tagName, expectedName) if (tagName != expectedName) throw std::runtime_error(std::string("Failed to parse textures.config.xml. Unexpected tag found: ") + tagName)
 
    //add asteroid textures
 
-   rapidxml::xml_node<>* asteroidsNode = rootNode->first_node(Asteroids_XML_Node);
-   CHECK_NODE(asteroidsNode, Asteroids_XML_Node)
-
-   rapidxml::xml_node<>* asteroidsTextureNode = asteroidsNode->first_node(Single_Texture_XML_Node);
-   CHECK_NODE(asteroidsTextureNode, "Asteroids texture")
+   Locus::XMLTag* asteroidsTag = rootTag.FindSubTag(Asteroids_XML_Node, 0);
+   CHECK_TAG(asteroidsTag, Asteroids_XML_Node);
 
    std::string imageFile;
 
-   do
+   for (Locus::XMLTag& asteroidsTextureTag : asteroidsTag->subTags)
    {
-      imageFile = asteroidsTextureNode->value();
+      CHECK_TAG_NAME(asteroidsTextureTag.name, Single_Texture_XML_Node);
+
+      imageFile = asteroidsTextureTag.value;
       Locus::TrimString(imageFile);
 
       LoadAsteroidTexture(texturesPath + imageFile);
 
       ++numAsteroidTextures;
-
-      asteroidsTextureNode = asteroidsTextureNode->next_sibling(Single_Texture_XML_Node);
-
-   } while (asteroidsTextureNode != nullptr);
+   }
 
    //add planet textures
 
-   rapidxml::xml_node<>* planetsNode = rootNode->first_node(Planets_XML_Node);
-   CHECK_NODE(planetsNode, Planets_XML_Node)
+   Locus::XMLTag* planetsTag = rootTag.FindSubTag(Planets_XML_Node, 0);
+   CHECK_TAG(planetsTag, Planets_XML_Node);
 
-   rapidxml::xml_node<>* planetsTextureNode = planetsNode->first_node(Single_Texture_XML_Node);
-   CHECK_NODE(planetsTextureNode, "Planets texture")
-
-   do
+   for (Locus::XMLTag& planetTextureTag : planetsTag->subTags)
    {
-      imageFile = planetsTextureNode->value();
+      CHECK_TAG_NAME(planetTextureTag.name, Single_Texture_XML_Node);
+
+      imageFile = planetTextureTag.value;
       Locus::TrimString(imageFile);
 
       LoadPlanetTexture(texturesPath + imageFile);
 
       ++numPlanetTextures;
-
-      planetsTextureNode = planetsTextureNode->next_sibling(Single_Texture_XML_Node);
-
-   } while (planetsTextureNode != nullptr);
+   }
 
    //add moon textures
 
-   rapidxml::xml_node<>* moonsNode = rootNode->first_node(Moons_XML_Node);
-   CHECK_NODE(moonsNode, Moons_XML_Node)
+   Locus::XMLTag* moonsTag = rootTag.FindSubTag(Moons_XML_Node, 0);
+   CHECK_TAG(moonsTag, Moons_XML_Node);
 
-   rapidxml::xml_node<>* moonsTextureNode = moonsNode->first_node(Single_Texture_XML_Node);
-   CHECK_NODE(moonsTextureNode, "Moons texture")
-
-   do
+   for (Locus::XMLTag& moonTextureTag : moonsTag->subTags)
    {
-      imageFile = moonsTextureNode->value();
+      CHECK_TAG_NAME(moonTextureTag.name, Single_Texture_XML_Node);
+
+      imageFile = moonTextureTag.value;
       Locus::TrimString(imageFile);
 
       LoadMoonTexture(texturesPath + imageFile);
 
       ++numMoonTextures;
-
-      moonsTextureNode = moonsTextureNode->next_sibling(Single_Texture_XML_Node);
-
-   } while (moonsTextureNode != nullptr);
+   }
 
    //add skybox and Hud textures
 
-   typedef std::pair<const char*, bool> TextureNameAndClamp_t;
+   typedef std::pair<std::string, bool> TextureNameAndClamp_t;
 
-   TextureNameAndClamp_t skyboxAndHudTextures[] = { TextureNameAndClamp_t(TextureManager::Skybox_Front.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Skybox_Back.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Skybox_Left.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Skybox_Right.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Skybox_Up.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Skybox_Down.c_str(), true),
-                                                    TextureNameAndClamp_t(TextureManager::Shot_TextureName.c_str(), false),
-                                                    TextureNameAndClamp_t(TextureManager::Lives_Icon_TextureName.c_str(), false),
-                                                    TextureNameAndClamp_t(TextureManager::Lives_Times_TextureName.c_str(), false),
-                                                    TextureNameAndClamp_t(TextureManager::Score_Label_TextureName.c_str(), false),
-                                                    TextureNameAndClamp_t(TextureManager::Level_Label_TextureName.c_str(), false),
-                                                    TextureNameAndClamp_t(TextureManager::Ammo_TextureName.c_str(), false) };
+   TextureNameAndClamp_t skyboxAndHudTextures[] = { TextureNameAndClamp_t(TextureManager::Skybox_Front, true),
+                                                    TextureNameAndClamp_t(TextureManager::Skybox_Back, true),
+                                                    TextureNameAndClamp_t(TextureManager::Skybox_Left, true),
+                                                    TextureNameAndClamp_t(TextureManager::Skybox_Right, true),
+                                                    TextureNameAndClamp_t(TextureManager::Skybox_Up, true),
+                                                    TextureNameAndClamp_t(TextureManager::Skybox_Down, true),
+                                                    TextureNameAndClamp_t(TextureManager::Shot_TextureName, false),
+                                                    TextureNameAndClamp_t(TextureManager::Lives_Icon_TextureName, false),
+                                                    TextureNameAndClamp_t(TextureManager::Lives_Times_TextureName, false),
+                                                    TextureNameAndClamp_t(TextureManager::Score_Label_TextureName, false),
+                                                    TextureNameAndClamp_t(TextureManager::Level_Label_TextureName, false),
+                                                    TextureNameAndClamp_t(TextureManager::Ammo_TextureName, false) };
 
    for (const TextureNameAndClamp_t& textureNameAndClampValue : skyboxAndHudTextures)
    {
-      rapidxml::xml_node<>* skyboxOrHudTextureNode = rootNode->first_node(textureNameAndClampValue.first);
-      CHECK_NODE(skyboxOrHudTextureNode, textureNameAndClampValue.first)
+      Locus::XMLTag* skyboxOrHudTextureTag = rootTag.FindSubTag(textureNameAndClampValue.first, 0);
+      CHECK_TAG(skyboxOrHudTextureTag, textureNameAndClampValue.first);
 
-      imageFile = skyboxOrHudTextureNode->value();
+      imageFile = skyboxOrHudTextureTag->value;
       Locus::TrimString(imageFile);
 
       Load(textureNameAndClampValue.first, texturesPath + imageFile, textureNameAndClampValue.second);
@@ -247,16 +227,17 @@ void TextureManager::LoadAllTextures()
    {
       digitTextureName = TextureManager::MakeDigitTextureName(digit);
 
-      rapidxml::xml_node<>* digitTextureNode = rootNode->first_node(digitTextureName.c_str());
-      CHECK_NODE(digitTextureNode, digitTextureName)
+      Locus::XMLTag* digitTextureTag = rootTag.FindSubTag(digitTextureName, 0);
+      CHECK_TAG(digitTextureTag, digitTextureName);
 
-      imageFile = digitTextureNode->value();
+      imageFile = digitTextureTag->value;
       Locus::TrimString(imageFile);
 
       Load(digitTextureName, texturesPath + imageFile, false);
    }
 
-   #undef CHECK_NODE
+   #undef CHECK_TAG
+   #undef CHECK_TAG_NAME
 }
 
 }

@@ -11,13 +11,12 @@
 #include "Config.h"
 
 #include "Locus/Common/Parsing.h"
+#include "Locus/Common/Exception.h"
 
-#include "Locus/FileSystem/FileSystemUtil.h"
 #include "Locus/FileSystem/MountedFilePath.h"
 
-#include "RapidXML/rapidxml.hpp"
-
-#include "XML.h"
+#include "Locus/XML/XMLParsing.h"
+#include "Locus/XML/XMLTag.h"
 
 #include <map>
 #include <type_traits>
@@ -70,59 +69,59 @@ float Config::maxMoonOrbitalSpeed = Default_Max_Moon_Orbital_Speed;
 namespace OptionsXML
 {
 
-static const char* XML_Root = "Options";
-static const char* Model_File = "Model_File";
-static const char* Num_Asteroids = "Num_Asteroids";
-static const char* Num_Stars = "Num_Stars";
-static const char* Num_Shots = "Num_Shots";
-static const char* Player_Translation_Speed = "Player_Speed";
-static const char* Shot_Speed = "Shot_Speed";
-static const char* Asteroids_Boundary = "Game_Boundary_Length";
-static const char* Player_Collision_Radius = "Player_Collision_Radius";
-static const char* Asteroid_Speed = "Asteroid_Speed";
-static const char* Asteroid_Rotation_Speed = "Rotation_Speed";
-static const char* Num_Planets = "Num_Planets";
-static const char* Planet_Radius = "Planet_Radius";
-static const char* Num_Moons = "Num_Moons";
-static const char* Moon_Orbital_Speed = "Moon_Orbital_Speed";
+static const std::string XML_Root = "Options";
+static const std::string Model_File = "Model_File";
+static const std::string Num_Asteroids = "Num_Asteroids";
+static const std::string Num_Stars = "Num_Stars";
+static const std::string Num_Shots = "Num_Shots";
+static const std::string Player_Translation_Speed = "Player_Speed";
+static const std::string Shot_Speed = "Shot_Speed";
+static const std::string Asteroids_Boundary = "Game_Boundary_Length";
+static const std::string Player_Collision_Radius = "Player_Collision_Radius";
+static const std::string Asteroid_Speed = "Asteroid_Speed";
+static const std::string Asteroid_Rotation_Speed = "Rotation_Speed";
+static const std::string Num_Planets = "Num_Planets";
+static const std::string Planet_Radius = "Planet_Radius";
+static const std::string Num_Moons = "Num_Moons";
+static const std::string Moon_Orbital_Speed = "Moon_Orbital_Speed";
 
-static const char* Minimum = "Min";
-static const char* Maximum = "Max";
+static const std::string Minimum = "Min";
+static const std::string Maximum = "Max";
 
 }
 
 namespace LightingXML
 {
 
-static const char* XML_Root = "Lighting";
-static const char* Shot_Lights = "ShotLights";
-static const char* Light = "Light";
-static const char* R = "R";
-static const char* G = "G";
-static const char* B = "B";
-static const char* A = "A";
-static const char* Index = "index";
-static const char* Attenuation = "Attenuation";
-static const char* ConstantAttenuation = "Constant";
-static const char* LinearAttenuation = "Linear";
-static const char* QuadraticAttenuation = "Quadratic";
+static const std::string XML_Root = "Lighting";
+static const std::string Shot_Lights = "ShotLights";
+static const std::string Light = "Light";
+static const std::string R = "R";
+static const std::string G = "G";
+static const std::string B = "B";
+static const std::string A = "A";
+static const std::string Index = "index";
+static const std::string Attenuation = "Attenuation";
+static const std::string ConstantAttenuation = "Constant";
+static const std::string LinearAttenuation = "Linear";
+static const std::string QuadraticAttenuation = "Quadratic";
 
 }
 
 template <typename T>
-void LoadNumeric(T& valueToLoad, rapidxml::xml_node<>* rootNode, const char* tagName, float minValue)
+void LoadNumeric(T& valueToLoad, const Locus::XMLTag& rootTag, const std::string& tagName, float minValue)
 {
-   rapidxml::xml_node<>* xmlNode = rootNode->first_node(tagName);
-   if (xmlNode != nullptr)
+   const Locus::XMLTag* xmlTag = rootTag.FindSubTag(tagName, 0);
+   if (xmlTag != nullptr)
    {
-      std::string xmlNodeValue;
+      std::string xmlTagValue;
 
-      xmlNodeValue = xmlNode->value();
-      Locus::TrimString(xmlNodeValue);
+      xmlTagValue = xmlTag->value;
+      Locus::TrimString(xmlTagValue);
 
-      if (Locus::IsType<T>(xmlNodeValue))
+      if (Locus::IsType<T>(xmlTagValue))
       {
-         float potentialValue = std::stof(xmlNodeValue);
+         float potentialValue = std::stof(xmlTagValue);
 
          if (potentialValue >= minValue)
          {
@@ -133,34 +132,34 @@ void LoadNumeric(T& valueToLoad, rapidxml::xml_node<>* rootNode, const char* tag
 }
 
 template <typename T>
-void LoadMinMaxPair(T& minValueToLoad, T& maxValueToLoad, rapidxml::xml_node<>* rootNode, const char* tagName, float minValue)
+void LoadMinMaxPair(T& minValueToLoad, T& maxValueToLoad, const Locus::XMLTag& rootTag, const std::string& tagName, float minValue)
 {
-   rapidxml::xml_node<>* xmlNode = rootNode->first_node(tagName);
-   if (xmlNode != nullptr)
+   const Locus::XMLTag* xmlTag = rootTag.FindSubTag(tagName, 0);
+   if (xmlTag != nullptr)
    {
-      rapidxml::xml_node<>* minNode = xmlNode->first_node(OptionsXML::Minimum);
-      if (minNode != nullptr)
+      const Locus::XMLTag* minTag = xmlTag->FindSubTag(OptionsXML::Minimum, 0);
+      if (minTag != nullptr)
       {
-         std::string xmlNodeValue;
+         std::string xmlTagValue;
 
-         xmlNodeValue = minNode->value();
-         Locus::TrimString(xmlNodeValue);
+         xmlTagValue = minTag->value;
+         Locus::TrimString(xmlTagValue);
 
-         if (Locus::IsType<T>(xmlNodeValue))
+         if (Locus::IsType<T>(xmlTagValue))
          {
-            float potentialMinValue = std::stof(xmlNodeValue);
+            float potentialMinValue = std::stof(xmlTagValue);
 
             if (potentialMinValue >= minValue)
             {
-               rapidxml::xml_node<>* maxNode = xmlNode->first_node(OptionsXML::Maximum);
-               if (maxNode != nullptr)
+               const Locus::XMLTag* maxTag = xmlTag->FindSubTag(OptionsXML::Maximum, 0);
+               if (maxTag != nullptr)
                {
-                  xmlNodeValue = maxNode->value();
-                  Locus::TrimString(xmlNodeValue);
+                  xmlTagValue = maxTag->value;
+                  Locus::TrimString(xmlTagValue);
 
-                  if (Locus::IsType<T>(xmlNodeValue))
+                  if (Locus::IsType<T>(xmlTagValue))
                   {
-                     float potentialMaxValue = std::stof(xmlNodeValue);
+                     float potentialMaxValue = std::stof(xmlTagValue);
 
                      if (potentialMaxValue >= potentialMinValue)
                      {
@@ -199,39 +198,38 @@ void Config::Set()
    minMoonOrbitalSpeed = Default_Min_Moon_Orbital_Speed;
    maxMoonOrbitalSpeed = Default_Max_Moon_Orbital_Speed;
 
-   rapidxml::xml_document<> xmlDocument;
-   std::vector<char> xmlContents;
+   Locus::XMLTag rootTag;
 
-   if(!ParseXMLFile(Locus::MountedFilePath("config/options.config.xml"), xmlDocument, xmlContents))
+   try
+   {
+      Locus::ParseXMLFile(Locus::MountedFilePath("config/options.config.xml"), rootTag);
+   }
+   catch (Locus::Exception&)
    {
       return;
    }
 
-   rapidxml::xml_node<>* rootNode = xmlDocument.first_node(OptionsXML::XML_Root);
-   if (rootNode != nullptr)
+   Locus::XMLTag* modelFileTag = rootTag.FindSubTag(OptionsXML::Model_File, 0);
+   if (modelFileTag != nullptr)
    {
-      rapidxml::xml_node<>* modelFileNode = rootNode->first_node(OptionsXML::Model_File);
-      if (modelFileNode != nullptr)
-      {
-         modelFile = modelFileNode->value();
-         Locus::TrimString(modelFile);
-      }
-
-      LoadNumeric<int>(numAsteroids, rootNode, OptionsXML::Num_Asteroids, 1.0f);
-      LoadNumeric<unsigned int>(numStars, rootNode, OptionsXML::Num_Stars, 0.0f);
-      LoadNumeric<unsigned int>(numShots, rootNode, OptionsXML::Num_Shots, 1.0f);
-      LoadNumeric<float>(playerTranslationSpeed, rootNode, OptionsXML::Player_Translation_Speed, 0.0f);
-      LoadNumeric<float>(shotSpeed, rootNode, OptionsXML::Shot_Speed, 1.0f);
-      LoadNumeric<float>(asteroidsBoundary, rootNode, OptionsXML::Asteroids_Boundary, 1.0f);
-      LoadNumeric<float>(playerCollisionRadius, rootNode, OptionsXML::Player_Collision_Radius, 0.01f);
-
-      LoadMinMaxPair<float>(minAsteroidSpeed, maxAsteroidSpeed, rootNode, OptionsXML::Asteroid_Speed, 0.0f);
-      LoadMinMaxPair<float>(minAsteroidRotationSpeed, maxAsteroidRotationSpeed, rootNode, OptionsXML::Asteroid_Rotation_Speed, 0.0f);
-      LoadMinMaxPair<int>(minPlanets, maxPlanets, rootNode, OptionsXML::Num_Planets, 0.0f);
-      LoadMinMaxPair<float>(minPlanetRadius, maxPlanetRadius, rootNode, OptionsXML::Planet_Radius, 0.01f);
-      LoadMinMaxPair<int>(minMoons, maxMoons, rootNode, OptionsXML::Num_Moons, 0.0f);
-      LoadMinMaxPair<float>(minMoonOrbitalSpeed, maxMoonOrbitalSpeed, rootNode, OptionsXML::Moon_Orbital_Speed, 0.0f);
+      modelFile = modelFileTag->value;
+      Locus::TrimString(modelFile);
    }
+
+   LoadNumeric<int>(numAsteroids, rootTag, OptionsXML::Num_Asteroids, 1.0f);
+   LoadNumeric<unsigned int>(numStars, rootTag, OptionsXML::Num_Stars, 0.0f);
+   LoadNumeric<unsigned int>(numShots, rootTag, OptionsXML::Num_Shots, 1.0f);
+   LoadNumeric<float>(playerTranslationSpeed, rootTag, OptionsXML::Player_Translation_Speed, 0.0f);
+   LoadNumeric<float>(shotSpeed, rootTag, OptionsXML::Shot_Speed, 1.0f);
+   LoadNumeric<float>(asteroidsBoundary, rootTag, OptionsXML::Asteroids_Boundary, 1.0f);
+   LoadNumeric<float>(playerCollisionRadius, rootTag, OptionsXML::Player_Collision_Radius, 0.01f);
+
+   LoadMinMaxPair<float>(minAsteroidSpeed, maxAsteroidSpeed, rootTag, OptionsXML::Asteroid_Speed, 0.0f);
+   LoadMinMaxPair<float>(minAsteroidRotationSpeed, maxAsteroidRotationSpeed, rootTag, OptionsXML::Asteroid_Rotation_Speed, 0.0f);
+   LoadMinMaxPair<int>(minPlanets, maxPlanets, rootTag, OptionsXML::Num_Planets, 0.0f);
+   LoadMinMaxPair<float>(minPlanetRadius, maxPlanetRadius, rootTag, OptionsXML::Planet_Radius, 0.01f);
+   LoadMinMaxPair<int>(minMoons, maxMoons, rootTag, OptionsXML::Num_Moons, 0.0f);
+   LoadMinMaxPair<float>(minMoonOrbitalSpeed, maxMoonOrbitalSpeed, rootTag, OptionsXML::Moon_Orbital_Speed, 0.0f);
 }
 
 static bool ReadInt(const std::string& str, int& value)
@@ -258,76 +256,72 @@ static bool ReadFloat(const std::string& str, float& value)
    return true;
 }
 
-bool LoadShotLights(rapidxml::xml_node<>* containingNode, std::vector<Locus::Color>& lightColors)
+bool LoadShotLights(const Locus::XMLTag& containingTag, std::vector<Locus::Color>& lightColors)
 {
-   rapidxml::xml_node<>* lightNode = containingNode->first_node(LightingXML::Light);
-
-   #define CHECK_NODE(node) if (node == nullptr) return false;
-
-   CHECK_NODE(lightNode)
+   #define CHECK_XML(tagOrAttribute) if (tagOrAttribute == nullptr) return false
 
    std::map<int, Locus::Color> loadedColorMap;
 
    Locus::Color loadedColor;
 
-   do
+   for (const Locus::XMLTag& lightTag : containingTag.subTags)
    {
-      rapidxml::xml_attribute<>* indexAttribute = lightNode->first_attribute(LightingXML::Index);
-      CHECK_NODE(indexAttribute)
+      if (lightTag.name != LightingXML::Light)
+      {
+         return false;
+      }
 
-      rapidxml::xml_node<>* redNode = lightNode->first_node(LightingXML::R);
-      CHECK_NODE(redNode)
+      const Locus::XMLAttribute* indexAttribute = lightTag.FindAttribute(LightingXML::Index, 0);
+      CHECK_XML(indexAttribute);
 
-      rapidxml::xml_node<>* greenNode = lightNode->first_node(LightingXML::G);
-      CHECK_NODE(greenNode)
+      const Locus::XMLTag* redTag = lightTag.FindSubTag(LightingXML::R, 0);
+      CHECK_XML(redTag);
 
-      rapidxml::xml_node<>* blueNode = lightNode->first_node(LightingXML::B);
-      CHECK_NODE(blueNode)
+      const Locus::XMLTag* greenTag = lightTag.FindSubTag(LightingXML::G, 0);
+      CHECK_XML(greenTag);
 
-      rapidxml::xml_node<>* alphaNode = lightNode->first_node(LightingXML::A);
-      CHECK_NODE(alphaNode)
+      const Locus::XMLTag* blueTag = lightTag.FindSubTag(LightingXML::B, 0);
+      CHECK_XML(blueTag);
+
+      const Locus::XMLTag* alphaTag = lightTag.FindSubTag(LightingXML::A, 0);
+      CHECK_XML(alphaTag);
 
       int index = 0;
-      if (!ReadInt(indexAttribute->value(), index))
+      if (!ReadInt(indexAttribute->value, index))
       {
          return false;
       }
 
       int redAsInt = 0;
-      if (!ReadInt(redNode->value(), redAsInt))
+      if (!ReadInt(redTag->value, redAsInt))
       {
          return false;
       }
       loadedColor.r = static_cast<unsigned char>(redAsInt);
 
       int greenAsInt = 0;
-      if (!ReadInt(greenNode->value(), greenAsInt))
+      if (!ReadInt(greenTag->value, greenAsInt))
       {
          return false;
       }
       loadedColor.g = static_cast<unsigned char>(greenAsInt);
 
       int blueAsInt = 0;
-      if (!ReadInt(blueNode->value(), blueAsInt))
+      if (!ReadInt(blueTag->value, blueAsInt))
       {
          return false;
       }
       loadedColor.b = static_cast<unsigned char>(blueAsInt);
 
       int alphaAsInt = 0;
-      if (!ReadInt(alphaNode->value(), alphaAsInt))
+      if (!ReadInt(alphaTag->value, alphaAsInt))
       {
          return false;
       }
       loadedColor.a = static_cast<unsigned char>(alphaAsInt);
 
       loadedColorMap[index] = loadedColor;
-
-      lightNode = lightNode->next_sibling(LightingXML::Light);
-
-   } while (lightNode != nullptr);
-
-#undef CHECK_NODE
+   }
 
    lightColors.reserve(lightColors.size() + loadedColorMap.size());
 
@@ -339,12 +333,12 @@ bool LoadShotLights(rapidxml::xml_node<>* containingNode, std::vector<Locus::Col
    return true;
 }
 
-static void ReadFloatFromNode(rapidxml::xml_node<>* containingNode, const char* nodeName, float& value)
+static void ReadFloatFromTag(const Locus::XMLTag& containingTag, const std::string& subTagName, float& floatValue)
 {
-   rapidxml::xml_node<>* xmlNode = containingNode->first_node(nodeName);
-   if (xmlNode != nullptr)
+   const Locus::XMLTag* subTag = containingTag.FindSubTag(subTagName, 0);
+   if (subTag != nullptr)
    {
-      ReadFloat(xmlNode->value(), value);
+      ReadFloat(subTag->value, floatValue);
    }
 }
 
@@ -365,9 +359,6 @@ Config::LightingOptions Config::ReadLightingOptions()
    static const float Default_Linear_Attenuation = 0.009f;
    static const float Default_Quadratic_Attenuation = 0.05f;
 
-   rapidxml::xml_document<> xmlDocument;
-   std::vector<char> xmlContents;
-
    bool problemWithColors = true;
 
    Config::LightingOptions lightingOptions;
@@ -377,29 +368,31 @@ Config::LightingOptions Config::ReadLightingOptions()
 
    bool problemLoadingFile = false;
 
-   if (!ParseXMLFile(Locus::MountedFilePath("config/lighting.config.xml"), xmlDocument, xmlContents))
+   Locus::XMLTag rootTag;
+
+   try
+   {
+      Locus::ParseXMLFile(Locus::MountedFilePath("config/lighting.config.xml"), rootTag);
+   }
+   catch (Locus::Exception&)
    {
       problemLoadingFile = true;
    }
 
    if (!problemLoadingFile)
    {
-      rapidxml::xml_node<>* rootNode = xmlDocument.first_node(LightingXML::XML_Root);
-      if (rootNode != nullptr)
+      Locus::XMLTag* shotLightsTag = rootTag.FindSubTag(LightingXML::Shot_Lights, 0);
+      if (shotLightsTag != nullptr)
       {
-         rapidxml::xml_node<>* shotLightsNode = rootNode->first_node(LightingXML::Shot_Lights);
-         if (shotLightsNode != nullptr)
-         {
-            problemWithColors = !LoadShotLights(shotLightsNode, lightingOptions.lightColors);
-         }
+         problemWithColors = !LoadShotLights(*shotLightsTag, lightingOptions.lightColors);
+      }
 
-         rapidxml::xml_node<>* attenuationNode = rootNode->first_node(LightingXML::Attenuation);
-         if (attenuationNode != nullptr)
-         {
-            ReadFloatFromNode(attenuationNode, LightingXML::ConstantAttenuation, lightingOptions.constantAttenuation);
-            ReadFloatFromNode(attenuationNode, LightingXML::LinearAttenuation, lightingOptions.linearAttenuation);
-            ReadFloatFromNode(attenuationNode, LightingXML::QuadraticAttenuation, lightingOptions.quadraticAttenuation);
-         }
+      Locus::XMLTag* attenuationTag = rootTag.FindSubTag(LightingXML::Attenuation, 0);
+      if (attenuationTag != nullptr)
+      {
+         ReadFloatFromTag(*attenuationTag, LightingXML::ConstantAttenuation, lightingOptions.constantAttenuation);
+         ReadFloatFromTag(*attenuationTag, LightingXML::LinearAttenuation, lightingOptions.linearAttenuation);
+         ReadFloatFromTag(*attenuationTag, LightingXML::QuadraticAttenuation, lightingOptions.quadraticAttenuation);
       }
    }
 

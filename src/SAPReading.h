@@ -10,30 +10,21 @@
 
 #pragma once
 
-#include <string>
-#include <vector>
-
 namespace Locus
 {
 
-class DataStream;
+class Mesh;
 struct MountedFilePath;
 
 }
 
-namespace rapidxml
-{
-
-template <class Ch>
-class xml_document;
-
-}
+#include <string>
+#include <vector>
+#include <memory>
 
 namespace MPM
 {
 
-bool ParseXMLFile(const std::string& filePath, rapidxml::xml_document<char>& xmlDocument, std::vector<char>& xmlContents);
-bool ParseXMLFile(const Locus::MountedFilePath& mountedFilePath, rapidxml::xml_document<char>& xmlDocument, std::vector<char>& xmlContents);
-bool ParseXMLFile(Locus::DataStream& xmlDataStream, rapidxml::xml_document<char>& xmlDocument, std::vector<char>& xmlContents);
+void ParseSAPFile(const Locus::MountedFilePath& mountedFilePath, std::vector<std::unique_ptr<Locus::Mesh>>& meshes);
 
 }

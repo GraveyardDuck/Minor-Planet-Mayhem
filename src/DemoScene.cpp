@@ -16,6 +16,7 @@
 #include "Shot.h"
 #include "Planet.h"
 #include "PauseScene.h"
+#include "SAPReading.h"
 
 #include "Locus/Common/Random.h"
 
@@ -26,7 +27,6 @@
 #include "Locus/Geometry/Line.h"
 #include "Locus/Geometry/Frustum.h"
 
-#include "Locus/Rendering/SAPReading.h"
 #include "Locus/Rendering/MeshUtility.h"
 #include "Locus/Rendering/DrawUtility.h"
 #include "Locus/Rendering/ShaderVariables.h"
@@ -101,10 +101,7 @@ DemoScene::DemoScene(Locus::SceneManager& sceneManager, unsigned int resolutionX
      crosshairsY(resolutionY/2),
      skyBox(SKY_BOX_RADIUS)
 {
-   if (!Locus::ParseSAPFile(Locus::MountedFilePath("data/" + Config::GetModelFile()), asteroidMeshes))
-   {
-      throw std::runtime_error("Failed to load models");
-   }
+   ParseSAPFile(Locus::MountedFilePath("data/" + Config::GetModelFile()), asteroidMeshes);
 
    Load();
 }

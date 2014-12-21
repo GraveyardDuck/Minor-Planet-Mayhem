@@ -96,6 +96,8 @@ void ShowFatalError(const std::string& error)
 
       if (!GLEW_VERSION_2_0)
       {
+         window.MakeWindowed();
+
          ShowFatalError("OpenGL 2.0 is required to run this game");
          return EXIT_FAILURE;
       }
