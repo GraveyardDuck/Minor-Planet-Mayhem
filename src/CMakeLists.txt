@@ -69,7 +69,6 @@ add_executable(MPM
                Player.h
                SAPReading.cpp
                SAPReading.h
-               ShaderNames.h
                Shot.cpp
                Shot.h
                TextureManager.cpp

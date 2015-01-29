@@ -10,6 +10,8 @@
 
 #pragma once
 
+#include "Locus/Common/IDType.h"
+
 #include "Locus/Rendering/Drawable.h"
 #include "Locus/Rendering/LineSegmentCollection.h"
 #include "Locus/Rendering/Quad.h"
@@ -27,6 +29,8 @@ public:
    void Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, unsigned int resolutionX, unsigned int resolutionY);
    void Update(int score, int level, int lives, std::size_t currentShots, int crosshairsX, int crosshairsY, int fps);
 
+   void SetProgramIDs(Locus::ID_t notTexturedNotLitProgramID, Locus::ID_t texturedNotLitProgramID);
+
    virtual void CreateGPUVertexData() override;
    virtual void DeleteGPUVertexData() override;
    virtual void UpdateGPUVertexData() override;
@@ -38,6 +42,9 @@ private:
 
    unsigned int resolutionX;
    unsigned int resolutionY;
+
+   Locus::ID_t notTexturedNotLitProgramID;
+   Locus::ID_t texturedNotLitProgramID;
 
    int score;
    int level;

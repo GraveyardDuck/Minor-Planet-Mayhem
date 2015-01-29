@@ -10,6 +10,8 @@
 
 #pragma once
 
+#include "Locus/Common/IDType.h"
+
 #include "Locus/Simulation/Scene.h"
 
 #include "Locus/Rendering/DrawablePointCloud.h"
@@ -85,6 +87,10 @@ private:
    std::vector<Locus::Color> lightColors;
 
    std::size_t currentLightColorIndex;
+
+   Locus::ID_t notTexturedNotLitProgramID;
+   Locus::ID_t texturedNotLitProgramID;
+   std::vector<Locus::ID_t> litProgramIDs;
 
    unsigned int resolutionX;
    unsigned int resolutionY;

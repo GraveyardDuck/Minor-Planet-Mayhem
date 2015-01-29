@@ -20,12 +20,10 @@
 #include <Locus/Rendering/Locus_glew.h>
 
 #include "TextureManager.h"
-#include "ShaderNames.h"
 
 //TODO: Draw HUD independently of screen resolution
 
 //HUD Constants
-//#define CROSSHAIRS_WIDTH 15
 #define HUD_NUM_SCORE_DIGITS 11
 #define HUD_NUM_LEVEL_DIGITS 2
 #define HUD_NUM_FPS_DIGITS 4
@@ -37,17 +35,25 @@ const Locus::Color HUD::QuadTextureColor(255, 255, 255, 204);
 const float HUD::ammoPadding = 2.0f;
 
 HUD::HUD()
-   :  resolutionX(0), resolutionY(0), score(0), level(0), lives(0), currentShots(0), crosshairsX(0), crosshairsY(0), maxShots(0),
-      topStripY(0.0f), bottomStripY(0.0f), scoreX(0.0f), levelX(0.0f), ammoBoxX(0.0f), digitWidth(0.0f), ammoWidth(0.0f)
+   :  resolutionX(0),
+      resolutionY(0),
+      notTexturedNotLitProgramID(Locus::BAD_ID),
+      texturedNotLitProgramID(Locus::BAD_ID),
+      score(0),
+      level(0),
+      lives(0),
+      currentShots(0),
+      crosshairsX(0),
+      crosshairsY(0),
+      maxShots(0),
+      topStripY(0.0f),
+      bottomStripY(0.0f),
+      scoreX(0.0f),
+      levelX(0.0f),
+      ammoBoxX(0.0f),
+      digitWidth(0.0f),
+      ammoWidth(0.0f)
 {
-   //AddDrawableObject(&crosshairs);
-   //AddDrawableObject(&livesIcon);
-   //AddDrawableObject(&livesTimes);
-   //AddDrawableObject(&livesQuad);
-   //AddDrawableObject(&scoreLabel);
-   //AddDrawableObject(&levelLabel);
-   //AddDrawableObject(&digit);
-   //AddDrawableObject(&ammo);
 }
 
 void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, unsigned int resolutionX, unsigned int resolutionY)
@@ -170,6 +176,12 @@ void HUD::Update(int score, int level, int lives, std::size_t currentShots, int 
    this->fps = fps;
 }
 
+void HUD::SetProgramIDs(Locus::ID_t notTexturedNotLitProgramID, Locus::ID_t texturedNotLitProgramID)
+{
+   this->notTexturedNotLitProgramID = notTexturedNotLitProgramID;
+   this->texturedNotLitProgramID = texturedNotLitProgramID;
+}
+
 void HUD::DrawDigits(Locus::RenderingState& renderingState, int value, int numDigits, float x, float y) const
 {
    std::vector<int> digits(numDigits);
@@ -258,7 +270,7 @@ void HUD::UpdateGPUVertexData()
 void HUD::Draw(Locus::RenderingState& renderingState) const
 {
    //draw crosshairs
-   renderingState.shaderController.UseProgram(ShaderNames::NotTexturedNotLit);
+   renderingState.shaderController.UseProgram(notTexturedNotLitProgramID);
 
    glLineWidth(3.0f);
 
@@ -272,7 +284,7 @@ void HUD::Draw(Locus::RenderingState& renderingState) const
 
    glLineWidth(1.0f);
 
-   renderingState.shaderController.UseProgram(ShaderNames::TexturedNotLit);
+   renderingState.shaderController.UseProgram(texturedNotLitProgramID);
 
    glEnable (GL_BLEND);
 

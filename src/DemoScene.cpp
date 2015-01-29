@@ -12,7 +12,6 @@
 #include "Config.h"
 #include "Moon.h"
 #include "Asteroid.h"
-#include "ShaderNames.h"
 #include "Shot.h"
 #include "Planet.h"
 #include "PauseScene.h"
@@ -90,6 +89,8 @@ DemoScene::DemoScene(Locus::SceneManager& sceneManager, unsigned int resolutionX
    : Scene(sceneManager),
      dieOnNextFrame(false),
      maxLights(1),
+     notTexturedNotLitProgramID(Locus::BAD_ID),
+     texturedNotLitProgramID(Locus::BAD_ID),
      resolutionX(resolutionX),
      resolutionY(resolutionY),
      lastMouseX(0),
@@ -150,9 +151,11 @@ void DemoScene::LoadShaderPrograms()
 {
    Locus::GLInfo::GLSLVersion activeGLSLVersion = renderingState->shaderController.GetActiveGLSLVersion();
 
-   renderingState->shaderController.LoadShaderProgram(ShaderNames::NotTexturedNotLit, activeGLSLVersion, false, 0);
+   notTexturedNotLitProgramID = renderingState->shaderController.LoadShaderProgram(activeGLSLVersion, false, 0);
 
-   renderingState->shaderController.LoadShaderProgram(ShaderNames::TexturedNotLit, activeGLSLVersion, true, 0);
+   texturedNotLitProgramID = renderingState->shaderController.LoadShaderProgram(activeGLSLVersion, true, 0);
+
+   hud.SetProgramIDs(notTexturedNotLitProgramID, texturedNotLitProgramID);
 
    unsigned int lightIndex = 0;
 
@@ -160,7 +163,9 @@ void DemoScene::LoadShaderPrograms()
    {
       try
       {
-         renderingState->shaderController.LoadShaderProgram(ShaderNames::TexturedAndLit_1 + lightIndex, activeGLSLVersion, true, lightIndex + 1);
+         Locus::ID_t thisLitProgramID = renderingState->shaderController.LoadShaderProgram(activeGLSLVersion, true, lightIndex + 1);
+
+         litProgramIDs.push_back(thisLitProgramID);
       }
       catch(Locus::ShaderLinkException& shaderLinkException)
       {
@@ -213,7 +218,7 @@ void DemoScene::InitializeRenderingState()
    renderingState->transformationStack.SetTransformationMode(Locus::TransformationStack::ModelView);
    renderingState->transformationStack.LoadIdentity();
 
-   renderingState->shaderController.UseProgram(ShaderNames::TexturedNotLit);
+   renderingState->shaderController.UseProgram(texturedNotLitProgramID);
 }
 
 void DemoScene::DestroyRenderingState()
@@ -1013,7 +1018,7 @@ void DemoScene::DrawSkyBox()
 
 void DemoScene::DrawStars()
 {
-   renderingState->shaderController.UseProgram(ShaderNames::NotTexturedNotLit);
+   renderingState->shaderController.UseProgram(notTexturedNotLitProgramID);
 
    glDisable(GL_DEPTH_TEST);
 
@@ -1026,7 +1031,7 @@ void DemoScene::DrawStars()
 
    player.viewpoint.Deactivate(renderingState->transformationStack);
 
-   renderingState->shaderController.UseProgram(ShaderNames::TexturedNotLit);
+   renderingState->shaderController.UseProgram(texturedNotLitProgramID);
 
    glEnable(GL_DEPTH_TEST);
 }
@@ -1089,7 +1094,7 @@ void DemoScene::DrawAsteroids()
 
       numShotPositionsToUse = (numShotsAndPositions > maxLights) ? maxLights : numShotsAndPositions;
 
-      renderingState->shaderController.UseProgram(ShaderNames::TexturedAndLit_1 + (numShotPositionsToUse - 1));
+      renderingState->shaderController.UseProgram(litProgramIDs[numShotPositionsToUse - 1]);
 
       for (unsigned int shotPositionIndex = 0; shotPositionIndex < numShotPositionsToUse; ++shotPositionIndex)
       {
@@ -1121,7 +1126,7 @@ void DemoScene::DrawAsteroids()
 
    if (shaderChanged)
    {
-      renderingState->shaderController.UseProgram(ShaderNames::TexturedNotLit);
+      renderingState->shaderController.UseProgram(texturedNotLitProgramID);
    }
 }
 
