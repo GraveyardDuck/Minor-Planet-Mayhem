@@ -11,6 +11,7 @@
 #include "HUD.h"
 
 #include "Locus/Geometry/Geometry.h"
+#include "Locus/Geometry/Vector3Geometry.h"
 
 #include "Locus/Rendering/RenderingState.h"
 #include "Locus/Rendering/ShaderController.h"
@@ -20,6 +21,8 @@
 #include <Locus/Rendering/Locus_glew.h>
 
 #include "TextureManager.h"
+
+#include <cmath>
 
 //TODO: Draw HUD independently of screen resolution
 
@@ -81,7 +84,7 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
       for (int j = 1; j <= 5; ++j)
       {
          float angle = static_cast<float>( (i + j * increment) * Locus::TO_RADIANS );
-         lineSegment.segment.P2 = Locus::Vector3(sin(angle) * crosshairsWidth, cos(angle) * crosshairsWidth, 0.0);
+         lineSegment.segment.P2 = Locus::FVector3(std::sin(angle) * crosshairsWidth, std::cos(angle) * crosshairsWidth, 0.0);
 
          if (makeLine)
          {
@@ -96,30 +99,30 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
    float firstAngle = static_cast<float>( increment * Locus::TO_RADIANS );
 
    lineSegment.segment.P1 = lineSegment.segment.P2;
-   lineSegment.segment.P2.set(sin(firstAngle) * crosshairsWidth, cos(firstAngle) * crosshairsWidth, 0.0f);
+   lineSegment.segment.P2.Set(std::sin(firstAngle) * crosshairsWidth, std::cos(firstAngle) * crosshairsWidth, 0.0f);
    crosshairs.AddLineSegment(lineSegment);
 
    //make crosshair lines
    int halfWidth = crosshairsWidth/2;
 
-   lineSegment.segment.P1.set(0.0f, static_cast<float>(-halfWidth), 0.0f);
-   lineSegment.segment.P2.set(0.0f, static_cast<float>(-3*halfWidth), 0.0f);
+   lineSegment.segment.P1.Set(0.0f, static_cast<float>(-halfWidth), 0.0f);
+   lineSegment.segment.P2.Set(0.0f, static_cast<float>(-3*halfWidth), 0.0f);
    crosshairs.AddLineSegment(lineSegment);
 
-   lineSegment.segment.P1.set(0.0f, static_cast<float>(halfWidth), 0.0f);
-   lineSegment.segment.P2.set(0.0f, static_cast<float>(3*halfWidth), 0.0f);
+   lineSegment.segment.P1.Set(0.0f, static_cast<float>(halfWidth), 0.0f);
+   lineSegment.segment.P2.Set(0.0f, static_cast<float>(3*halfWidth), 0.0f);
    crosshairs.AddLineSegment(lineSegment);
 
-   lineSegment.segment.P1.set(static_cast<float>(-halfWidth), 0.0f, 0.0f);
-   lineSegment.segment.P2.set(static_cast<float>(-3*halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P1.Set(static_cast<float>(-halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P2.Set(static_cast<float>(-3*halfWidth), 0.0f, 0.0f);
    crosshairs.AddLineSegment(lineSegment);
 
-   lineSegment.segment.P1.set(static_cast<float>(halfWidth), 0.0f, 0.0f);
-   lineSegment.segment.P2.set(static_cast<float>(3*halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P1.Set(static_cast<float>(halfWidth), 0.0f, 0.0f);
+   lineSegment.segment.P2.Set(static_cast<float>(3*halfWidth), 0.0f, 0.0f);
    crosshairs.AddLineSegment(lineSegment);
 
-   Locus::Vector3 right(1.0, 0.0, 0.0);
-   Locus::Vector3 up(0.0, -1.0, 0.0);
+   Locus::FVector3 right(1.0, 0.0, 0.0);
+   Locus::FVector3 up(0.0, -1.0, 0.0);
 
    topStripY = (80.0f/600) * resolutionY;
    bottomStripY = (550.0f/600) * resolutionY;
@@ -154,15 +157,15 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
 
    ammoBoxX = (70.0f/800) * resolutionX;
 
-   livesIcon.Set( Locus::Vector3(livesIconX, topStripY, 0.0), right, up, livesIconWidth, topStripHeight, QuadTextureColor );
-   livesTimes.Set( Locus::Vector3(livesTimesX, topStripY, 0.0), right, up, digitWidth, topStripHeight, QuadTextureColor );
-   livesQuad.Set( Locus::Vector3(numLivesX, topStripY, 0.0), right, up, digitWidth, topStripHeight, QuadTextureColor );
-   scoreLabel.Set( Locus::Vector3(scoreLabelX, topStripY, 0.0), right, up, scoreLabelWidth, topStripHeight, QuadTextureColor );
-   levelLabel.Set( Locus::Vector3(levelLabelX, topStripY, 0.0), right, up, levelLabelWidth, topStripHeight, QuadTextureColor );
-   digit.Set( Locus::Vector3::ZeroVector(), right, up, digitWidth, topStripHeight, QuadTextureColor );
+   livesIcon.Set( Locus::FVector3(livesIconX, topStripY, 0.0), right, up, livesIconWidth, topStripHeight, QuadTextureColor );
+   livesTimes.Set( Locus::FVector3(livesTimesX, topStripY, 0.0), right, up, digitWidth, topStripHeight, QuadTextureColor );
+   livesQuad.Set( Locus::FVector3(numLivesX, topStripY, 0.0), right, up, digitWidth, topStripHeight, QuadTextureColor );
+   scoreLabel.Set( Locus::FVector3(scoreLabelX, topStripY, 0.0), right, up, scoreLabelWidth, topStripHeight, QuadTextureColor );
+   levelLabel.Set( Locus::FVector3(levelLabelX, topStripY, 0.0), right, up, levelLabelWidth, topStripHeight, QuadTextureColor );
+   digit.Set( Locus::Vec3D::ZeroVector(), right, up, digitWidth, topStripHeight, QuadTextureColor );
 
    ammoWidth = static_cast<float>(ammoBoxWidth - 2 * ammoPadding)/(this->maxShots);
-   ammo.Set( Locus::Vector3::ZeroVector(), right, up, ammoWidth, ammoBoxHeight - 2 * ammoPadding, QuadTextureColor );
+   ammo.Set( Locus::Vec3D::ZeroVector(), right, up, ammoWidth, ammoBoxHeight - 2 * ammoPadding, QuadTextureColor );
 }
 
 void HUD::Update(int score, int level, int lives, std::size_t currentShots, int crosshairsX, int crosshairsY, int fps)
@@ -194,7 +197,7 @@ void HUD::DrawDigits(Locus::RenderingState& renderingState, int value, int numDi
    renderingState.transformationStack.Push();
 
    renderingState.transformationStack.LoadIdentity();
-   renderingState.transformationStack.Translate( Locus::Vector3(x, y, 0.0) );
+   renderingState.transformationStack.Translate( Locus::FVector3(x, y, 0.0) );
 
    for (int i = 0; i < numDigits; ++i)
    {
@@ -204,7 +207,7 @@ void HUD::DrawDigits(Locus::RenderingState& renderingState, int value, int numDi
       renderingState.transformationStack.UploadTransformations(renderingState.shaderController);
       digit.Draw(renderingState);
 
-      renderingState.transformationStack.Translate( Locus::Vector3(digitWidth, 0.0, 0.0) );
+      renderingState.transformationStack.Translate( Locus::FVector3(digitWidth, 0.0, 0.0) );
    }
 
    renderingState.transformationStack.Pop();
@@ -218,14 +221,14 @@ void HUD::DrawAmmo(Locus::RenderingState& renderingState) const
    renderingState.transformationStack.Push();
 
    renderingState.transformationStack.LoadIdentity();
-   renderingState.transformationStack.Translate( Locus::Vector3(ammoBoxX + ammoPadding, bottomStripY - ammoPadding, 0.0) );
+   renderingState.transformationStack.Translate( Locus::FVector3(ammoBoxX + ammoPadding, bottomStripY - ammoPadding, 0.0) );
 
    for (std::size_t i = 0; i < maxShots - currentShots; ++i)
    {
       renderingState.transformationStack.UploadTransformations(renderingState.shaderController);
       ammo.Draw(renderingState);
 
-      renderingState.transformationStack.Translate( Locus::Vector3(ammoWidth, 0.0, 0.0) );
+      renderingState.transformationStack.Translate( Locus::FVector3(ammoWidth, 0.0, 0.0) );
    }
 
    renderingState.transformationStack.Pop();
@@ -275,7 +278,7 @@ void HUD::Draw(Locus::RenderingState& renderingState) const
    glLineWidth(3.0f);
 
    renderingState.transformationStack.Push();
-   renderingState.transformationStack.Translate(Locus::Vector3(static_cast<float>(crosshairsX), static_cast<float>(crosshairsY), 0.0f));
+   renderingState.transformationStack.Translate(Locus::FVector3(static_cast<float>(crosshairsX), static_cast<float>(crosshairsY), 0.0f));
    renderingState.UploadTransformations();
 
    crosshairs.Draw(renderingState);

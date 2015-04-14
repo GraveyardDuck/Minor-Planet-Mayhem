@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Locus/Geometry/Vector3.h"
+#include "Locus/Math/Vectors.h"
 
 #include "CelestialObject.h"
 
@@ -34,7 +34,7 @@ public:
    void Draw(Locus::RenderingState& renderingState);
 
 private:
-   Locus::Vector3 rotationAxis;
+   Locus::FVector3 rotationAxis;
    float rotationSpeed; //radians
 };
 

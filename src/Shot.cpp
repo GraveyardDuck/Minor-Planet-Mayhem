@@ -13,6 +13,7 @@
 #include "CollidableTypes.h"
 
 #include "Locus/Geometry/Quaternion.h"
+#include "Locus/Geometry/Vector3Geometry.h"
 
 #include "Locus/Rendering/Mesh.h"
 #include "Locus/Rendering/DefaultGPUVertexData.h"
@@ -23,20 +24,20 @@
 namespace MPM
 {
 
-Shot::Shot(const Locus::Vector3& direction, const Locus::Vector3& position, Locus::Mesh* mesh)
+Shot::Shot(const Locus::FVector3& direction, const Locus::FVector3& position, Locus::Mesh* mesh)
    : valid(true), position(position), collisionBox(position, 2 * SHOT_RADIUS, 2 * SHOT_RADIUS, 2 * SHOT_RADIUS), mesh(mesh)
 {
    collidableType = CollidableType_Shot;
 
    motionProerties.direction = direction;
 
-   const Locus::Vector3& zAxis = Locus::Vector3::ZAxis();
-   Locus::Quaternion inverseRotation(direction.cross(zAxis), zAxis.angleBetweenRadians(direction));
+   const Locus::FVector3& zAxis = Locus::Vec3D::ZAxis();
+   Locus::Quaternion inverseRotation(Cross(direction, zAxis), AngleBetweenRadians(zAxis, direction));
 
    collisionBox.SetRotationInverse( inverseRotation.ToTransformation() );
 }
 
-const Locus::Vector3& Shot::GetPosition() const
+const Locus::FVector3& Shot::GetPosition() const
 {
    return position;
 }
@@ -48,12 +49,12 @@ bool Shot::IsValid() const
 
 void Shot::MoveAlongDirection(float units)
 {
-   Locus::Vector3 oldPosition = position;
+   Locus::FVector3 oldPosition = position;
 
    position += units * motionProerties.direction;
 
-   collisionBox.centroid = (position + oldPosition) / 2 ;
-   collisionBox.SetZLength( (position - oldPosition).norm() + 2 * SHOT_RADIUS );
+   collisionBox.centroid = (position + oldPosition) / 2.0f ;
+   collisionBox.SetZLength( Norm(position - oldPosition) + 2 * SHOT_RADIUS );
 }
 
 void Shot::UpdateBroadCollisionExtent()

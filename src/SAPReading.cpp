@@ -17,7 +17,7 @@
 #include "Locus/XML/XMLParsing.h"
 #include "Locus/XML/XMLTag.h"
 
-#include "Locus/Geometry/Vector3.h"
+#include "Locus/Geometry/Vector3Geometry.h"
 
 #include "Locus/Rendering/TextureCoordinate.h"
 #include "Locus/Rendering/Mesh.h"
@@ -53,7 +53,7 @@ void ParseSAPFile(const Locus::MountedFilePath& mountedFilePath, std::vector<std
    #define CHECK_TAG(tag) if (tag == nullptr) throw std::runtime_error("Failed to find SAP XML tag")
    #define CHECK_TAG_NAME(tagName, expectedName) if (tagName != expectedName) std::runtime_error(std::string("Unexpected tag found in SAP file: ") + tagName)
 
-   Locus::Vector3 positionFromFile;
+   Locus::FVector3 positionFromFile;
    Locus::Mesh::face_t faceFromFile;
    Locus::TextureCoordinate textureCoordFromFile;
 
@@ -137,7 +137,7 @@ void ParseSAPFile(const Locus::MountedFilePath& mountedFilePath, std::vector<std
 
       mesh->ComputeCentroid();
       mesh->ToModel();
-      mesh->centroid = Locus::Vector3::ZeroVector();
+      mesh->centroid = Locus::Vec3D::ZeroVector();
       mesh->Triangulate();
       mesh->UpdateEdgeAdjacency();
       mesh->AssignNormals();

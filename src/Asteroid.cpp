@@ -203,12 +203,12 @@ void Asteroid::ResolveCollision(Asteroid& otherAsteroid)
 
    if ( GetAsteroidIntersection(otherAsteroid, intersectingTriangle1, intersectingTriangle2) )
    {
-      Locus::Vector3 collisionPoint = Locus::Triangle3D_t::ComputeCentroid(intersectingTriangle1, intersectingTriangle2);
+      Locus::FVector3 collisionPoint = Locus::Triangle3D_t::ComputeCentroid(intersectingTriangle1, intersectingTriangle2);
 
-      Locus::Vector3 impulseDirection = intersectingTriangle1.Normal().normVector();
+      Locus::FVector3 impulseDirection = NormVector(intersectingTriangle1.Normal());
 
       Locus::ResolveCollision(1.0f, BoundingSphere(), otherAsteroid.BoundingSphere(), collisionPoint, impulseDirection,
-                               motionProperties, otherAsteroid.motionProperties);
+                              motionProperties, otherAsteroid.motionProperties);
 
       lastCollision = &otherAsteroid;
       otherAsteroid.lastCollision = this;
@@ -230,13 +230,13 @@ bool Asteroid::WasHit() const
    return hit;
 }
 
-void Asteroid::RegisterHit(const Locus::Vector3& hitLocation)
+void Asteroid::RegisterHit(const Locus::FVector3& hitLocation)
 {
    this->hitLocation = hitLocation;
    hit = true;
 }
 
-const Locus::Vector3& Asteroid::GetHitLocation() const
+const Locus::FVector3& Asteroid::GetHitLocation() const
 {
    return hitLocation;
 }

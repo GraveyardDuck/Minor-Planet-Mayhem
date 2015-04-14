@@ -10,7 +10,8 @@
 
 #pragma once
 
-#include "Locus/Geometry/Vector3.h"
+#include "Locus/Math/Vectors.h"
+
 #include "Locus/Geometry/Collidable.h"
 #include "Locus/Geometry/MotionProperties.h"
 #include "Locus/Geometry/OrientedBox.h"
@@ -36,9 +37,9 @@ class Asteroid;
 class Shot : public Locus::Collidable, public Locus::DefaultSingleDrawable
 {
 public:
-   Shot(const Locus::Vector3& direction, const Locus::Vector3& position, Locus::Mesh* mesh);
+   Shot(const Locus::FVector3& direction, const Locus::FVector3& position, Locus::Mesh* mesh);
 
-   const Locus::Vector3& GetPosition() const;
+   const Locus::FVector3& GetPosition() const;
 
    virtual void UpdateBroadCollisionExtent();
 
@@ -59,7 +60,7 @@ public:
 private:
    bool valid;
    Locus::MotionProperties motionProerties;
-   Locus::Vector3 position;
+   Locus::FVector3 position;
    Locus::OrientedBox collisionBox;
 
    Locus::Mesh* mesh;

@@ -13,12 +13,11 @@
 #include "Locus/Geometry/Collidable.h"
 #include "Locus/Geometry/Model.h"
 #include "Locus/Geometry/MotionProperties.h"
+#include "Locus/Geometry/BoundingVolumeHierarchy.h"
 
 #include "Locus/Rendering/Viewpoint.h"
 
 #include "Locus/Audio/SoundEffect.h"
-
-#include "Locus/Geometry/BoundingVolumeHierarchy.h"
 
 #include <memory>
 #include <string>
@@ -44,7 +43,7 @@ public:
 
    void SetModel(float radius);
 
-   virtual void Rotate(const Locus::Vector3& rotation);
+   virtual void Rotate(const Locus::FVector3& rotation);
 
    virtual void UpdateBroadCollisionExtent();
 

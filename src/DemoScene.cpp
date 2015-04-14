@@ -47,7 +47,7 @@
 #include <stdexcept>
 #include <fstream>
 
-#include <math.h>
+#include <cmath>
 
 //TODO: Remove magic numbers, either by putting in data files or use a scripting interface
 
@@ -322,7 +322,7 @@ void DemoScene::InitializeStars()
 
    Locus::Random random;
 
-   std::vector<Locus::Vector3> starPositions(Config::GetNumStars());
+   std::vector<Locus::FVector3> starPositions(Config::GetNumStars());
    std::vector<Locus::Color> starColors(Config::GetNumStars());
 
    for (std::size_t i = 0; i < Config::GetNumStars(); ++i)
@@ -339,7 +339,7 @@ void DemoScene::InitializeStars()
          goodPair = ((x*x + y*y) <= (starDistance*starDistance));
       }
 
-      float z = sqrt(starDistance*starDistance - (x*x + y*y)) - 10;
+      float z = std::sqrt(starDistance*starDistance - (x*x + y*y)) - 10;
 
       if (random.FlipCoin(0.5))
       {
@@ -357,7 +357,7 @@ void DemoScene::InitializeStars()
          b = static_cast<unsigned char>(random.RandomInt(0, 255));
       }
 
-      starPositions.push_back( Locus::Vector3(x, y, z) );
+      starPositions.push_back( Locus::FVector3(x, y, z) );
       starColors.push_back( Locus::Color(r, g, b, 255) );
    }
 
@@ -381,7 +381,7 @@ void DemoScene::InitializePlanets()
 
    for (int i = 0; i < numPlanets; ++i)
    {
-      Locus::Vector3 planetLocation;
+      Locus::FVector3 planetLocation;
       bool goodLocation = false;
       bool goodPair = false;
 
@@ -400,7 +400,7 @@ void DemoScene::InitializePlanets()
             goodPair = ((planetLocation.x * planetLocation.x + planetLocation.y * planetLocation.y) <= (distance*distance));
          }
 
-         planetLocation.z = sqrt(distance*distance - (planetLocation.x * planetLocation.x + planetLocation.y * planetLocation.y)) - 5;
+         planetLocation.z = std::sqrt(distance*distance - (planetLocation.x * planetLocation.x + planetLocation.y * planetLocation.y)) - 5;
 
          if (r.FlipCoin(0.5))
          {
@@ -412,7 +412,7 @@ void DemoScene::InitializePlanets()
             //planets shouldn't be touching each other or each other's moons
             for (const std::unique_ptr<Planet>& planet : planets)
             {
-               if (planet->Position().distanceTo(planetLocation) <= (planet->getRadius() + MOON_ORBIT_DISTANCE + PLANET_SPACING_THRESHOLD))
+               if (DistanceBetween(planet->Position(), planetLocation) <= (planet->getRadius() + MOON_ORBIT_DISTANCE + PLANET_SPACING_THRESHOLD))
                {
                   goodLocation = false;
                   ++numTries;
@@ -427,7 +427,7 @@ void DemoScene::InitializePlanets()
 
       std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, planetMesh.get()) );
       planet->Translate(planetLocation);
-      planet->Scale( Locus::Vector3(planetRadius, planetRadius, planetRadius) );
+      planet->Scale( Locus::FVector3(planetRadius, planetRadius, planetRadius) );
 
       int numMoons = r.RandomInt(Config::GetMinMoons(), Config::GetMaxMoons());
 
@@ -503,8 +503,8 @@ void DemoScene::InitializeAsteroids()
       float yDirection = static_cast<float>(r.RandomDouble(-1, 1));
       float zDirection = static_cast<float>(r.RandomDouble(-1, 1));
 
-      asteroids[i]->motionProperties.direction.set(xDirection, yDirection, zDirection);
-      asteroids[i]->motionProperties.direction.normalize();
+      asteroids[i]->motionProperties.direction.Set(xDirection, yDirection, zDirection);
+      Normalize(asteroids[i]->motionProperties.direction);
 
       //randomize speed
       asteroids[i]->motionProperties.speed = static_cast<float>(r.RandomDouble(Config::GetMinAsteroidSpeed(), Config::GetMaxAsteroidSpeed()));
@@ -514,17 +514,17 @@ void DemoScene::InitializeAsteroids()
       yDirection = static_cast<float>(r.RandomDouble(-1, 1));
       zDirection = static_cast<float>(r.RandomDouble(-1, 1));
 
-      asteroids[i]->motionProperties.rotation.set(xDirection, yDirection, zDirection);
+      asteroids[i]->motionProperties.rotation.Set(xDirection, yDirection, zDirection);
       
       //randomize rotation speed
       asteroids[i]->motionProperties.angularSpeed = static_cast<float>(r.RandomDouble(Config::GetMinAsteroidRotationSpeed(), Config::GetMaxAsteroidRotationSpeed()));
 
       //randomize size
       float scale = static_cast<float>(r.RandomDouble(MIN_ASTEROID_SCALE, MAX_ASTEROID_SCALE));
-      asteroids[i]->Scale( Locus::Vector3(scale, scale, scale) );
+      asteroids[i]->Scale( Locus::FVector3(scale, scale, scale) );
 
       //randomize position (centroid)
-      Locus::Vector3 asteroidPosition;
+      Locus::FVector3 asteroidPosition;
       bool goodLocation = false;
 
       while (!goodLocation)
@@ -539,12 +539,12 @@ void DemoScene::InitializeAsteroids()
             asteroidPosition.y = static_cast<float>(r.RandomDouble(-maxAsteroidDistance, maxAsteroidDistance));
             asteroidPosition.z = static_cast<float>(r.RandomDouble(-maxAsteroidDistance, maxAsteroidDistance));
 
-            goodPoint = asteroidPosition.distanceTo(Locus::Vector3::ZeroVector()) >= minAsteroidDistance;
+            goodPoint = DistanceBetween(asteroidPosition, Locus::Vec3D::ZeroVector()) >= minAsteroidDistance;
          }
 
          for (int previousAsteroidIndex = 0; previousAsteroidIndex < i; ++previousAsteroidIndex)
          {
-            if (asteroids[previousAsteroidIndex]->Position().distanceTo(asteroidPosition) <= ASTEROID_SPACING_THRESHOLD)
+            if (DistanceBetween(asteroids[previousAsteroidIndex]->Position(), asteroidPosition) <= ASTEROID_SPACING_THRESHOLD)
             {
                goodLocation = false;
                break;
@@ -600,7 +600,7 @@ void DemoScene::UpdateShotPositions(double DT)
 
    float boundary = Config::GetAsteroidsBoundary();
 
-   float shotDistance = Locus::Vector3(boundary, boundary, boundary).norm();
+   float shotDistance = Norm(Locus::FVector3(boundary, boundary, boundary));
 
    //check if shots go beyond the boundary. If they do, remove them
    for (std::size_t shotIndex = 0; shotIndex < numShots; ++shotIndex)
@@ -609,7 +609,7 @@ void DemoScene::UpdateShotPositions(double DT)
       {
          shots[shotIndex]->MoveAlongDirection(static_cast<float>(DT) * Config::GetShotSpeed());
 
-         if (shots[shotIndex]->GetPosition().distanceTo(Locus::Vector3::ZeroVector()) >= shotDistance)
+         if (DistanceBetween(shots[shotIndex]->GetPosition(), Locus::Vec3D::ZeroVector()) >= shotDistance)
          {
             shotsToRemove.push(shotIndex);
          }
@@ -646,18 +646,18 @@ void DemoScene::UpdateShotPositions(double DT)
    }
 }
 
-Locus::Plane DemoScene::MakeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid)
+Locus::Plane DemoScene::MakeHalfSplitPlane(const Locus::FVector3& shotPosition, const Locus::FVector3& asteroidCentroid)
 {
    Locus::Plane orthogonalPlane(asteroidCentroid, player.viewpoint.GetForward());
-   Locus::Vector3 shotProjection = orthogonalPlane.getProjection(shotPosition);
+   Locus::FVector3 shotProjection = orthogonalPlane.getProjection(shotPosition);
 
-   Locus::Vector3 normal = shotProjection - asteroidCentroid;
-   normal.rotateAround(-player.viewpoint.GetForward(), Locus::PI/2);
+   Locus::FVector3 normal = shotProjection - asteroidCentroid;
+   RotateAround(normal, -player.viewpoint.GetForward(), Locus::PI/2);
 
    return Locus::Plane(asteroidCentroid, normal);
 }
 
-void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition)
+void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::FVector3& shotPosition)
 {
    //split an asteroid in two. If it has no more hits left,
    //simply remove the asteroid from the game
@@ -679,8 +679,8 @@ void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
       float yRotationDirection = static_cast<float>( random.RandomDouble(-1, 1) );
       float zRotationDirection = static_cast<float>( random.RandomDouble(-1, 1) );
 
-      splitAsteroid1->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
-      splitAsteroid2->motionProperties.rotation.set(xRotationDirection, yRotationDirection, zRotationDirection);
+      splitAsteroid1->motionProperties.rotation.Set(xRotationDirection, yRotationDirection, zRotationDirection);
+      splitAsteroid2->motionProperties.rotation.Set(xRotationDirection, yRotationDirection, zRotationDirection);
 
       std::unique_ptr<Asteroid>& asteroidToSplit = asteroids[splitIndex];
 
@@ -703,7 +703,7 @@ void DemoScene::SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shot
          splitAsteroid2->motionProperties.speed = asteroidToSplit->motionProperties.speed;
 
          splitAsteroid1->motionProperties.direction = splitPlane.getNormal();
-         splitAsteroid1->motionProperties.direction.normalize();
+         Normalize(splitAsteroid1->motionProperties.direction);
 
          splitAsteroid2->motionProperties.direction = -(splitAsteroid1->motionProperties.direction);
 
@@ -839,9 +839,9 @@ void DemoScene::MouseMoved(int x, int y)
    int diffX = x - lastMouseX;
    int diffY = y - lastMouseY;
 
-   Locus::Vector3 difference(static_cast<float>(diffX), static_cast<float>(diffY), 0.0f);
+   Locus::FVector3 difference(static_cast<float>(diffX), static_cast<float>(diffY), 0.0f);
 
-   Locus::Vector3 rotation((-difference.y/resolutionY) * FIELD_OF_VIEW * Locus::TO_RADIANS, (-difference.x/resolutionX)* FIELD_OF_VIEW * Locus::TO_RADIANS, 0.0f);
+   Locus::FVector3 rotation((-difference.y/resolutionY) * FIELD_OF_VIEW * Locus::TO_RADIANS, (-difference.x/resolutionX)* FIELD_OF_VIEW * Locus::TO_RADIANS, 0.0f);
 
    player.Rotate(rotation);
 
@@ -918,17 +918,17 @@ void DemoScene::TickAsteroids(double DT)
    //update asteroid positions
    for (std::unique_ptr<Asteroid>& asteroid : asteroids)
    {
-      Locus::Vector3 nextPosition = asteroid->Position() + ((asteroid->motionProperties.speed * asteroid->motionProperties.direction) * static_cast<float>(DT));
+      Locus::FVector3 nextPosition = asteroid->Position() + ((asteroid->motionProperties.speed * asteroid->motionProperties.direction) * static_cast<float>(DT));
 
-      if (abs(nextPosition.x) >= Config::GetAsteroidsBoundary())
+      if (std::abs(nextPosition.x) >= Config::GetAsteroidsBoundary())
       {
          asteroid->negateXDirection();
       }
-      if (abs(nextPosition.y) >= Config::GetAsteroidsBoundary())
+      if (std::abs(nextPosition.y) >= Config::GetAsteroidsBoundary())
       {
          asteroid->negateYDirection();
       }
-      if (abs(nextPosition.z) >= Config::GetAsteroidsBoundary())
+      if (std::abs(nextPosition.z) >= Config::GetAsteroidsBoundary())
       {
          asteroid->negateZDirection();
       }
@@ -941,10 +941,10 @@ void DemoScene::TickAsteroids(double DT)
 
    //update asteroid visibility with camera frustum
 
-   Locus::Vector3 forward = player.viewpoint.GetForward();
-   Locus::Vector3 up = player.viewpoint.GetUp();
+   Locus::FVector3 forward = player.viewpoint.GetForward();
+   Locus::FVector3 up = player.viewpoint.GetUp();
 
-   Locus::Vector3 point = player.viewpoint.GetPosition();
+   Locus::FVector3 point = player.viewpoint.GetPosition();
 
    //TODO: Fix fudging going on here
    Locus::Frustum viewFrustum(point, forward, up, 2.5f * FIELD_OF_VIEW * (static_cast<float>(resolutionX)/resolutionY), FRUSTUM_VERTICAL_FIELD_OF_VIEW, FRUSTUM_NEAR_DISTANCE, starDistance * 4.0f);
@@ -1059,7 +1059,7 @@ void DemoScene::DrawAsteroids()
    struct ShotPositionAndDistance
    {
       const Shot* shot;
-      Locus::Vector3 position;
+      Locus::FVector3 position;
       float squaredDistance;
 
       bool operator <(const ShotPositionAndDistance& other) const
@@ -1079,7 +1079,7 @@ void DemoScene::DrawAsteroids()
       {
          singleShotPositionAndDistance.shot = shot.get();
          singleShotPositionAndDistance.position = shot->GetPosition();
-         singleShotPositionAndDistance.squaredDistance = (singleShotPositionAndDistance.position - player.viewpoint.GetPosition()).squaredNorm();
+         singleShotPositionAndDistance.squaredDistance = SquaredNorm(singleShotPositionAndDistance.position - player.viewpoint.GetPosition());
 
          shotPositionsAndDistances.push_back(singleShotPositionAndDistance);
       }

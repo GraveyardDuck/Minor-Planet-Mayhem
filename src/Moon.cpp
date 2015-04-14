@@ -30,26 +30,26 @@ Moon::Moon(unsigned int t, float radius, float distanceFromPlanetCenter, float r
    rotationAxis.y = static_cast<float>(random.RandomDouble(-1.0, 1.0));
    rotationAxis.z = static_cast<float>(random.RandomDouble(-1.0, 1.0));
 
-   rotationAxis.normalize();
+   Normalize(rotationAxis);
 
-   Locus::Vector3 axisOrthogonalToRotationAxis;
+   Locus::FVector3 axisOrthogonalToRotationAxis;
    axisOrthogonalToRotationAxis.x = static_cast<float>(random.RandomDouble(-1.0, 1.0));
    axisOrthogonalToRotationAxis.y = static_cast<float>(random.RandomDouble(-1.0, 1.0));
 
    //set z such that the dot product is zero
    axisOrthogonalToRotationAxis.z = (-rotationAxis.x * axisOrthogonalToRotationAxis.x - rotationAxis.y * axisOrthogonalToRotationAxis.y) / rotationAxis.z;
-   axisOrthogonalToRotationAxis.normalize();
+   Normalize(axisOrthogonalToRotationAxis);
 
-   Locus::Vector3 position = axisOrthogonalToRotationAxis * distanceFromPlanetCenter;
+   Locus::FVector3 position = axisOrthogonalToRotationAxis * distanceFromPlanetCenter;
 
    Translate(position);
-   Scale( Locus::Vector3(radius, radius, radius) );
+   Scale( Locus::FVector3(radius, radius, radius) );
 }
 
 void Moon::tick(double DT)
 {
-   Locus::Vector3 currentPosition = CurrentTranslation();
-   currentPosition.rotateAround(rotationAxis, rotationSpeed * static_cast<float>(DT));
+   Locus::FVector3 currentPosition = CurrentTranslation();
+   RotateAround(currentPosition, rotationAxis, rotationSpeed * static_cast<float>(DT));
 
    Translate(currentPosition - CurrentTranslation());
 }

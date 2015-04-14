@@ -14,6 +14,8 @@
 
 #include "Locus/Simulation/Scene.h"
 
+#include "Locus/Math/VectorsFwd.h"
+
 #include "Locus/Rendering/DrawablePointCloud.h"
 #include "Locus/Rendering/SkyBox.h"
 #include "Locus/Rendering/Light.h"
@@ -147,8 +149,8 @@ private:
    void TickAsteroids(double DT);
    void CheckForAsteroidHits();
 
-   Locus::Plane MakeHalfSplitPlane(const Locus::Vector3& shotPosition, const Locus::Vector3& asteroidCentroid);
-   void SplitAsteroid(std::size_t splitIndex, const Locus::Vector3& shotPosition);
+   Locus::Plane MakeHalfSplitPlane(const Locus::FVector3& shotPosition, const Locus::FVector3& asteroidCentroid);
+   void SplitAsteroid(std::size_t splitIndex, const Locus::FVector3& shotPosition);
    void UpdateShotPositions(double DT);
    void ShotFired();
 

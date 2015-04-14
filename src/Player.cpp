@@ -15,6 +15,7 @@
 
 #include "Locus/Geometry/Geometry.h"
 #include "Locus/Geometry/ModelUtility.h"
+#include "Locus/Geometry/Vector3Geometry.h"
 
 #include "Locus/FileSystem/MountedFilePath.h"
 
@@ -44,7 +45,7 @@ void Player::SetModel(float radius)
    model.Reset(viewpoint.GetPosition(), viewpoint.GetRotation(), Locus::Transformation::IdentityScale());
 }
 
-void Player::Rotate(const Locus::Vector3& rotation)
+void Player::Rotate(const Locus::FVector3& rotation)
 {
    viewpoint.RotateBy(rotation);
    model.Rotate(rotation);
@@ -97,11 +98,11 @@ void Player::ResolveCollision(Asteroid& asteroid)
 
       if (model.GetResolvedCollision(asteroid, model.CurrentModelTransformation(), asteroid.CurrentModelTransformation(), thisIntersectionSet, asteroidIntersectionSet, thisIntersectingTriangle, asteroidTriangle))
       {
-         Locus::Vector3 collisionPoint = (viewpoint.GetPosition() + asteroid.centroid) / 2.0f;
-         Locus::Vector3 impulseDirection = (asteroid.centroid - viewpoint.GetPosition()).normVector();
+         Locus::FVector3 collisionPoint = (viewpoint.GetPosition() + asteroid.centroid) / 2.0f;
+         Locus::FVector3 impulseDirection = NormVector(asteroid.centroid - viewpoint.GetPosition());
 
          Locus::ResolveCollision(1.0f, model.BoundingSphere(), asteroid.BoundingSphere(), collisionPoint, impulseDirection,
-                                  motionProperties, asteroid.motionProperties);
+                                 motionProperties, asteroid.motionProperties);
 
          asteroid.lastCollision = this;
          asteroid.lastCollisionTime = std::chrono::high_resolution_clock::now();
@@ -120,7 +121,7 @@ void Player::tick(double DT)
    //rotation is done directly when the game responds to the
    //user's mouse movements
 
-   Locus::Vector3 translation
+   Locus::FVector3 translation
    ( 
       (translateLeft  ? -Config::GetPlayerTranslationSpeed() : 0.0f) + (translateRight ?  Config::GetPlayerTranslationSpeed() : 0.0f),
       (translateDown  ? -Config::GetPlayerTranslationSpeed() : 0.0f) + (translateUp    ?  Config::GetPlayerTranslationSpeed() : 0.0f),
@@ -129,10 +130,10 @@ void Player::tick(double DT)
 
    bool move = false;
 
-   Locus::Vector3 originalPosition = viewpoint.GetPosition();
-   Locus::Vector3 newPosition;
+   Locus::FVector3 originalPosition = viewpoint.GetPosition();
+   Locus::FVector3 newPosition;
 
-   if (!translation.ApproximatelyEqualTo(Locus::Vector3::ZeroVector()))
+   if (!ApproximatelyEqual(translation, Locus::Vec3D::ZeroVector()))
    {
       translation *= static_cast<float>(DT);
 
@@ -159,13 +160,13 @@ void Player::tick(double DT)
 
       model.Translate(motionProperties.direction);
 
-      motionProperties.direction.normalize();
+      Normalize(motionProperties.direction);
 
       UpdateBroadCollisionExtent();
    }
    else
    {
-      motionProperties.direction = Locus::Vector3::ZeroVector();
+      motionProperties.direction = Locus::Vec3D::ZeroVector();
       motionProperties.speed = 0.0f;
    }
 }

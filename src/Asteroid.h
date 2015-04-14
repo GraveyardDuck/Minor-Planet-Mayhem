@@ -10,14 +10,15 @@
 
 #pragma once
 
+#include "Locus/Math/Vectors.h"
+
 #include "Locus/Geometry/Moveable.h"
 #include "Locus/Geometry/Collidable.h"
 #include "Locus/Geometry/MotionProperties.h"
 #include "Locus/Geometry/TriangleFwd.h"
+#include "Locus/Geometry/BoundingVolumeHierarchy.h"
 
 #include "Locus/Rendering/Mesh.h"
-
-#include "Locus/Geometry/BoundingVolumeHierarchy.h"
 
 #include <chrono>
 
@@ -75,8 +76,8 @@ public:
    //asteroid logic functions
 
    bool WasHit() const;
-   void RegisterHit(const Locus::Vector3& hitLocation);
-   const Locus::Vector3& GetHitLocation() const;
+   void RegisterHit(const Locus::FVector3& hitLocation);
+   const Locus::FVector3& GetHitLocation() const;
 
    void decreaseHitsLeft();
    void negateDirection();
@@ -91,7 +92,7 @@ private:
    int hitsLeft;
 
    bool hit;
-   Locus::Vector3 hitLocation;
+   Locus::FVector3 hitLocation;
 
    std::unique_ptr< Locus::SphereTree_t > boundingVolumeHierarchy;
 };
