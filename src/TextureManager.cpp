@@ -88,32 +88,32 @@ std::string TextureManager::MakeDigitTextureName(std::size_t index)
 
 void TextureManager::LoadAsteroidTexture(const std::string& textureLocation)
 {
-   Load(TextureManager::MakeAsteroidTextureName(numAsteroidTextures), textureLocation, false);
+   Load(TextureManager::MakeAsteroidTextureName(numAsteroidTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::LoadPlanetTexture(const std::string& textureLocation)
 {
-   Load(TextureManager::MakePlanetTextureName(numPlanetTextures), textureLocation, false);
+   Load(TextureManager::MakePlanetTextureName(numPlanetTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::LoadMoonTexture(const std::string& textureLocation)
 {
-   Load(TextureManager::MakeMoonTextureName(numMoonTextures), textureLocation, false);
+   Load(TextureManager::MakeMoonTextureName(numMoonTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::LoadAsteroidTexture(const Locus::MountedFilePath& textureLocation)
 {
-   Load(TextureManager::MakeAsteroidTextureName(numAsteroidTextures), textureLocation, false);
+   Load(TextureManager::MakeAsteroidTextureName(numAsteroidTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::LoadPlanetTexture(const Locus::MountedFilePath& textureLocation)
 {
-   Load(TextureManager::MakePlanetTextureName(numPlanetTextures), textureLocation, false);
+   Load(TextureManager::MakePlanetTextureName(numPlanetTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::LoadMoonTexture(const Locus::MountedFilePath& textureLocation)
 {
-   Load(TextureManager::MakeMoonTextureName(numMoonTextures), textureLocation, false);
+   Load(TextureManager::MakeMoonTextureName(numMoonTextures), textureLocation, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
 }
 
 void TextureManager::UnLoad()
@@ -216,7 +216,7 @@ void TextureManager::LoadAllTextures()
       imageFile = skyboxOrHudTextureTag->value;
       Locus::TrimString(imageFile);
 
-      Load(textureNameAndClampValue.first, texturesPath + imageFile, textureNameAndClampValue.second);
+      Load(textureNameAndClampValue.first, texturesPath + imageFile, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, textureNameAndClampValue.second);
    }
 
    //add digits textures
@@ -233,7 +233,7 @@ void TextureManager::LoadAllTextures()
       imageFile = digitTextureTag->value;
       Locus::TrimString(imageFile);
 
-      Load(digitTextureName, texturesPath + imageFile, false);
+      Load(digitTextureName, texturesPath + imageFile, Locus::Texture::MipmapGeneration::GLGenerateMipMap, Locus::TextureFiltering::Linear, false);
    }
 
    #undef CHECK_TAG
