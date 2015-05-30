@@ -77,7 +77,10 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
 
    double increment = 0.2;
 
-   crosshairs.Clear();
+   const std::size_t NUM_CROSSHAIR_LINE_SEGMENTS = ((360 * 5) + 4);
+
+   crosshairs.lineSegments.clear();
+   crosshairs.lineSegments.reserve(NUM_CROSSHAIR_LINE_SEGMENTS);
 
    for (int i = 0; i < 360; ++i)
    {
@@ -88,7 +91,7 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
 
          if (makeLine)
          {
-            crosshairs.AddLineSegment(lineSegment);
+            crosshairs.lineSegments.push_back(lineSegment);
          }
 
          lineSegment.segment.P1 = lineSegment.segment.P2;
@@ -100,26 +103,26 @@ void HUD::Initialize(MPM::TextureManager* textureManager, std::size_t maxShots, 
 
    lineSegment.segment.P1 = lineSegment.segment.P2;
    lineSegment.segment.P2.Set(std::sin(firstAngle) * crosshairsWidth, std::cos(firstAngle) * crosshairsWidth, 0.0f);
-   crosshairs.AddLineSegment(lineSegment);
+   crosshairs.lineSegments.push_back(lineSegment);
 
    //make crosshair lines
    int halfWidth = crosshairsWidth/2;
 
    lineSegment.segment.P1.Set(0.0f, static_cast<float>(-halfWidth), 0.0f);
    lineSegment.segment.P2.Set(0.0f, static_cast<float>(-3*halfWidth), 0.0f);
-   crosshairs.AddLineSegment(lineSegment);
+   crosshairs.lineSegments.push_back(lineSegment);
 
    lineSegment.segment.P1.Set(0.0f, static_cast<float>(halfWidth), 0.0f);
    lineSegment.segment.P2.Set(0.0f, static_cast<float>(3*halfWidth), 0.0f);
-   crosshairs.AddLineSegment(lineSegment);
+   crosshairs.lineSegments.push_back(lineSegment);
 
    lineSegment.segment.P1.Set(static_cast<float>(-halfWidth), 0.0f, 0.0f);
    lineSegment.segment.P2.Set(static_cast<float>(-3*halfWidth), 0.0f, 0.0f);
-   crosshairs.AddLineSegment(lineSegment);
+   crosshairs.lineSegments.push_back(lineSegment);
 
    lineSegment.segment.P1.Set(static_cast<float>(halfWidth), 0.0f, 0.0f);
    lineSegment.segment.P2.Set(static_cast<float>(3*halfWidth), 0.0f, 0.0f);
-   crosshairs.AddLineSegment(lineSegment);
+   crosshairs.lineSegments.push_back(lineSegment);
 
    Locus::FVector3 right(1.0, 0.0, 0.0);
    Locus::FVector3 up(0.0, -1.0, 0.0);
