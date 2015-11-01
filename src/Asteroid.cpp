@@ -25,8 +25,6 @@
 namespace MPM
 {
 
-std::unique_ptr< Locus::SoundEffect > Asteroid::asteroidAsteroidCollsionSoundEffect;
-
 Asteroid::Asteroid()
    : Asteroid(0)
 {
@@ -217,11 +215,6 @@ void Asteroid::ResolveCollision(Asteroid& otherAsteroid)
 
       lastCollisionTime = now;
       otherAsteroid.lastCollisionTime = now;
-
-      if (Asteroid::asteroidAsteroidCollsionSoundEffect != nullptr)
-      {
-         Asteroid::asteroidAsteroidCollsionSoundEffect->Play();
-      }
    }
 }
 

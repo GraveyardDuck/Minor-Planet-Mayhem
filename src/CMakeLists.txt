@@ -49,8 +49,6 @@ include_directories(${LOCUS_INCLUDE}
 add_executable(MPM
                Asteroid.cpp
                Asteroid.h
-               CelestialObject.cpp
-               CelestialObject.h
                CollidableTypes.h
                Config.cpp
                Config.h

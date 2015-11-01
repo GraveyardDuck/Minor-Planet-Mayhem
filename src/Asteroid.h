@@ -27,7 +27,6 @@ namespace Locus
 
 class RenderingState;
 class Texture;
-class SoundEffect;
 
 }
 
@@ -37,28 +36,16 @@ namespace MPM
 class Asteroid : public Locus::Mesh, public Locus::Collidable
 {
 public:
-   bool visible;
-
-   Locus::MotionProperties motionProperties;
-
-   //HACK: avoiding interpenetration
-   Locus::Collidable* lastCollision;
-   std::chrono::high_resolution_clock::time_point lastCollisionTime;
-
-   static std::unique_ptr< Locus::SoundEffect > asteroidAsteroidCollsionSoundEffect;
-
    Asteroid();
    Asteroid(int h);
    Asteroid(const Asteroid& other);
    Asteroid& operator=(const Asteroid& other);
 
-   //getters
    Locus::Texture* GetTexture();
    int getHitsLeft();
 
    const Locus::SphereTree_t& GetBoundingVolumeHierarchy() const;
 
-   //setters
    void SetTexture(Locus::Texture* texture);
 
    void GrabMesh(const Mesh& mesh);
@@ -73,8 +60,6 @@ public:
    virtual void ResolveCollision(Collidable& collidable) override;
    void ResolveCollision(Asteroid& otherAsteroid);
 
-   //asteroid logic functions
-
    bool WasHit() const;
    void RegisterHit(const Locus::FVector3& hitLocation);
    const Locus::FVector3& GetHitLocation() const;
@@ -86,6 +71,14 @@ public:
    void negateZDirection();
 
    void tick(double DT);
+
+   bool visible;
+
+   Locus::MotionProperties motionProperties;
+
+   //HACK: avoiding interpenetration
+   Locus::Collidable* lastCollision;
+   std::chrono::high_resolution_clock::time_point lastCollisionTime;
 
 private:
    Locus::Texture* texture;

@@ -167,7 +167,7 @@ void DemoScene::LoadShaderPrograms()
 
          litProgramIDs.push_back(thisLitProgramID);
       }
-      catch(Locus::ShaderLinkException& shaderLinkException)
+      catch (Locus::ShaderLinkException& shaderLinkException)
       {
          if (lightIndex == 0)
          {
@@ -271,11 +271,6 @@ void DemoScene::LoadAudioState()
 
    asteroidShotCollisionSoundEffect = std::make_unique<Locus::SoundEffect>();
    asteroidShotCollisionSoundEffect->Load(Locus::MountedFilePath("audio/asteroid_shot_collision.ogg"));
-
-   //player.LoadCollisionSoundEffect("audio/asteroid_ship_collision.ogg");
-
-   //Asteroid::asteroidAsteroidCollsionSoundEffect = std::make_unique<Locus::SoundEffect>();
-   //Asteroid::asteroidAsteroidCollsionSoundEffect->Load(Locus::MountedFilePath("audio/asteroid_asteroid_collision.ogg"));
 }
 
 void DemoScene::InitializeMeshes()
@@ -412,7 +407,7 @@ void DemoScene::InitializePlanets()
             //planets shouldn't be touching each other or each other's moons
             for (const std::unique_ptr<Planet>& planet : planets)
             {
-               if (DistanceBetween(planet->Position(), planetLocation) <= (planet->getRadius() + MOON_ORBIT_DISTANCE + PLANET_SPACING_THRESHOLD))
+               if (DistanceBetween(planet->Position(), planetLocation) <= (planet->GetRadius() + MOON_ORBIT_DISTANCE + PLANET_SPACING_THRESHOLD))
                {
                   goodLocation = false;
                   ++numTries;
@@ -425,7 +420,7 @@ void DemoScene::InitializePlanets()
       int planetTextureIndex = r.RandomInt(0, static_cast<int>(textureManager->NumPlanetTextures()) - 1);
       float planetRadius = static_cast<float>(r.RandomDouble(Config::GetMinPlanetRadius(), Config::GetMaxPlanetRadius()));
 
-      std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetRadius, planetTextureIndex, planetMesh.get()) );
+      std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetMesh.get(), planetRadius, planetTextureIndex) );
       planet->Translate(planetLocation);
       planet->Scale( Locus::FVector3(planetRadius, planetRadius, planetRadius) );
 
@@ -439,7 +434,7 @@ void DemoScene::InitializePlanets()
 
          float rotationSpeed = static_cast<float>( r.RandomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
 
-         planet->addMoon( std::make_unique<Moon>(moonTextureIndex, MOON_RADIUS, moonDistance, rotationSpeed, moonMesh.get()) );
+         planet->AddMoon( std::make_unique<Moon>(moonMesh.get(), MOON_RADIUS, moonTextureIndex, moonDistance, rotationSpeed) );
       }
 
       planets.push_back(std::move(planet));
@@ -491,7 +486,6 @@ void DemoScene::InitializeAsteroids()
    for (int i = 0; i < Config::GetNumAsteroids(); ++i)
    {
       //get asteroid type
-      //std::size_t whichMesh = r.randomInt(0, numAsteroidTemplates - 1);
 
       asteroids[i] = std::make_unique<Asteroid>(MAX_ASTEROID_HITS);
       asteroids[i]->GrabMeshAndCollidable(asteroidTemplates[whichMesh]);
@@ -895,7 +889,7 @@ bool DemoScene::Update(double DT)
 
    for (std::unique_ptr<Planet>& planet : planets)
    {
-      planet->tick(DT);
+      planet->Tick(DT);
    }
 
    collisionManager.UpdateCollisions();
@@ -1040,7 +1034,7 @@ void DemoScene::DrawPlanets()
 {
    for (std::unique_ptr<Planet>& planet : planets)
    {
-      textureManager->GetTexture(MPM::TextureManager::MakePlanetTextureName(planet->textureIndex))->Bind();
+      textureManager->GetTexture(MPM::TextureManager::MakePlanetTextureName(planet->GetTextureIndex()))->Bind();
       renderingState->shaderController.SetTextureUniform(Locus::ShaderSource::Map_Diffuse, 0);
 
       player.viewpoint.Activate(renderingState->transformationStack);

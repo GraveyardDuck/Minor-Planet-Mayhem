@@ -20,20 +20,31 @@
 
 #include "Locus/Common/Random.h"
 
+#include <cassert>
+
 namespace MPM
 {
 
-Planet::Planet(float r, unsigned int t, Locus::Mesh* mesh) : CelestialObject(t, mesh), radius(r)
+Planet::Planet(const Locus::Mesh* mesh, float radius, unsigned int textureIndex)
+   : mesh(mesh), radius(radius), textureIndex(textureIndex)
 {
+   assert(mesh != nullptr);
 }
 
-float Planet::getRadius() const
+float Planet::GetRadius() const
 {
    return radius;
 }
 
-void Planet::addMoon(std::unique_ptr<Moon> moon)
+unsigned int Planet::GetTextureIndex() const
 {
+   return textureIndex;
+}
+
+void Planet::AddMoon(std::unique_ptr<Moon> moon)
+{
+   assert(moon != nullptr);
+
    moons.push_back(std::move(moon));
 }
 
@@ -45,28 +56,28 @@ void Planet::SetRandomTextures(const MPM::TextureManager& textureManager)
 
    for (std::unique_ptr<Moon>& moon : moons)
    {
-      moon->textureIndex = static_cast<unsigned int>( random.RandomInt(0, static_cast<int>(textureManager.NumMoonTextures()) - 1) );
+      moon->SetRandomTexture(textureManager);
    }
 }
 
-void Planet::tick(double DT)
+void Planet::Tick(double DT)
 {
    for (std::unique_ptr<Moon>& moon : moons)
    {
-      moon->tick(DT);
+      moon->Tick(DT);
    }
 }
 
-void Planet::Draw(Locus::RenderingState& renderingState, const MPM::TextureManager& textureManager)
+void Planet::Draw(Locus::RenderingState& renderingState, const MPM::TextureManager& textureManager) const
 {
    renderingState.transformationStack.UploadTransformations(renderingState.shaderController, CurrentModelTransformation());
    mesh->Draw(renderingState);
 
    renderingState.transformationStack.Translate(Position());
 
-   for (std::unique_ptr<Moon>& moon : moons)
+   for (const std::unique_ptr<Moon>& moon : moons)
    {
-      textureManager.GetTexture(MPM::TextureManager::MakeMoonTextureName(moon->textureIndex))->Bind();
+      textureManager.GetTexture(MPM::TextureManager::MakeMoonTextureName(moon->GetTextureIndex()))->Bind();
       renderingState.shaderController.SetTextureUniform(Locus::ShaderSource::Map_Diffuse, 0);
 
       moon->Draw(renderingState);
