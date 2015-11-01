@@ -20,8 +20,8 @@
 <Shot_Speed>200</Shot_Speed>
 
 <!-- Half the length of the game boundary ( units ) (call this L). The game is played
-	     within a cube with dimensions 2L x 2L x 2L. Asteroids bounce off the side of
-		 the boundary. The player starts at the center. -->
+     within a cube with dimensions 2L x 2L x 2L. Asteroids bounce off the side of
+     the boundary. The player starts at the center. -->
 <Game_Boundary_Length>130</Game_Boundary_Length>
 
 <!-- The distance of the collision zone around the player ( units ) -->
@@ -50,17 +50,5 @@
 <Min>30</Min>
 <Max>50</Max>
 </Planet_Radius>
-
-<!-- The number of moons orbiting around a planet -->
-<Num_Moons>
-<Min>1</Min>
-<Max>3</Max>
-</Num_Moons>
-
-<!-- The orbital speed of a moon ( radians / second ) -->
-<Moon_Orbital_Speed>
-<Min>1</Min>
-<Max>3</Max>
-</Moon_Orbital_Speed>
 
 </Options>

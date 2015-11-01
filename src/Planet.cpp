@@ -9,7 +9,6 @@
 \********************************************************************************************************/
 
 #include "Planet.h"
-#include "Moon.h"
 #include "TextureManager.h"
 
 #include "Locus/Rendering/Mesh.h"
@@ -41,47 +40,15 @@ unsigned int Planet::GetTextureIndex() const
    return textureIndex;
 }
 
-void Planet::AddMoon(std::unique_ptr<Moon> moon)
+void Planet::RandomizeTexture(const MPM::TextureManager& textureManager)
 {
-   assert(moon != nullptr);
-
-   moons.push_back(std::move(moon));
+   textureIndex = static_cast<unsigned int>( Locus::Random().RandomInt(0, static_cast<int>(textureManager.NumPlanetTextures()) - 1) );
 }
 
-void Planet::SetRandomTextures(const MPM::TextureManager& textureManager)
-{
-   Locus::Random random;
-
-   textureIndex = static_cast<unsigned int>( random.RandomInt(0, static_cast<int>(textureManager.NumPlanetTextures()) - 1) );
-
-   for (std::unique_ptr<Moon>& moon : moons)
-   {
-      moon->SetRandomTexture(textureManager);
-   }
-}
-
-void Planet::Tick(double DT)
-{
-   for (std::unique_ptr<Moon>& moon : moons)
-   {
-      moon->Tick(DT);
-   }
-}
-
-void Planet::Draw(Locus::RenderingState& renderingState, const MPM::TextureManager& textureManager) const
+void Planet::Draw(Locus::RenderingState& renderingState) const
 {
    renderingState.transformationStack.UploadTransformations(renderingState.shaderController, CurrentModelTransformation());
    mesh->Draw(renderingState);
-
-   renderingState.transformationStack.Translate(Position());
-
-   for (const std::unique_ptr<Moon>& moon : moons)
-   {
-      textureManager.GetTexture(MPM::TextureManager::MakeMoonTextureName(moon->GetTextureIndex()))->Bind();
-      renderingState.shaderController.SetTextureUniform(Locus::ShaderSource::Map_Diffuse, 0);
-
-      moon->Draw(renderingState);
-   }
 }
 
 }

@@ -52,7 +52,6 @@ class DemoScene : public Locus::Scene
 {
 public:
    DemoScene(Locus::SceneManager& sceneManager, unsigned int resolutionX, unsigned int resolutionY);
-   ~DemoScene();
 
    virtual void Activate() override;
 
@@ -113,7 +112,6 @@ private:
    float z_far;
 
    std::unique_ptr<Locus::Mesh> planetMesh;
-   std::unique_ptr<Locus::Mesh> moonMesh;
 
    std::vector<std::unique_ptr<Planet>> planets;
    Locus::DrawablePointCloud stars;
@@ -141,8 +139,6 @@ private:
    void LoadAudioState();
    void LoadLights();
    void LoadTextures();
-
-   void DestroyRenderingState();
 
    void UpdateLastMousePosition();
 

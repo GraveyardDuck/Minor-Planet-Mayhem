@@ -8,9 +8,6 @@
 <Texture index="2">planet_2.png</Texture>
 <Texture index="3">planet_3.png</Texture>
 </Planets>
-<Moons>
-<Texture index="1">moon.png</Texture>
-</Moons>
 <Skybox_Front>space1.png</Skybox_Front>
 <Skybox_Back>space1.png</Skybox_Back>
 <Skybox_Left>space1.png</Skybox_Left>

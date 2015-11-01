@@ -56,8 +56,6 @@ add_executable(MPM
                DemoScene.h
                HUD.cpp
                HUD.h
-               Moon.cpp
-               Moon.h
                MPM.cpp
                PauseScene.cpp
                PauseScene.h

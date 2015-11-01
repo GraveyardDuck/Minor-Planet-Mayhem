@@ -10,7 +10,6 @@
 
 #include "DemoScene.h"
 #include "Config.h"
-#include "Moon.h"
 #include "Asteroid.h"
 #include "Shot.h"
 #include "Planet.h"
@@ -52,8 +51,6 @@
 //TODO: Remove magic numbers, either by putting in data files or use a scripting interface
 
 #define PLANET_SPACING_THRESHOLD 30
-#define MOON_ORBIT_DISTANCE 0.6f
-#define MOON_RADIUS 0.5f
 
 #define SKY_BOX_RADIUS 100
 
@@ -105,11 +102,6 @@ DemoScene::DemoScene(Locus::SceneManager& sceneManager, unsigned int resolutionX
    ParseSAPFile(Locus::MountedFilePath("data/" + Config::GetModelFile()), asteroidMeshes);
 
    Load();
-}
-
-DemoScene::~DemoScene()
-{
-   DestroyRenderingState();
 }
 
 void DemoScene::Load()
@@ -221,30 +213,6 @@ void DemoScene::InitializeRenderingState()
    renderingState->shaderController.UseProgram(texturedNotLitProgramID);
 }
 
-void DemoScene::DestroyRenderingState()
-{
-   renderingState.reset();
-   textureManager.reset();
-
-   planetMesh->DeleteGPUVertexData();
-   moonMesh->DeleteGPUVertexData();
-   shotMesh->DeleteGPUVertexData();
-   skyBox.DeleteGPUVertexData();
-   hud.DeleteGPUVertexData();
-
-   stars.DeleteGPUVertexData();
-
-   for (std::unique_ptr<Asteroid>& asteroid : asteroids)
-   {
-      asteroid->DeleteGPUVertexData();
-   }
-
-   for (std::unique_ptr<Shot>& shot : shots)
-   {
-      shot->DeleteGPUVertexData();
-   }
-}
-
 void DemoScene::LoadTextures()
 {
    textureManager->LoadAllTextures();
@@ -258,7 +226,7 @@ void DemoScene::LoadTextures()
 
    for (std::unique_ptr<Planet>& planet : planets)
    {
-      planet->SetRandomTextures(*textureManager);
+      planet->RandomizeTexture(*textureManager);
    }
 }
 
@@ -278,10 +246,6 @@ void DemoScene::InitializeMeshes()
    planetMesh = Locus::MeshUtility::MakeSphere(1.0, 3);
    planetMesh->CreateGPUVertexData();
    planetMesh->UpdateGPUVertexData();
-
-   moonMesh = Locus::MeshUtility::MakeSphere(1.0, 2);
-   moonMesh->CreateGPUVertexData();
-   moonMesh->UpdateGPUVertexData();
 
    shotMesh = Locus::MeshUtility::MakeIcosahedron(SHOT_RADIUS);
    shotMesh->gpuVertexDataTransferInfo.sendColors = false;
@@ -364,9 +328,7 @@ void DemoScene::InitializeStars()
 void DemoScene::InitializePlanets()
 {
    //randomly place a certain amount of planets (between MIN_PLANETS and MAX_PLANETS) a certain distance
-   //away (between MIN_PLANET_DISTANCE and MAX_PLANET_DISTANCE) from the origin.  Also place a certain
-   //amount of moons to orbit the planet (between MIN_MOONS and MAX_MOONS) at a random location MOON_ORBIT_DISTANCE
-   //from the planet and give each a random angular velocity.
+   //away (between MIN_PLANET_DISTANCE and MAX_PLANET_DISTANCE) from the origin.
 
    Locus::Random r;
 
@@ -404,10 +366,10 @@ void DemoScene::InitializePlanets()
 
          if (numTries < maxTries)
          {
-            //planets shouldn't be touching each other or each other's moons
+            //planets shouldn't be touching each other
             for (const std::unique_ptr<Planet>& planet : planets)
             {
-               if (DistanceBetween(planet->Position(), planetLocation) <= (planet->GetRadius() + MOON_ORBIT_DISTANCE + PLANET_SPACING_THRESHOLD))
+               if (DistanceBetween(planet->Position(), planetLocation) <= (planet->GetRadius() + PLANET_SPACING_THRESHOLD))
                {
                   goodLocation = false;
                   ++numTries;
@@ -423,19 +385,6 @@ void DemoScene::InitializePlanets()
       std::unique_ptr<Planet> planet( std::make_unique<Planet>(planetMesh.get(), planetRadius, planetTextureIndex) );
       planet->Translate(planetLocation);
       planet->Scale( Locus::FVector3(planetRadius, planetRadius, planetRadius) );
-
-      int numMoons = r.RandomInt(Config::GetMinMoons(), Config::GetMaxMoons());
-
-      float moonDistance = planetRadius + MOON_ORBIT_DISTANCE;
-
-      for (int j = 0; j < numMoons; ++j)
-      {
-         int moonTextureIndex = r.RandomInt(0, static_cast<int>(textureManager->NumMoonTextures()) - 1);
-
-         float rotationSpeed = static_cast<float>( r.RandomDouble(Config::GetMinMoonOrbitalSpeed(), Config::GetMaxMoonOrbitalSpeed()) );
-
-         planet->AddMoon( std::make_unique<Moon>(moonMesh.get(), MOON_RADIUS, moonTextureIndex, moonDistance, rotationSpeed) );
-      }
 
       planets.push_back(std::move(planet));
    }
@@ -760,7 +709,6 @@ void DemoScene::KeyPressed(Locus::Key_t key)
          break;
 
       case Locus::Key_ESCAPE:
-         DestroyRenderingState();
          dieOnNextFrame = true;
          break;
 
@@ -886,11 +834,6 @@ bool DemoScene::Update(double DT)
 
    TickAsteroids(DT);
    UpdateShotPositions(DT);
-
-   for (std::unique_ptr<Planet>& planet : planets)
-   {
-      planet->Tick(DT);
-   }
 
    collisionManager.UpdateCollisions();
    collisionManager.TransmitCollisions();
@@ -1040,7 +983,7 @@ void DemoScene::DrawPlanets()
       player.viewpoint.Activate(renderingState->transformationStack);
 
          renderingState->transformationStack.Translate(player.viewpoint.GetPosition());
-         planet->Draw(*renderingState, *textureManager);
+         planet->Draw(*renderingState);
 
       player.viewpoint.Deactivate(renderingState->transformationStack);
    }

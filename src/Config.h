@@ -39,10 +39,6 @@ public:
    static int GetMaxPlanets();
    static float GetMinPlanetRadius();
    static float GetMaxPlanetRadius();
-   static int GetMinMoons();
-   static int GetMaxMoons();
-   static float GetMinMoonOrbitalSpeed();
-   static float GetMaxMoonOrbitalSpeed();
 
    struct LightingOptions
    {
@@ -71,10 +67,6 @@ private:
    static int maxPlanets;
    static float minPlanetRadius;
    static float maxPlanetRadius;
-   static int minMoons;
-   static int maxMoons;
-   static float minMoonOrbitalSpeed;
-   static float maxMoonOrbitalSpeed;
 };
 
 }

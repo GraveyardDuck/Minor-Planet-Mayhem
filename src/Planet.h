@@ -27,7 +27,6 @@ namespace MPM
 {
 
 class TextureManager;
-class Moon;
 
 class Planet : public Locus::Moveable
 {
@@ -37,16 +36,12 @@ public:
    float GetRadius() const;
    unsigned int GetTextureIndex() const;
 
-   void AddMoon(std::unique_ptr<Moon> moon);
+   void RandomizeTexture(const MPM::TextureManager& textureManager);
 
-   void SetRandomTextures(const MPM::TextureManager& textureManager);
-
-   void Tick(double DT);
-   void Draw(Locus::RenderingState& renderingState, const MPM::TextureManager& textureManager) const;
+   void Draw(Locus::RenderingState& renderingState) const;
 
 private:
    const Locus::Mesh* mesh;
-   std::vector< std::unique_ptr<Moon> > moons;
    float radius;
    unsigned int textureIndex;
 };

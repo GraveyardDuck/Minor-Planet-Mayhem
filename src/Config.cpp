@@ -40,10 +40,6 @@ static const int Default_Min_Planets = 10;
 static const int Default_Max_Planets = 15;
 static const float Default_Min_Planet_Radius = 30.0f;
 static const float Default_Max_Planet_Radius = 50.0f;
-static const int Default_Min_Moons = 1;
-static const int Default_Max_Moons = 3;
-static const float Default_Min_Moon_Orbital_Speed = 1.0f;
-static const float Default_Max_Moon_Orbital_Speed = 1.5f;
 
 std::string Config::modelFile = Default_Model_File;
 int Config::numAsteroids = Default_Num_Asteroids;
@@ -61,10 +57,6 @@ int Config::minPlanets = Default_Min_Planets;
 int Config::maxPlanets = Default_Max_Planets;
 float Config::minPlanetRadius = Default_Min_Planet_Radius;
 float Config::maxPlanetRadius = Default_Max_Planet_Radius;
-int Config::minMoons = Default_Min_Moons;
-int Config::maxMoons = Default_Max_Moons;
-float Config::minMoonOrbitalSpeed = Default_Min_Moon_Orbital_Speed;
-float Config::maxMoonOrbitalSpeed = Default_Max_Moon_Orbital_Speed;
 
 namespace OptionsXML
 {
@@ -82,8 +74,6 @@ static const std::string Asteroid_Speed = "Asteroid_Speed";
 static const std::string Asteroid_Rotation_Speed = "Rotation_Speed";
 static const std::string Num_Planets = "Num_Planets";
 static const std::string Planet_Radius = "Planet_Radius";
-static const std::string Num_Moons = "Num_Moons";
-static const std::string Moon_Orbital_Speed = "Moon_Orbital_Speed";
 
 static const std::string Minimum = "Min";
 static const std::string Maximum = "Max";
@@ -193,10 +183,6 @@ void Config::Set()
    maxPlanets = Default_Max_Planets;
    minPlanetRadius = Default_Min_Planet_Radius;
    maxPlanetRadius = Default_Max_Planet_Radius;
-   minMoons = Default_Min_Moons;
-   maxMoons = Default_Max_Moons;
-   minMoonOrbitalSpeed = Default_Min_Moon_Orbital_Speed;
-   maxMoonOrbitalSpeed = Default_Max_Moon_Orbital_Speed;
 
    Locus::XMLTag rootTag;
 
@@ -228,8 +214,6 @@ void Config::Set()
    LoadMinMaxPair<float>(minAsteroidRotationSpeed, maxAsteroidRotationSpeed, rootTag, OptionsXML::Asteroid_Rotation_Speed, 0.0f);
    LoadMinMaxPair<int>(minPlanets, maxPlanets, rootTag, OptionsXML::Num_Planets, 0.0f);
    LoadMinMaxPair<float>(minPlanetRadius, maxPlanetRadius, rootTag, OptionsXML::Planet_Radius, 0.01f);
-   LoadMinMaxPair<int>(minMoons, maxMoons, rootTag, OptionsXML::Num_Moons, 0.0f);
-   LoadMinMaxPair<float>(minMoonOrbitalSpeed, maxMoonOrbitalSpeed, rootTag, OptionsXML::Moon_Orbital_Speed, 0.0f);
 }
 
 static bool ReadInt(const std::string& str, int& value)
@@ -482,26 +466,6 @@ float Config::GetMinPlanetRadius()
 float Config::GetMaxPlanetRadius()
 {
    return maxPlanetRadius;
-}
-
-int Config::GetMinMoons()
-{
-   return minMoons;
-}
-
-int Config::GetMaxMoons()
-{
-   return maxMoons;
-}
-
-float Config::GetMinMoonOrbitalSpeed()
-{
-   return minMoonOrbitalSpeed;
-}
-
-float Config::GetMaxMoonOrbitalSpeed()
-{
-   return maxMoonOrbitalSpeed;
 }
 
 }

@@ -44,7 +44,6 @@ public:
 
    static std::string MakeAsteroidTextureName(std::size_t index);
    static std::string MakePlanetTextureName(std::size_t index);
-   static std::string MakeMoonTextureName(std::size_t index);
    static std::string MakeDigitTextureName(std::size_t index);
 
    virtual void UnLoad() override;
@@ -52,25 +51,20 @@ public:
 
    std::size_t NumAsteroidTextures() const;
    std::size_t NumPlanetTextures() const;
-   std::size_t NumMoonTextures() const;
 
 private:
    static const std::string Asteroid_Base_TextureName;
    static const std::string Planet_Base_TextureName;
-   static const std::string Moon_Base_TextureName;
    static const std::string Digit_Base_TextureName;
 
    std::size_t numAsteroidTextures;
    std::size_t numPlanetTextures;
-   std::size_t numMoonTextures;
 
    void LoadAsteroidTexture(const std::string& textureLocation);
    void LoadPlanetTexture(const std::string& textureLocation);
-   void LoadMoonTexture(const std::string& textureLocation);
 
    void LoadAsteroidTexture(const Locus::MountedFilePath& textureLocation);
    void LoadPlanetTexture(const Locus::MountedFilePath& textureLocation);
-   void LoadMoonTexture(const Locus::MountedFilePath& textureLocation);
 };
 
 }
